@@ -1,7 +1,7 @@
 /* ============================================================
    quiz.js - Quiz page logic (practice.html)
    Handles: data loading, rendering, answering, palette,
-   filters, search, bookmarks, keyboard shortcuts and results.
+   filters, search, bookmarks, keyboard shortcuts and results. 
    ============================================================ */
 
 (function () {
@@ -181,7 +181,7 @@
       DOM.submitBtn.disabled = false;
       DOM.nextBtn.disabled = false;
     }
-
+  
     /* Nav buttons */
     DOM.prevBtn.disabled = state.index === 0;
     DOM.nextBtn.disabled = state.index >= total - 1;
