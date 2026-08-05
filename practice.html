@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice · KCET MCQ</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ============ Navbar ============ -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <span class="logo">🎯</span>
+        <span id="brandName">Practice</span>
+      </a>
+      <div class="nav-actions">
+        <button id="finishBtn" class="btn btn-outline" title="Finish and view result">
+          Finish 🏁
+        </button>
+        <button id="themeToggle" class="icon-btn" title="Toggle dark mode">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- ============ Header ============ -->
+    <div class="practice-header">
+      <div>
+        <h2 id="subjectTitle">Loading…</h2>
+        <div class="sub" id="subjectSub"></div>
+      </div>
+    </div>
+
+    <!-- ============ Main quiz area ============ -->
+    <div id="mainArea" class="quiz-grid">
+      <!-- -------- Left: Question panel -------- -->
+      <div>
+        <div class="question-card">
+          <div class="q-meta">
+            <span id="qNumber" class="q-number">Question 1</span>
+            <span id="qMeta"></span>
+            <button id="bookmarkBtn" class="bookmark-btn" title="Bookmark">☆</button>
+          </div>
+
+          <!-- Image (only shown when hasImage = true) -->
+          <div id="imageWrap" class="hidden"></div>
+
+          <p id="questionText" class="question-text"></p>
+
+          <div id="optionsList" class="options-list"></div>
+
+          <!-- Instant feedback banner -->
+          <div id="feedback" class="feedback"></div>
+
+          <!-- Explanation card -->
+          <div id="explanation" class="explanation">
+            <h4>💡 Explanation</h4>
+            <p id="explanationText"></p>
+          </div>
+        </div>
+
+        <!-- -------- Navigation -------- -->
+        <div class="question-nav">
+          <button id="prevBtn" class="btn btn-outline" disabled>⬅ Previous</button>
+          <button id="submitBtn" class="btn btn-primary">Submit ✅</button>
+          <button id="nextBtn" class="btn btn-primary">Next ➡</button>
+        </div>
+
+        <!-- -------- Progress -------- -->
+        <div class="progress-wrap">
+          <div class="progress-info">
+            <span id="progressInfo">0 of 0 answered</span>
+            <span><kbd>←</kbd><kbd>→</kbd> navigate · <kbd>1</kbd>-<kbd>4</kbd> answer · <kbd>B</kbd> bookmark</span>
+          </div>
+          <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+        </div>
+      </div>
+
+      <!-- -------- Sidebar: filters + palette -------- -->
+      <div class="sidebar">
+        <h3>⚙️ Filters</h3>
+        <div class="controls">
+          <label for="chapterFilter">Chapter</label>
+          <select id="chapterFilter"><option value="all">All Chapters</option></select>
+
+          <label for="searchBox">Search question</label>
+          <input id="searchBox" type="text" placeholder="Type to search…" />
+        </div>
+
+        <h3>📋 Question Palette</h3>
+        <div id="palette" class="palette"></div>
+
+        <div class="legend">
+          <span><span class="dot gray"></span> Not attempted</span>
+          <span><span class="dot green"></span> Correct</span>
+          <span><span class="dot red"></span> Wrong</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Empty state (no results) ============ -->
+    <div id="emptyState" class="empty-state hidden">
+      <div class="big">⚠️</div>
+      <p>Loading questions…</p>
+      <div style="margin-top:18px;">
+        <a class="btn btn-primary" href="index.html">← Back to subjects</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="data/embedded.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

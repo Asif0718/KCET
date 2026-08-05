@@ -1,0 +1,274 @@
+[
+  {
+    "id": 1,
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "question": "A body moving with uniform acceleration travels 40 m in the first 2 s and 60 m in the next 2 s. What is the initial velocity and acceleration of the body?",
+    "options": {
+      "A": "u = 15 m/s, a = 5 m/s²",
+      "B": "u = 10 m/s, a = 5 m/s²",
+      "C": "u = 15 m/s, a = 10 m/s²",
+      "D": "u = 20 m/s, a = 5 m/s²"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "u = 15 m/s, a = 5 m/s²",
+    "explanation": "Using s = ut + ½at² for the first 2 s: 40 = 2u + 2a, i.e. u + a = 20. For the first 4 s total displacement is 40 + 60 = 100 m: 100 = 4u + 8a, i.e. u + 2a = 25. Subtracting the two equations gives a = 5 m/s², and substituting back gives u = 15 m/s. Hence option A is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 2,
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "question": "A ball thrown vertically upward returns to the thrower after 6 s. The initial velocity of the ball is (g = 10 m/s²)",
+    "options": {
+      "A": "20 m/s",
+      "B": "25 m/s",
+      "C": "30 m/s",
+      "D": "35 m/s"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "30 m/s",
+    "explanation": "Total time of flight for vertical throw is T = 2u/g. Given T = 6 s and g = 10 m/s², we get u = gT/2 = (10 × 6)/2 = 30 m/s. The ball takes 3 s to rise and 3 s to fall back. Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 3,
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "question": "A 5 kg block is placed on a frictionless table. A force of 20 N acts on it. The acceleration of the block is",
+    "options": {
+      "A": "2 m/s²",
+      "B": "4 m/s²",
+      "C": "5 m/s²",
+      "D": "10 m/s²"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "4 m/s²",
+    "explanation": "Newton's second law states F = ma. Rearranging, a = F/m = 20/5 = 4 m/s². The acceleration is directly proportional to force and inversely proportional to mass. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 4,
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "question": "An object of mass 2 kg is moving with a speed of 3 m/s. The kinetic energy of the object is",
+    "options": {
+      "A": "3 J",
+      "B": "6 J",
+      "C": "9 J",
+      "D": "18 J"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "9 J",
+    "explanation": "Kinetic energy is given by K = ½mv² = ½ × 2 × (3)² = 9 J. Kinetic energy is a scalar quantity and depends on the square of the speed, so doubling speed quadruples the energy. Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 5,
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "question": "A force of 10 N acts on a body through a distance of 5 m in the direction of the force. The work done is",
+    "options": {
+      "A": "50 J",
+      "B": "25 J",
+      "C": "10 J",
+      "D": "5 J"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "50 J",
+    "explanation": "Work done W = F × s × cosθ. Since force and displacement are in the same direction, θ = 0° and cos 0° = 1. Hence W = 10 × 5 = 50 J. Work is a scalar quantity measured in joules. Hence option A is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 6,
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "question": "The SI unit of power is",
+    "options": {
+      "A": "Joule",
+      "B": "Watt",
+      "C": "Newton",
+      "D": "Horsepower"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Watt",
+    "explanation": "Power is the rate of doing work, P = W/t. Its SI unit is the watt (W), equal to one joule per second. Horsepower is a practical unit, and Newton is the SI unit of force. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 7,
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "question": "The value of acceleration due to gravity at a height equal to the radius of the Earth (R) above the Earth's surface is (g₀ = acceleration at surface)",
+    "options": {
+      "A": "g₀",
+      "B": "g₀/2",
+      "C": "g₀/4",
+      "D": "g₀/8"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "g₀/4",
+    "explanation": "Acceleration due to gravity varies as g = g₀ (R/(R+h))². At height h = R, we get g = g₀(R/2R)² = g₀/4. This follows from the inverse square law of gravitation. Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 8,
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "question": "Kepler's second law of planetary motion is a consequence of conservation of",
+    "options": {
+      "A": "Energy",
+      "B": "Linear momentum",
+      "C": "Angular momentum",
+      "D": "Mass"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Angular momentum",
+    "explanation": "Kepler's second law (equal areas in equal times) implies that the areal velocity of a planet is constant. This happens because the gravitational force is central, exerting zero torque, so angular momentum is conserved. Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 9,
+    "subject": "Physics",
+    "chapter": "Properties of Matter",
+    "question": "Young's modulus of a wire is defined as the ratio of",
+    "options": {
+      "A": "Longitudinal stress to longitudinal strain",
+      "B": "Volume stress to volume strain",
+      "C": "Shearing stress to shearing strain",
+      "D": "Force to area"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "Longitudinal stress to longitudinal strain",
+    "explanation": "Young's modulus Y = (Longitudinal stress)/(Longitudinal strain) = (F/A)/(ΔL/L). It measures the stiffness of a material under axial loading. Bulk modulus relates volume stress and strain while shear modulus relates shearing quantities. Hence option A is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 10,
+    "subject": "Physics",
+    "chapter": "Properties of Matter",
+    "question": "Water rises in a capillary tube because of",
+    "options": {
+      "A": "Viscosity",
+      "B": "Surface tension",
+      "C": "Gravity",
+      "D": "Elasticity"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Surface tension",
+    "explanation": "Capillary rise is due to surface tension and the adhesive forces between water and the tube wall. The liquid is pulled up until the upward force of surface tension balances the weight of the liquid column. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 11,
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "question": "In an isothermal process, the change in internal energy of an ideal gas is",
+    "options": {
+      "A": "Positive",
+      "B": "Negative",
+      "C": "Zero",
+      "D": "Maximum"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Zero",
+    "explanation": "For an ideal gas, internal energy depends only on temperature. In an isothermal process temperature stays constant, so the change in internal energy ΔU = 0. According to the first law, Q = W in such a process. Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 12,
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "question": "The first law of thermodynamics is a statement of conservation of",
+    "options": {
+      "A": "Angular momentum",
+      "B": "Energy",
+      "C": "Mass",
+      "D": "Charge"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Energy",
+    "explanation": "The first law of thermodynamics, ΔQ = ΔU + ΔW, states that heat supplied to a system goes into increasing internal energy and doing external work. It is a restatement of the law of conservation of energy. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 13,
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "question": "The SI unit of electric charge is",
+    "options": {
+      "A": "Ampere",
+      "B": "Volt",
+      "C": "Coulomb",
+      "D": "Farad"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Coulomb",
+    "explanation": "Charge is measured in coulombs (C). One coulomb is the quantity of charge transported by a current of one ampere in one second. Ampere measures current, volt measures potential, and farad measures capacitance. Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 14,
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "question": "Two point charges 2 μC and 8 μC attract each other with a force F. If the distance between them is halved, the new force will be",
+    "options": {
+      "A": "F",
+      "B": "2F",
+      "C": "4F",
+      "D": "8F"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "4F",
+    "explanation": "Coulomb's law: F ∝ 1/r². When distance is halved (r becomes r/2), the force becomes F × (r/(r/2))² = 4F. The electrostatic force follows the inverse square law. Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 15,
+    "subject": "Physics",
+    "chapter": "Modern Physics",
+    "question": "The dual nature of matter was proposed by who",
+    "options": {
+      "A": "Einstein",
+      "B": "de Broglie",
+      "C": "Bohr",
+      "D": "Planck"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "de Broglie",
+    "explanation": "Louis de Broglie proposed that matter particles have a wave associated with them, given by λ = h/mv, known as the de Broglie wavelength. This wave–particle duality was experimentally confirmed by Davisson and Germer. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 16,
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "question": "The ratio of molar specific heats of oxygen is",
+    "options": {
+      "A": "1.4",
+      "B": "1.67",
+      "C": "1.33",
+      "D": "1.28"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "1.4",
+    "explanation": "The ratio of molar specific heats is represented by γ (gamma), where γ = Cp/Cv. It can also be expressed as γ = 1 + (2/f), where f is the number of degrees of freedom of the gas molecule. Oxygen (O₂) is a diatomic gas, and under normal conditions it has five active degrees of freedom (three translational and two rotational). Therefore, γ = 1 + 2/5 = 7/5 = 1.4. Option A is correct. Option B (1.67) is the value for monatomic gases such as helium and argon. Option C (1.33) is typical for polyatomic gases with six degrees of freedom. Option D is incorrect because it does not correspond to the specific heat ratio of oxygen. Questions based on specific heat ratios and degrees of freedom are frequently asked in KCET and other entrance examinations.",
+    "hasImage": false,
+    "image": null
+  }
+]

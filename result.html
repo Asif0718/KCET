@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Result · KCET MCQ</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ============ Navbar ============ -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <span class="logo">🎯</span>
+        KCET Practice
+      </a>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" title="Toggle dark mode">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- ============ Result card ============ -->
+    <div class="result-card">
+      <h2 id="resultSubject">Practice Result</h2>
+      <p class="sub">Here is your performance summary</p>
+
+      <!-- Circular score ring -->
+      <div id="scoreRing" class="result-score" style="--score: 0">
+        <span class="score-value" id="scoreValue">0%</span>
+      </div>
+
+      <div class="result-stats">
+        <div class="stat total">
+          <div class="stat-value" id="statTotal">0</div>
+          <div class="stat-label">Total</div>
+        </div>
+        <div class="stat correct">
+          <div class="stat-value" id="statCorrect">0</div>
+          <div class="stat-label">Correct</div>
+        </div>
+        <div class="stat wrong">
+          <div class="stat-value" id="statWrong">0</div>
+          <div class="stat-label">Wrong</div>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <button id="restartBtn" class="btn btn-primary">🔄 Restart Practice</button>
+        <button id="reviewBtn" class="btn btn-outline">📖 Review Questions</button>
+        <a href="index.html" class="btn btn-ghost">🏠 Home</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="data/embedded.js"></script>
+  <script>
+    /* ============================================================
+       Result page logic
+       Reads the saved summary from LocalStorage (computed in
+       quiz.js) and renders it with an animated score ring.
+       ============================================================ */
+    document.addEventListener("DOMContentLoaded", () => {
+      const subject = new URLSearchParams(window.location.search).get("subject") || "chemistry";
+      const result = Storage.getResult(subject);
+
+      const meta = SUBJECTS.find((s) => s.key === subject);
+      if (meta) document.getElementById("resultSubject").textContent = `${meta.name} Result`;
+
+      if (!result) {
+        document.getElementById("scoreValue").textContent = "—";
+        document.getElementById("scoreRing").style.setProperty("--score", 0);
+        document.querySelector(".result-card .sub").textContent =
+          "No attempt found for this subject yet.";
+      } else {
+        const { total, correct, wrong, percentage } = result;
+        document.getElementById("statTotal").textContent = total;
+        document.getElementById("statCorrect").textContent = correct;
+        document.getElementById("statWrong").textContent = wrong;
+        document.getElementById("scoreValue").textContent = percentage + "%";
+        document.getElementById("scoreRing").style.setProperty("--score", percentage);
+      }
+
+      /* Restart: clear saved session and go back to practice */
+      document.getElementById("restartBtn").addEventListener("click", () => {
+        Storage.resetSession(subject);
+        goTo(`practice.html?subject=${subject}`);
+      });
+
+      /* Review: jump back to the practice page without clearing */
+      document.getElementById("reviewBtn").addEventListener("click", () => {
+        goTo(`practice.html?subject=${subject}`);
+      });
+    });
+  </script>
+</body>
+</html>

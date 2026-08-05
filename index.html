@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KCET MCQ Practice</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ============ Navbar ============ -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <span class="logo">🎯</span>
+        KCET Practice
+      </a>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" title="Toggle dark mode">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ Hero ============ -->
+  <section class="container">
+    <div class="hero">
+      <h1>KCET MCQ Practice Platform</h1>
+      <p>Pick a subject, answer instantly, and get detailed explanations for every question.</p>
+    </div>
+
+    <!-- ============ Subject Cards ============ -->
+    <div id="subjectGrid" class="subject-grid"></div>
+  </section>
+
+  <footer class="footer">
+    Built with plain HTML, CSS & JavaScript — no frameworks needed. Data loads from local JSON.
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="data/embedded.js"></script>
+  <script>
+    /* Render the three subject cards dynamically from SUBJECTS metadata */
+    document.addEventListener("DOMContentLoaded", () => {
+      const grid = document.getElementById("subjectGrid");
+
+      SUBJECTS.forEach((subject) => {
+        const card = document.createElement("a");
+        card.className = "subject-card";
+        card.href = `practice.html?subject=${subject.key}`;
+        card.style.setProperty("--card-color", subject.color);
+        card.style.setProperty("--card-color-2", subject.color2);
+
+        card.innerHTML = `
+          <span class="card-icon">${subject.icon}</span>
+          <h3>${subject.name}</h3>
+          <p>${subject.tagline}</p>
+          <span class="count">Start practicing →</span>
+        `;
+
+        grid.appendChild(card);
+      });
+    });
+  </script>
+</body>
+</html>
