@@ -124,6 +124,28 @@ body {
   gap: 10px;
 }
 
+/* ---------- DBMS Button ---------- */
+.btn-dbms {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.btn-dbms:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+  color: #fff;
+}
+
 /* ---------- Theme Toggle ---------- */
 .icon-btn {
   background: var(--surface-2);

@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DBMS &amp; SQL Beginner Guide</title>
+  <meta name="description" content="Learn DBMS and SQL from scratch with simple explanations, examples, and JOINs." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dbms.css" />
+</head>
+<body>
+  <script>try { if (JSON.parse(localStorage.getItem("kcet_mcq_theme")) === "dark") document.body.classList.add("dark"); } catch (e) {}</script>
+
+  <!-- ============ Scroll Progress ============ -->
+  <div class="scroll-progress" aria-hidden="true"><div id="scrollProgressBar"></div></div>
+
+  <!-- ============ Navbar ============ -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <div class="nav-left">
+        <button id="menuToggle" class="icon-btn menu-btn" aria-label="Open sections menu" aria-expanded="false" aria-controls="sidebar">
+          ☰
+        </button>
+        <a href="index.html" class="brand">
+          <span class="logo">🎯</span>
+          Portal by Sif
+        </a>
+        <span class="mobile-title">📚 DBMS Learning</span>
+      </div>
+      <div class="nav-actions">
+        <a href="index.html" class="btn-home">← Back to Home</a>
+        <button id="themeToggle" class="icon-btn" title="Toggle dark mode">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ Hero ============ -->
+  <header class="container">
+    <div class="hero">
+      <span class="hero-badge">Beginner Friendly · Zero experience needed</span>
+      <h1>Learn DBMS &amp; SQL from Zero to JOINs 🗄️</h1>
+      <p>A tiny interactive course. Short lessons, real-world examples, and zero confusing jargon.</p>
+
+      <div class="path-card" role="group" aria-label="Your learning progress">
+        <div class="path-info">
+          <strong>Your Learning Path</strong>
+          <span id="progressPercent" class="path-percent">0%</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="learningProgress"></div></div>
+        <p class="path-steps">DBMS → SQL → JOINs</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ Roadmap ============ -->
+  <section class="container" aria-labelledby="roadmapTitle">
+    <div class="chapter-card">
+      <h2 id="roadmapTitle">🗺️ Course Roadmap</h2>
+      <p class="muted">This is your full journey. Click any step to jump to that lesson.</p>
+      <ol class="roadmap">
+        <li class="rm-badge rm-start">START</li>
+        <li><a class="rm-step p-basic" href="#introduction"><b>01</b>What is Data?</a></li>
+        <li><a class="rm-step p-basic" href="#database"><b>02</b>What is a Database?</a></li>
+        <li><a class="rm-step p-basic" href="#dbms"><b>03</b>What is DBMS?</a></li>
+        <li><a class="rm-step p-basic" href="#rdbms"><b>04</b>DBMS vs RDBMS</a></li>
+        <li><a class="rm-step p-basic" href="#tables"><b>05</b>Tables · Rows &amp; Columns</a></li>
+        <li><a class="rm-step p-basic" href="#terminology"><b>06</b>Schema &amp; Terms</a></li>
+        <li><a class="rm-step p-basic" href="#keys"><b>07</b>Keys</a></li>
+        <li><a class="rm-step p-sql" href="#sql"><b>08</b>SQL</a></li>
+        <li><a class="rm-step p-sql" href="#commands"><b>09</b>SQL Commands</a></li>
+        <li><a class="rm-step p-sql" href="#create-table"><b>10</b>CREATE</a></li>
+        <li><a class="rm-step p-sql" href="#insert"><b>11</b>INSERT</a></li>
+        <li><a class="rm-step p-sql" href="#select"><b>12</b>SELECT</a></li>
+        <li><a class="rm-step p-sql" href="#where"><b>13</b>WHERE</a></li>
+        <li><a class="rm-step p-sql" href="#operators"><b>14</b>Operators</a></li>
+        <li><a class="rm-step p-sql" href="#order-by"><b>15</b>ORDER BY</a></li>
+        <li><a class="rm-step p-adv" href="#groupby"><b>16</b>GROUP BY</a></li>
+        <li><a class="rm-step p-adv" href="#having"><b>17</b>HAVING</a></li>
+        <li><a class="rm-step p-adv" href="#relationships"><b>18</b>Relationships</a></li>
+        <li><a class="rm-step p-adv" href="#primary-key"><b>19</b>Primary Key</a></li>
+        <li><a class="rm-step p-adv" href="#foreign-key"><b>20</b>Foreign Key</a></li>
+        <li><a class="rm-step p-join" href="#joins"><b>21</b>JOINs</a></li>
+        <li><a class="rm-step p-join" href="#inner-join"><b>22</b>INNER JOIN</a></li>
+        <li><a class="rm-step p-join" href="#left-join"><b>23</b>LEFT JOIN</a></li>
+        <li><a class="rm-step p-join" href="#right-join"><b>24</b>RIGHT JOIN</a></li>
+        <li><a class="rm-step p-join" href="#full-join"><b>25</b>FULL OUTER JOIN</a></li>
+        <li><a class="rm-step p-join" href="#self-join"><b>26</b>SELF JOIN</a></li>
+        <li><a class="rm-step p-join" href="#cross-join"><b>27</b>CROSS JOIN</a></li>
+        <li><a class="rm-step p-join" href="#practice"><b>28</b>Practice ✏️</a></li>
+        <li class="rm-badge rm-end">END 🎉</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ Layout: Sidebar + Content ============ -->
+  <div class="container dbms-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar" aria-label="Course sections">
+      <p class="side-title">📚 DBMS Course</p>
+      <nav class="side-nav" aria-label="Sections navigation">
+        <a href="#introduction" class="active">Introduction</a>
+        <a href="#database">Database</a>
+        <a href="#dbms">DBMS</a>
+        <a href="#rdbms">RDBMS</a>
+        <a href="#tables">Tables</a>
+        <a href="#sql">SQL</a>
+        <a href="#constraints">Constraints</a>
+        <a href="#keys">Keys</a>
+        <a href="#crud">CRUD</a>
+        <a href="#filtering">Filtering</a>
+        <a href="#functions">Functions</a>
+        <a href="#groupby">GROUP BY</a>
+        <a href="#having">HAVING</a>
+        <a href="#relationships">Relationships</a>
+        <a href="#joins">JOINs</a>
+        <a href="#practice">Practice ✏️</a>
+      </nav>
+      <a href="index.html" class="btn btn-primary side-back">← Back to Home</a>
+    </aside>
+    <div class="backdrop" id="backdrop" hidden></div>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="content">
+
+      <!-- ===== Chapter: Introduction ===== -->
+      <section class="chapter-card" id="introduction" aria-labelledby="h-introduction">
+        <span class="chapter-tag">Chapter 1</span>
+        <h2 id="h-introduction">👋 Introduction — What is Data?</h2>
+
+        <h3 id="data">What is Data?</h3>
+        <div class="define">
+          <p><strong>Data means raw facts or information.</strong> Facts about people, places, things — anything.</p>
+        </div>
+
+        <p><strong>Example:</strong> facts about one student:</p>
+        <div class="fact-box">
+          <p>Name: <b>Asif</b></p>
+          <p>Age: <b>21</b></p>
+          <p>CGPA: <b>9.15</b></p>
+          <p>Department: <b>CSE</b></p>
+        </div>
+
+        <div class="analogy">
+          <p>🧠 <b>Think of it like this:</b> data is like ingredients in a kitchen. Alone they are just items. But when we organize and cook them, we get a useful dish!</p>
+        </div>
+
+        <div class="tip">
+          <p><strong>Why is data important?</strong> Because good data helps us make good decisions — which student passed, which product sold most, which day had most visitors. Almost every app you use (YouTube, Instagram, Paytm) runs on data.</p>
+        </div>
+      </section>
+
+      <!-- ===== Chapter: Database ===== -->
+      <section class="chapter-card" id="database" aria-labelledby="h-database">
+        <span class="chapter-tag">Chapter 2</span>
+        <h2 id="h-database">🗃️ What is a Database?</h2>
+
+        <div class="define">
+          <p>A <strong>database</strong> is an organized place where we store data so it is easy to find, manage, and update.</p>
+        </div>
+
+        <div class="analogy">
+          <p>🧠 <b>Analogy:</b> A database is like a <b>school office cupboard</b>. All student files are kept inside it in order — not thrown around randomly.</p>
+        </div>
+
+        <div class="flow" aria-label="College stores data in a student database which holds student information">
+          <span class="flow-node">🏫 College</span>
+          <span class="flow-arrow">↓</span>
+          <span class="flow-node accent">Student Database</span>
+          <span class="flow-arrow">↓</span>
+          <span class="flow-node">👤 Student Information</span>
+        </div>
+
+        <h3>A tiny example table</h3>
+        <p>This is how data looks inside a database — in a <b>table</b>:</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>ID</th><th>Name</th><th>Age</th><th>Department</th><th>CGPA</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>101</td><td>Asif</td><td>21</td><td>CSE</td><td>9.15</td></tr>
+              <tr><td>102</td><td>Jasmine</td><td>22</td><td>ECE</td><td>8.50</td></tr>
+              <tr><td>103</td><td>Aman</td><td>20</td><td>CSE</td><td>8.90</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ul class="simple-list">
+          <li><b>Table</b> → data arranged in rows and columns (like an Excel sheet). 📄</li>
+          <li><b>Row</b> → one complete entry. Example: the full record of Asif. ➡️</li>
+          <li><b>Column</b> → one type of information for everyone. Example: the Age column. ⬇️</li>
+        </ul>
+      </section>
+
+      <!-- ===== Chapter: DBMS ===== -->
+      <section class="chapter-card" id="dbms" aria-labelledby="h-dbms">
+        <span class="chapter-tag">Chapter 3</span>
+        <h2 id="h-dbms">⚙️ What is DBMS?</h2>
+
+        <div class="define">
+          <p><strong>DBMS = Database Management System.</strong></p>
+          <p>It is <strong>software</strong> that helps us store, manage, retrieve, update and delete data from databases.</p>
+        </div>
+
+        <p>Popular DBMS software:</p>
+        <div class="chip-row">
+          <span class="chip-tag">MySQL</span>
+          <span class="chip-tag">PostgreSQL</span>
+          <span class="chip-tag">Oracle</span>
+          <span class="chip-tag">SQL Server</span>
+          <span class="chip-tag">SQLite</span>
+        </div>
+
+        <h3>How you talk to a database</h3>
+        <p>You never touch the database directly. The DBMS sits in the middle:</p>
+        <div class="flow" aria-label="You send SQL to the DBMS which works on the database">
+          <span class="flow-node">🙋 You</span>
+          <span class="flow-arrow">↓ sends SQL</span>
+          <span class="flow-node accent">⚙️ DBMS</span>
+          <span class="flow-arrow">↓ reads/writes</span>
+          <span class="flow-node">🗄️ Database</span>
+        </div>
+
+        <h3>What happens when you send a query?</h3>
+        <ol class="simple-list">
+          <li>You write a request (called a <b>query</b>) in SQL.</li>
+          <li>The DBMS <b>checks</b> it — is the spelling correct? Do you have permission?</li>
+          <li>The DBMS <b>finds</b> the data inside the database.</li>
+          <li>The DBMS <b>returns the result</b> back to you.</li>
+        </ol>
+
+        <h3 id="why-dbms">Why do we need a DBMS?</h3>
+        <p>Imagine saving all college records in normal text files. Chaos! 😵 Compare:</p>
+        <div class="compare-grid">
+          <div class="compare bad">
+            <h4>😵 Without DBMS</h4>
+            <ul>
+              <li>Many messy files</li>
+              <li>Duplicate data everywhere</li>
+              <li>Hard to search</li>
+              <li>Security problems</li>
+              <li>Difficult updates</li>
+            </ul>
+          </div>
+          <div class="compare good">
+            <h4>😎 With DBMS</h4>
+            <ul>
+              <li>Organized data</li>
+              <li>Fast searching</li>
+              <li>Security (who can see what)</li>
+              <li>Relationships between data</li>
+              <li>Many users at the same time</li>
+              <li>Backup &amp; recovery</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Chapter: RDBMS ===== -->
+      <section class="chapter-card" id="rdbms" aria-labelledby="h-rdbms">
+        <span class="chapter-tag">Chapter 4</span>
+        <h2 id="h-rdbms">🔗 DBMS vs RDBMS</h2>
+
+        <div class="compare-grid">
+          <div class="compare plain">
+            <h4>DBMS</h4>
+            <p><b>D</b>atabase <b>M</b>anagement <b>S</b>ystem</p>
+            <p class="muted">Stores data as files (any format).</p>
+          </div>
+          <div class="compare good">
+            <h4>RDBMS</h4>
+            <p><b>R</b>elational Database Management System</p>
+            <p>Data stored in <b>tables</b> → tables can be <b>related</b> to each other 🔗</p>
+          </div>
+        </div>
+
+        <div class="analogy">
+          <p>🧠 <b>Analogy:</b> In an RDBMS, the Students table and Departments table are linked like <b>friends on Instagram</b> — each student profile "points to" their department page.</p>
+        </div>
+
+        <p>Popular RDBMS: MySQL, PostgreSQL, Oracle, SQL Server.</p>
+
+        <h3>Quick comparison</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Feature</th><th>DBMS</th><th>RDBMS</th></tr></thead>
+            <tbody>
+              <tr><td>Data storage</td><td>Files</td><td>Tables (rows &amp; columns)</td></tr>
+              <tr><td>Relationships</td><td>Not supported</td><td>Supported ✔</td></tr>
+              <tr><td>Data redundancy</td><td>More duplication</td><td>Reduced via relations</td></tr>
+              <tr><td>Language</td><td>Varies</td><td>SQL</td></tr>
+              <tr><td>Examples</td><td>XML, file systems</td><td>MySQL, PostgreSQL, Oracle</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tip"><p><strong>Remember:</strong> Every RDBMS is a DBMS, but not every DBMS is an RDBMS. This course focuses on RDBMS.</p></div>
+      </section>
+
+      <!-- ===== Chapter: Tables / Terminology ===== -->
+      <section class="chapter-card" id="tables" aria-labelledby="h-tables">
+        <span class="chapter-tag">Chapter 5</span>
+        <h2 id="h-tables">📊 Tables, Rows &amp; Columns</h2>
+
+        <h3 id="terminology">Database Terminology (simple words)</h3>
+        <p>You will hear these words again and again. Here they are in easy language:</p>
+
+        <div class="term-grid">
+          <div class="term-card"><h4>Database</h4><p>An organized collection of data.</p><code>college_db</code></div>
+          <div class="term-card"><h4>Table</h4><p>Data in rows &amp; columns. Like an Excel sheet.</p><code>students</code></div>
+          <div class="term-card"><h4>Row (Record / Tuple)</h4><p>One complete entry.</p><code>101 | Asif | 21 | CSE</code></div>
+          <div class="term-card"><h4>Column (Attribute / Field)</h4><p>One property of the data.</p><code>age column</code></div>
+          <div class="term-card"><h4>Relation</h4><p>Fancy word for a table.</p><code>students = relation</code></div>
+          <div class="term-card"><h4>Schema</h4><p>The design/blueprint — table names, columns, types.</p><code>students(id, name, age)</code></div>
+        </div>
+        <div class="tip"><p><strong>Remember:</strong> Row = Record = Tuple (same thing!). Column = Attribute = Field (same thing!). Don't let anyone confuse you. 😄</p></div>
+
+        <h3 id="create-db">Creating a Database</h3>
+        <p>First, make an empty container to hold your tables:</p>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>CREATE DATABASE college;</code></pre>
+        </figure>
+        <p>What happens? The DBMS creates a new empty storage area named <code>college</code>. Nothing inside yet — just the container.</p>
+
+        <p>Then tell the DBMS "I want to work inside that database":</p>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>USE college;</code></pre>
+        </figure>
+        <div class="note"><p><b>Note:</b> The exact selection command can vary by database system (e.g., PostgreSQL uses <code>\c college;</code>). <code>USE</code> works in MySQL / SQL Server.</p></div>
+
+        <h3 id="create-table">Creating a Table</h3>
+        <p>Now create a table inside it. Each column needs a <b>name</b> and a <b>type</b> (what kind of data it holds):</p>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>CREATE TABLE students (
+    student_id INT,
+    name VARCHAR(50),
+    age INT,
+    cgpa DECIMAL(3,2)
+);</code></pre>
+        </figure>
+        <p><b>Line by line:</b></p>
+        <ul class="simple-list">
+          <li><code>CREATE TABLE students</code> → make a new table named <b>students</b>.</li>
+          <li><code>student_id INT</code> → a column for whole numbers (IDs).</li>
+          <li><code>name VARCHAR(50)</code> → text up to 50 characters.</li>
+          <li><code>age INT</code> → whole number.</li>
+          <li><code>cgpa DECIMAL(3,2)</code> → decimal number: max 3 digits, 2 after the point (like 9.15).</li>
+        </ul>
+
+        <p>Visual shape of the table:</p>
+        <figure class="code-block ascii">
+          <figcaption><span class="code-lang">Design</span></figcaption>
+          <pre><code>students
+--------------------------------
+student_id → INT
+name       → VARCHAR(50)
+age        → INT
+cgpa       → DECIMAL(3,2)</code></pre>
+        </figure>
+
+        <h3 id="data-types">SQL Data Types</h3>
+        <p>A data type tells the column what kind of value it accepts:</p>
+        <div class="type-grid">
+          <div class="term-card"><h4><code>INT</code></h4><p>Whole numbers.</p><code>21, 101, -5</code></div>
+          <div class="term-card"><h4><code>VARCHAR(n)</code></h4><p>Text up to n characters. Saves space.</p><code>'Asif'</code></div>
+          <div class="term-card"><h4><code>CHAR(n)</code></h4><p>Fixed-length text. Always uses n chars.</p><code>'M' , 'F'</code></div>
+          <div class="term-card"><h4><code>DECIMAL(p,s)</code></h4><p>Exact decimal numbers (money, CGPA).</p><code>9.15, 199.99</code></div>
+          <div class="term-card"><h4><code>DATE</code></h4><p>Dates only.</p><code>'2026-08-21'</code></div>
+          <div class="term-card"><h4><code>BOOLEAN</code></h4><p>True or False.</p><code>TRUE, FALSE</code></div>
+        </div>
+      </section>
+
+      <!-- ===== Chapter: SQL ===== -->
+      <section class="chapter-card" id="sql" aria-labelledby="h-sql">
+        <span class="chapter-tag">Chapter 6</span>
+        <h2 id="h-sql">💬 What is SQL?</h2>
+
+        <div class="define">
+          <p><strong>SQL = Structured Query Language.</strong></p>
+          <p>It is the language we use to communicate with relational databases — ask for data, add data, change data.</p>
+        </div>
+
+        <div class="flow" aria-label="You write a SQL query, the DBMS runs it on the database and returns a result">
+          <span class="flow-node">🙋 You</span>
+          <span class="flow-arrow">↓</span>
+          <span class="flow-node">💬 SQL Query</span>
+          <span class="flow-arrow">↓</span>
+          <span class="flow-node accent">⚙️ DBMS</span>
+          <span class="flow-arrow">↓</span>
+          <span class="flow-node">🗄️ Database</span>
+          <span class="flow-arrow">↓</span>
+          <span class="flow-node success">✅ Result</span>
+        </div>
+
+        <h3>Your first query</h3>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT * FROM students;</code></pre>
+        </figure>
+        <p><b>Every part explained:</b></p>
+        <ul class="simple-list">
+          <li><code>SELECT</code> → "show me…"</li>
+          <li><code>*</code> → "all columns"</li>
+          <li><code>FROM students</code> → "from the table called students"</li>
+          <li><code>;</code> → end of the statement (like a full stop.)</li>
+        </ul>
+        <p>In plain English: <i>"Show me all columns and all rows from the students table."</i></p>
+
+        <h3 id="commands">SQL Command Categories</h3>
+        <p>SQL commands come in 5 families. Think of them as toolboxes:</p>
+        <div class="cmd-grid">
+          <div class="cmd-card ddl"><h4>DDL — Structure 🔧</h4><p>Defines/changes table structure.</p><div class="chip-row"><span class="chip-tag">CREATE</span><span class="chip-tag">ALTER</span><span class="chip-tag">DROP</span><span class="chip-tag">TRUNCATE</span></div></div>
+          <div class="cmd-card dml"><h4>DML — Data ✏️</h4><p>Changes the data inside tables.</p><div class="chip-row"><span class="chip-tag">INSERT</span><span class="chip-tag">UPDATE</span><span class="chip-tag">DELETE</span></div></div>
+          <div class="cmd-card dql"><h4>DQL — Read 👀</h4><p>Asks questions about data.</p><div class="chip-row"><span class="chip-tag">SELECT</span></div></div>
+          <div class="cmd-card dcl"><h4>DCL — Rights 🔐</h4><p>Controls permissions.</p><div class="chip-row"><span class="chip-tag">GRANT</span><span class="chip-tag">REVOKE</span></div></div>
+          <div class="cmd-card tcl"><h4>TCL — Save points 💾</h4><p>Controls transactions (save/undo).</p><div class="chip-row"><span class="chip-tag">COMMIT</span><span class="chip-tag">ROLLBACK</span><span class="chip-tag">SAVEPOINT</span></div></div>
+        </div>
+        <div class="tip"><p><strong>In this course we focus on the everyday five:</strong> <code>CREATE</code>, <code>INSERT</code>, <code>SELECT</code>, <code>UPDATE</code>, <code>DELETE</code>.</p></div>
+      </section>
+
+      <!-- ===== Chapter: Constraints ===== -->
+      <section class="chapter-card" id="constraints" aria-labelledby="h-constraints">
+        <span class="chapter-tag">Chapter 7</span>
+        <h2 id="h-constraints">🚧 Constraints</h2>
+
+        <div class="define">
+          <p><strong>Constraints are rules</strong> that control what kind of data can enter a table. They protect your data from mistakes.</p>
+        </div>
+
+        <div class="analogy"><p>🧠 <b>Analogy:</b> Constraints are like the bouncer at a club door 🕴️ — wrong data is simply not allowed in.</p></div>
+
+        <div class="term-grid">
+          <div class="term-card"><h4><code>PRIMARY KEY</code></h4><p>Uniquely identifies each row.</p><code>student_id</code></div>
+          <div class="term-card"><h4><code>FOREIGN KEY</code></h4><p>Links a column to another table.</p><code>department_id</code></div>
+          <div class="term-card"><h4><code>NOT NULL</code></h4><p>This field cannot be empty.</p><code>name NOT NULL</code></div>
+          <div class="term-card"><h4><code>UNIQUE</code></h4><p>No duplicates allowed.</p><code>email UNIQUE</code></div>
+          <div class="term-card"><h4><code>CHECK</code></h4><p>Value must pass a condition.</p><code>age &gt;= 17</code></div>
+          <div class="term-card"><h4><code>DEFAULT</code></h4><p>Auto-fill value if nothing given.</p><code>cgpa DEFAULT 0.00</code></div>
+        </div>
+
+        <p>Example with rules attached:</p>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    age INT CHECK (age &gt;= 17),
+    cgpa DECIMAL(3,2) DEFAULT 0.00
+);</code></pre>
+        </figure>
+      </section>
+
+      <!-- ===== Chapter: Keys ===== -->
+      <section class="chapter-card" id="keys" aria-labelledby="h-keys">
+        <span class="chapter-tag">Chapter 8</span>
+        <h2 id="h-keys">🔑 Keys — Primary &amp; Foreign</h2>
+
+        <h3 id="primary-key">PRIMARY KEY</h3>
+        <div class="define"><p>A <strong>primary key uniquely identifies each row</strong> in a table.</p></div>
+        <div class="analogy"><p>🧠 <b>Analogy:</b> Your roll number / Aadhaar number. Many students may share the name "Asif" — but no two students ever share the same ID.</p></div>
+
+        <p>The highlighted column below is the primary key:</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th class="pk">🔑 student_id</th><th>name</th></tr></thead>
+            <tbody>
+              <tr><td class="pk">101</td><td>Asif</td></tr>
+              <tr><td class="pk">102</td><td>Jasmine</td></tr>
+              <tr><td class="pk">103</td><td>Aman</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tip"><p><strong>Rules of a primary key:</strong> ✔ Must be <b>unique</b> &nbsp;✔ Cannot be <b>NULL</b> (empty) &nbsp;✔ Identifies exactly one record.</p></div>
+
+        <h3 id="foreign-key">FOREIGN KEY</h3>
+        <div class="define"><p>A <strong>foreign key</strong> is a column in one table that <strong>points to the primary key of another table</strong>. It is how tables become "related".</p></div>
+
+        <p>Two separate tables:</p>
+        <div class="dual-tables">
+          <div>
+            <p class="tbl-name">Departments</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th class="pk">department_id</th><th>department_name</th></tr></thead>
+                <tbody>
+                  <tr><td class="pk">1</td><td>CSE</td></tr>
+                  <tr><td class="pk">2</td><td>ECE</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <p class="tbl-name">Students</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th class="pk">student_id</th><th>name</th><th class="fk">department_id 🔗</th></tr></thead>
+                <tbody>
+                  <tr><td class="pk">101</td><td>Asif</td><td class="fk">1</td></tr>
+                  <tr><td class="pk">102</td><td>Jasmine</td><td class="fk">2</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow" aria-label="Students.department_id points to Departments.department_id">
+          <span class="flow-node fk-node">Students.department_id</span>
+          <span class="flow-arrow">↓ points to</span>
+          <span class="flow-node pk-node">Departments.department_id</span>
+        </div>
+
+        <div class="tip"><p><strong>Super important:</strong> This connection between two tables is the <b>foundation of JOINs</b> — coming soon at the end of this course! 🚀</p></div>
+      </section>
+
+      <!-- ===== Chapter: CRUD ===== -->
+      <section class="chapter-card" id="crud" aria-labelledby="h-crud">
+        <span class="chapter-tag">Chapter 9</span>
+        <h2 id="h-crud">✏️ CRUD — Insert, Select, Update, Delete</h2>
+        <p class="muted"><b>CRUD</b> = the 4 everyday operations: <b>C</b>reate, <b>R</b>ead, <b>U</b>pdate, <b>D</b>elete.</p>
+
+        <h3 id="insert">INSERT — adding data</h3>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>INSERT INTO students
+VALUES (101, 'Asif', 21, 9.15);</code></pre>
+        </figure>
+        <p>Add many students in one go:</p>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>INSERT INTO students (student_id, name, age, cgpa)
+VALUES
+    (102, 'Jasmine', 22, 8.50),
+    (103, 'Aman', 20, 8.90);</code></pre>
+        </figure>
+        <div class="note"><p>Text values need quotes <code>'Asif'</code>, numbers don't. Listing column names first is safer — everyone knows which value goes where.</p></div>
+
+        <h3 id="select">SELECT — reading data</h3>
+        <p>Get everything:</p>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT * FROM students;</code></pre>
+        </figure>
+        <p>Get only some columns:</p>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT name, cgpa
+FROM students;</code></pre>
+        </figure>
+        <div class="tip"><p><code>*</code> means "all columns". Real projects prefer naming columns — faster and clearer.</p></div>
+
+        <h3 id="update">UPDATE — changing data</h3>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>UPDATE students
+SET cgpa = 9.25
+WHERE student_id = 101;</code></pre>
+        </figure>
+        <div class="warning">
+          <p>⚠️ <strong>Be very careful:</strong> <code>UPDATE</code> without <code>WHERE</code> changes <b>every single row</b> in the table! Always double-check your WHERE clause.</p>
+        </div>
+
+        <h3 id="delete">DELETE — removing data</h3>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>DELETE FROM students
+WHERE student_id = 101;</code></pre>
+        </figure>
+        <p>Don't confuse these three "removers":</p>
+        <div class="term-grid">
+          <div class="term-card warn-card"><h4><code>DELETE</code></h4><p>Removes chosen <b>rows</b>. Can use WHERE. Can be undone (ROLLBACK).</p></div>
+          <div class="term-card warn-card"><h4><code>TRUNCATE</code></h4><p>Empties the whole table instantly. All rows gone, table stays.</p></div>
+          <div class="term-card danger-card"><h4><code>DROP</code></h4><p>Deletes the <b>entire table</b> itself — structure and all. 💣</p></div>
+        </div>
+        <div class="warning"><p>⚠️ Same warning as UPDATE: <code>DELETE</code> without <code>WHERE</code> wipes out all rows!</p></div>
+      </section>
+
+      <!-- ===== Chapter: Filtering ===== -->
+      <section class="chapter-card" id="filtering" aria-labelledby="h-filtering">
+        <span class="chapter-tag">Chapter 10</span>
+        <h2 id="h-filtering">🔍 Filtering — WHERE &amp; Friends</h2>
+
+        <h3 id="where">WHERE</h3>
+        <div class="define"><p><strong>WHERE chooses only the rows that match a condition.</strong></p></div>
+        <div class="analogy"><p>🧠 <b>Analogy:</b> LIKE a water filter 🚰 — only what passes the condition comes through.</p></div>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT *
+FROM students
+WHERE cgpa &gt; 8.5;</code></pre>
+        </figure>
+        <p>Result — only students above 8.5:</p>
+        <figure class="code-block result">
+          <figcaption><span class="code-lang">Result</span></figcaption>
+          <pre><code>student_id | name | cgpa
+101        | Asif | 9.15
+103        | Aman | 8.90</code></pre>
+        </figure>
+        <p class="muted">(Jasmine has exactly 8.50 — not <i>greater than</i> 8.5 — so she is filtered out.)</p>
+
+        <h3 id="operators">Operators</h3>
+        <div class="op-grid">
+          <div class="term-card"><h4>Compare</h4><p><code>=</code> equal · <code>&gt;</code> greater · <code>&lt;</code> less<br /><code>&gt;=</code> · <code>&lt;=</code><br /><code>&lt;&gt;</code> or <code>!=</code> not equal</p></div>
+          <div class="term-card"><h4>Combine</h4><p><code>AND</code> both true<br /><code>OR</code> either true<br /><code>NOT</code> reverse</p></div>
+        </div>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT * FROM students
+WHERE department_id = 1 AND age &gt;= 20;</code></pre>
+        </figure>
+
+        <h3 id="between">BETWEEN — a range</h3>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT *
+FROM students
+WHERE cgpa BETWEEN 8.0 AND 9.0;</code></pre>
+        </figure>
+        <figure class="code-block ascii">
+          <figcaption><span class="code-lang">Visual</span></figcaption>
+          <pre><code>8.0 ◄═══════════════► 9.0
+     both ends INCLUDED</code></pre>
+        </figure>
+
+        <h3 id="in">IN — any value from a list</h3>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT *
+FROM students
+WHERE department_id IN (1, 2);</code></pre>
+        </figure>
+        <div class="tip"><p><b>Why useful?</b> Instead of writing <code>department_id = 1 OR department_id = 2 OR …</code>, just list values inside <code>IN ()</code>. Short and clean.</p></div>
+
+        <h3 id="like">LIKE — pattern matching</h3>
+        <p><code>LIKE</code> searches text by <b>pattern</b>, using two wildcards:</p>
+        <div class="term-grid">
+          <div class="term-card"><h4><code>%</code> = anything</h4><p><code>'A%'</code> starts with A<br /><code>'%A%'</code> contains A<br /><code>'%A'</code> ends with A</p></div>
+          <div class="term-card"><h4><code>_</code> = one character</h4><p><code>'A_'</code> A followed by exactly 1 letter<br /><code>'___'</code> exactly 3 letters</p></div>
+        </div>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT * FROM students
+WHERE name LIKE 'A%';</code></pre>
+        </figure>
+
+        <h3 id="null">NULL — missing value</h3>
+        <div class="define"><p><strong>NULL means "no value at all"</strong> — the field was never filled. It is not zero and not empty text.</p></div>
+        <figure class="code-block ascii">
+          <figcaption><span class="code-lang">Important</span></figcaption>
+          <pre><code>NULL ≠ 0
+NULL ≠ ''
+NULL ≠ false</code></pre>
+        </figure>
+        <p>Because NULL is "unknown", normal comparisons fail. Use special checks:</p>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT * FROM students WHERE cgpa IS NULL;
+SELECT * FROM students WHERE cgpa IS NOT NULL;</code></pre>
+        </figure>
+        <div class="warning"><p>⚠️ Never write <code>WHERE cgpa = NULL</code> — it silently returns nothing. Use <code>IS NULL</code>.</p></div>
+
+        <h3 id="distinct">DISTINCT — remove duplicates</h3>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT DISTINCT department_id
+FROM students;</code></pre>
+        </figure>
+        <p>If 30 students belong to CSE, DISTINCT shows <code>CSE</code> only once. It removes duplicate values from the result.</p>
+
+        <h3 id="order-by">ORDER BY — sorting</h3>
+        <div class="compare-grid">
+          <div class="compare plain"><h4>ASC ⬆️ (default)</h4><pre class="mini-pre">9.15 → 8.90 → 8.50
+smallest to largest</pre></div>
+          <div class="compare plain"><h4>DESC ⬇️</h4><pre class="mini-pre">9.15 → 8.90 → 8.50 reversed!
+largest to smallest</pre></div>
+        </div>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT * FROM students ORDER BY cgpa DESC;</code></pre>
+        </figure>
+
+        <h3 id="limit">LIMIT — take only a few rows</h3>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT * FROM students LIMIT 5;</code></pre>
+        </figure>
+        <div class="tip"><p><b>Why useful?</b> A table with 10 million rows would crash your app if you fetched it all. LIMIT grabs just a slice (e.g., "top 5 results").</p></div>
+      </section>
+
+      <!-- ===== Chapter: Functions ===== -->
+      <section class="chapter-card" id="functions" aria-labelledby="h-functions">
+        <span class="chapter-tag">Chapter 11</span>
+        <h2 id="h-functions">🧮 Aggregate Functions</h2>
+        <div class="define"><p><strong>Aggregate functions do math on many rows</strong> and give back one answer.</p></div>
+
+        <div class="chip-row big-chips">
+          <span class="chip-tag">COUNT() → how many</span>
+          <span class="chip-tag">SUM() → total</span>
+          <span class="chip-tag">AVG() → average</span>
+          <span class="chip-tag">MIN() → smallest</span>
+          <span class="chip-tag">MAX() → largest</span>
+        </div>
+
+        <p>Take these CGPAs: <code>9.15, 8.50, 8.90</code></p>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT AVG(cgpa) FROM students;</code></pre>
+        </figure>
+        <figure class="code-block result">
+          <figcaption><span class="code-lang">Result</span></figcaption>
+          <pre><code>AVG(cgpa)
+---------
+8.85   -- (9.15 + 8.50 + 8.90) ÷ 3</code></pre>
+        </figure>
+        <p><code>SELECT COUNT(*) FROM students;</code> → <code>3</code> (three rows). Easy!</p>
+      </section>
+
+      <!-- ===== Chapter: GROUP BY ===== -->
+      <section class="chapter-card" id="groupby" aria-labelledby="h-groupby">
+        <span class="chapter-tag">Chapter 12</span>
+        <h2 id="h-groupby">👥 GROUP BY</h2>
+        <div class="define"><p><strong>GROUP BY puts similar rows into groups</strong> so you can calculate something per group.</p></div>
+        <div class="analogy"><p>🧠 <b>Analogy:</b> Sorting your laundry into piles 🧦 — whites together, colors together — then counting each pile once.</p></div>
+
+        <p>Suppose our students belong to departments like this:</p>
+        <figure class="code-block ascii">
+          <figcaption><span class="code-lang">Groups</span></figcaption>
+          <pre><code>CSE  → [Asif, Aman]        → 2 students
+ECE  → [Jasmine]           → 1 student
+MECH → [Ravi, Diya, Kabeer, Sana] → 4 students</code></pre>
+        </figure>
+
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT department_id, COUNT(*)
+FROM students
+GROUP BY department_id;</code></pre>
+        </figure>
+        <figure class="code-block result">
+          <figcaption><span class="code-lang">Result</span></figcaption>
+          <pre><code>department_id | COUNT(*)
+1             | 2
+2             | 1
+3             | 4</code></pre>
+        </figure>
+      </section>
+
+      <!-- ===== Chapter: HAVING ===== -->
+      <section class="chapter-card" id="having" aria-labelledby="h-having">
+        <span class="chapter-tag">Chapter 13</span>
+        <h2 id="h-having">🚦 HAVING</h2>
+        <div class="define">
+          <p><strong>WHERE filters rows.</strong> <strong>HAVING filters groups.</strong></p>
+          <p>You cannot use <code>WHERE</code> on aggregate results (like COUNT) — that's what HAVING is for.</p>
+        </div>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT department_id, COUNT(*)
+FROM students
+GROUP BY department_id
+HAVING COUNT(*) &gt; 2;</code></pre>
+        </figure>
+        <figure class="code-block result">
+          <figcaption><span class="code-lang">Result</span></figcaption>
+          <pre><code>department_id | COUNT(*)
+3             | 4    -- only MECH survived!</code></pre>
+        </figure>
+
+        <h3>The full journey of a query</h3>
+        <div class="flow">
+          <span class="flow-node">Rows</span>
+          <span class="flow-arrow">↓ WHERE filters rows</span>
+          <span class="flow-node">GROUP BY makes groups</span>
+          <span class="flow-arrow">↓</span>
+          <span class="flow-node accent">Groups</span>
+          <span class="flow-arrow">↓ HAVING filters groups</span>
+          <span class="flow-node success">Final Result</span>
+        </div>
+      </section>
+
+      <!-- ===== Chapter: Relationships ===== -->
+      <section class="chapter-card" id="relationships" aria-labelledby="h-relationships">
+        <span class="chapter-tag">Chapter 14</span>
+        <h2 id="h-relationships">💞 Relationships Between Tables</h2>
+        <p>Tables connect to each other in three possible ways:</p>
+
+        <div class="rel-grid">
+          <div class="term-card">
+            <h4>One-to-One (1 : 1)</h4>
+            <p>One row matches exactly one row.</p>
+            <p class="mono">Person → Passport 🛂</p>
+            <p class="muted">One person has one passport; one passport belongs to one person.</p>
+          </div>
+          <div class="term-card">
+            <h4>One-to-Many (1 : N)</h4>
+            <p>One row matches many rows.</p>
+            <p class="mono">Department ↓<br />many Students 🎓</p>
+            <p class="muted">One department holds many students — done with a foreign key.</p>
+          </div>
+          <div class="term-card">
+            <h4>Many-to-Many (M : N)</h4>
+            <p>Many match many.</p>
+            <p class="mono">Students ↕ Courses 📚</p>
+            <p class="muted">A student takes many courses; a course has many students. Built using a third <b>bridge table</b> (e.g., enrollments) holding pairs of IDs.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Chapter: JOINs ===== -->
+      <section class="chapter-card" id="joins" aria-labelledby="h-joins">
+        <span class="chapter-tag">Chapter 15</span>
+        <h2 id="h-joins">🤝 JOINs — Combining Tables</h2>
+
+        <h3 id="why-joins">Why are JOINs needed?</h3>
+        <p>Real data is split across tables to stay clean. Look — the info we want lives in two places:</p>
+        <div class="dual-tables">
+          <div>
+            <p class="tbl-name">Students</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>student_id</th><th>name</th><th>department_id</th></tr></thead>
+                <tbody>
+                  <tr><td>101</td><td>Asif</td><td>1</td></tr>
+                  <tr><td>102</td><td>Jasmine</td><td>2</td></tr>
+                  <tr><td>104</td><td>Divya</td><td>—</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <p class="tbl-name">Departments</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>department_id</th><th>department_name</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>CSE</td></tr>
+                  <tr><td>2</td><td>ECE</td></tr>
+                  <tr><td>3</td><td>MECH</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <p>We want: <span class="mono">Asif → CSE</span> &nbsp;<span class="mono">Jasmine → ECE</span></p>
+        <div class="tip"><p><strong>JOIN combines related rows from two tables into one result</strong> — using the foreign key link you learned earlier.</p></div>
+
+        <h3 id="inner-join">INNER JOIN</h3>
+        <div class="define"><p><strong>Returns only the matching rows from both tables.</strong> No match → not included.</p></div>
+        <svg class="venn" viewBox="0 0 240 132" role="img" aria-label="Diagram: only the overlap of both circles is kept">
+          <defs><clipPath id="clipInnerL"><circle cx="88" cy="66" r="46"/></clipPath></defs>
+          <circle class="v-faint" cx="88"  cy="66" r="46"/>
+          <circle class="v-faint" cx="152" cy="66" r="46"/>
+          <circle class="v-hit"  cx="152" cy="66" r="46" clip-path="url(#clipInnerL)"/>
+          <text x="62" y="71">A</text><text x="170" y="71">B</text>
+        </svg>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT s.name, d.department_name
+FROM students s
+INNER JOIN departments d
+    ON s.department_id = d.department_id;</code></pre>
+        </figure>
+        <p class="muted"><code>s</code> and <code>d</code> are nicknames (aliases) for the tables. <code>ON</code> states the match rule.</p>
+        <figure class="code-block result">
+          <figcaption><span class="code-lang">Result</span></figcaption>
+          <pre><code>name    | department_name
+Asif    | CSE
+Jasmine | ECE</code></pre>
+        </figure>
+        <p>(Divya has no department → skipped. MECH has no students → skipped.)</p>
+
+        <h3 id="left-join">LEFT JOIN</h3>
+        <div class="define"><p><strong>Keeps ALL rows from the left table</strong>, plus matches from the right. No match? Right side becomes NULL.</p></div>
+        <svg class="venn" viewBox="0 0 240 132" role="img" aria-label="Diagram: entire left circle plus the overlap is kept">
+          <circle class="v-hit" cx="88" cy="66" r="46"/>
+          <circle class="v-faint" cx="152" cy="66" r="46"/>
+          <text x="55" y="71">A</text><text x="170" y="71">B</text>
+        </svg>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT s.name, d.department_name
+FROM students s
+LEFT JOIN departments d
+    ON s.department_id = d.department_id;</code></pre>
+        </figure>
+        <figure class="code-block result">
+          <figcaption><span class="code-lang">Result</span></figcaption>
+          <pre><code>name    | department_name
+Asif    | CSE
+Jasmine | ECE
+Divya   | NULL  ← still here!</code></pre>
+        </figure>
+
+        <h3 id="right-join">RIGHT JOIN</h3>
+        <div class="define"><p><strong>Keeps ALL rows from the right table</strong>, plus matches from the left. Mirror image of LEFT JOIN.</p></div>
+        <svg class="venn" viewBox="0 0 240 132" role="img" aria-label="Diagram: entire right circle plus the overlap is kept">
+          <circle class="v-faint" cx="88" cy="66" r="46"/>
+          <circle class="v-hit" cx="152" cy="66" r="46"/>
+          <text x="55" y="71">A</text><text x="168" y="71">B</text>
+        </svg>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT s.name, d.department_name
+FROM students s
+RIGHT JOIN departments d
+    ON s.department_id = d.department_id;</code></pre>
+        </figure>
+        <figure class="code-block result">
+          <figcaption><span class="code-lang">Result</span></figcaption>
+          <pre><code>name    | department_name
+Asif    | CSE
+Jasmine | ECE
+NULL    | MECH  ← department kept!</code></pre>
+        </figure>
+
+        <h3 id="full-join">FULL OUTER JOIN</h3>
+        <div class="define"><p><strong>Keeps everything from BOTH tables.</strong> Matching rows join up; unmatched rows from each side appear with NULLs.</p></div>
+        <svg class="venn" viewBox="0 0 240 132" role="img" aria-label="Diagram: both full circles are kept">
+          <circle class="v-hit" cx="88" cy="66" r="46"/>
+          <circle class="v-hit2" cx="152" cy="66" r="46"/>
+          <text x="52" y="71">A</text><text x="172" y="71">B</text>
+        </svg>
+        <figure class="code-block ascii">
+          <figcaption><span class="code-lang">Includes</span></figcaption>
+          <pre><code>Matching rows
++ Unmatched left rows
++ Unmatched right rows</code></pre>
+        </figure>
+        <div class="note">
+          <p>💡 <b>Heads-up:</b> PostgreSQL supports <code>FULL OUTER JOIN</code> directly, but MySQL has no native syntax — there you combine a LEFT JOIN + RIGHT JOIN with <code>UNION</code>.</p>
+        </div>
+
+        <h3 id="self-join">SELF JOIN</h3>
+        <div class="define"><p><strong>A table joined with itself.</strong> Useful when rows refer to other rows of the same table.</p></div>
+        <div class="analogy"><p>🧠 <b>Example:</b> Employees table — each employee has a <code>manager_id</code>, which is another employee's id in the SAME table. Who reports to whom?</p></div>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT e.name AS employee,
+       m.name AS manager
+FROM employees e
+LEFT JOIN employees m
+    ON e.manager_id = m.employee_id;</code></pre>
+        </figure>
+        <p class="muted">The same table plays two roles: <code>e</code> (employee) and <code>m</code> (manager).</p>
+        <figure class="code-block result">
+          <figcaption><span class="code-lang">Result</span></figcaption>
+          <pre><code>employee | manager
+Priya    | Ravi
+Arjun    | Ravi
+Sneha    | Priya
+Ravi     | NULL  ← the boss!</code></pre>
+        </figure>
+
+        <h3 id="cross-join">CROSS JOIN</h3>
+        <div class="define"><p><strong>Creates every possible combination of rows</strong> — no matching rule at all.</p></div>
+        <div class="analogy"><p>🧠 <b>Analogy:</b> Every shirt × every pant combination in a shop 👕👖.</p></div>
+        <figure class="code-block ascii">
+          <figcaption><span class="code-lang">Math</span></figcaption>
+          <pre><code>3 students × 2 courses = 6 combinations
+
+         | Java | Python
+  -------+------+--------
+  Asif   |  ✔   |   ✔
+  Aman   |  ✔   |   ✔
+  Divya  |  ✔   |   ✔</code></pre>
+        </figure>
+        <figure class="code-block">
+          <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
+          <pre><code>SELECT s.name, c.course_name
+FROM students s
+CROSS JOIN courses c;</code></pre>
+        </figure>
+
+        <h3 id="join-comparison">All JOINs at a glance</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>JOIN Type</th><th>Meaning</th><th>Keeps unmatched rows?</th></tr></thead>
+            <tbody>
+              <tr><td><b>INNER JOIN</b></td><td>Only matching rows</td><td>None ❌</td></tr>
+              <tr><td><b>LEFT JOIN</b></td><td>All left + matches</td><td>Left side ✔</td></tr>
+              <tr><td><b>RIGHT JOIN</b></td><td>All right + matches</td><td>Right side ✔</td></tr>
+              <tr><td><b>FULL OUTER JOIN</b></td><td>Everything from both</td><td>Both sides ✔✔</td></tr>
+              <tr><td><b>SELF JOIN</b></td><td>Table joined with itself</td><td>Depends (INNER/LEFT)</td></tr>
+              <tr><td><b>CROSS JOIN</b></td><td>Every combination</td><td>All combos (no matching)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="execution-order">Bonus: How SQL really runs your query</h3>
+        <p>You write <code>SELECT</code> first, but the database actually processes in this order:</p>
+        <ol class="exec-list">
+          <li><b>FROM</b> — grab the tables</li>
+          <li><b>WHERE</b> — filter rows</li>
+          <li><b>GROUP BY</b> — form groups</li>
+          <li><b>HAVING</b> — filter groups</li>
+          <li><b>SELECT</b> — pick columns</li>
+          <li><b>ORDER BY</b> — sort results</li>
+          <li><b>LIMIT</b> — trim to N rows</li>
+        </ol>
+        <div class="tip"><p>This explains WHY <code>HAVING</code> exists — when filtering happens, aggregates already exist, but plain <code>WHERE</code> ran long ago.</p></div>
+      </section>
+
+      <!-- ===== Practice ===== -->
+      <section class="chapter-card practice-section" id="practice" aria-labelledby="h-practice">
+        <span class="chapter-tag">Final Boss</span>
+        <h2 id="h-practice">🏋️ Practice Questions</h2>
+        <p class="muted">Try each one yourself first, then reveal the solution. All questions use the <code>students</code>, <code>departments</code> and <code>employees</code> tables from this page.</p>
+
+        <article class="pq">
+          <p class="pq-q"><b>Q1.</b> Display all students.</p>
+          <button class="answer-btn" type="button" aria-expanded="false">Show Answer</button>
+          <div class="pq-a" hidden>
+            <figure class="code-block"><figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption><pre><code>SELECT * FROM students;</code></pre></figure>
+          </div>
+        </article>
+
+        <article class="pq">
+          <p class="pq-q"><b>Q2.</b> Display only student names.</p>
+          <button class="answer-btn" type="button" aria-expanded="false">Show Answer</button>
+          <div class="pq-a" hidden>
+            <figure class="code-block"><figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption><pre><code>SELECT name FROM students;</code></pre></figure>
+          </div>
+        </article>
+
+        <article class="pq">
+          <p class="pq-q"><b>Q3.</b> Find students with CGPA &gt; 8.5.</p>
+          <button class="answer-btn" type="button" aria-expanded="false">Show Answer</button>
+          <div class="pq-a" hidden>
+            <figure class="code-block"><figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption><pre><code>SELECT * FROM students
+WHERE cgpa &gt; 8.5;</code></pre></figure>
+          </div>
+        </article>
+
+        <article class="pq">
+          <p class="pq-q"><b>Q4.</b> Find students older than 20.</p>
+          <button class="answer-btn" type="button" aria-expanded="false">Show Answer</button>
+          <div class="pq-a" hidden>
+            <figure class="code-block"><figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption><pre><code>SELECT * FROM students
+WHERE age &gt; 20;</code></pre></figure>
+          </div>
+        </article>
+
+        <article class="pq">
+          <p class="pq-q"><b>Q5.</b> Sort students by CGPA (highest first).</p>
+          <button class="answer-btn" type="button" aria-expanded="false">Show Answer</button>
+          <div class="pq-a" hidden>
+            <figure class="code-block"><figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption><pre><code>SELECT * FROM students
+ORDER BY cgpa DESC;</code></pre></figure>
+          </div>
+        </article>
+
+        <article class="pq">
+          <p class="pq-q"><b>Q6.</b> Find the highest CGPA.</p>
+          <button class="answer-btn" type="button" aria-expanded="false">Show Answer</button>
+          <div class="pq-a" hidden>
+            <figure class="code-block"><figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption><pre><code>SELECT MAX(cgpa) FROM students;</code></pre></figure>
+          </div>
+        </article>
+
+        <article class="pq">
+          <p class="pq-q"><b>Q7.</b> Find the average CGPA.</p>
+          <button class="answer-btn" type="button" aria-expanded="false">Show Answer</button>
+          <div class="pq-a" hidden>
+            <figure class="code-block"><figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption><pre><code>SELECT AVG(cgpa) FROM students;</code></pre></figure>
+          </div>
+        </article>
+
+        <article class="pq">
+          <p class="pq-q"><b>Q8.</b> Count the total number of students.</p>
+          <button class="answer-btn" type="button" aria-expanded="false">Show Answer</button>
+          <div class="pq-a" hidden>
+            <figure class="code-block"><figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption><pre><code>SELECT COUNT(*) FROM students;</code></pre></figure>
+          </div>
+        </article>
+
+        <article class="pq">
+          <p class="pq-q"><b>Q9.</b> Count students in each department.</p>
+          <button class="answer-btn" type="button" aria-expanded="false">Show Answer</button>
+          <div class="pq-a" hidden>
+            <figure class="code-block"><figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption><pre><code>SELECT department_id, COUNT(*)
+FROM students
+GROUP BY department_id;</code></pre></figure>
+          </div>
+        </article>
+
+        <article class="pq">
+          <p class="pq-q"><b>Q10.</b> Find students whose name starts with 'A'.</p>
+          <button class="answer-btn" type="button" aria-expanded="false">Show Answer</button>
+          <div class="pq-a" hidden>
+            <figure class="code-block"><figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption><pre><code>SELECT * FROM students
+WHERE name LIKE 'A%';</code></pre></figure>
+          </div>
+        </article>
+
+        <article class="pq">
+          <p class="pq-q"><b>Q11.</b> Find students from CSE (department_id = 1).</p>
+          <button class="answer-btn" type="button" aria-expanded="false">Show Answer</button>
+          <div class="pq-a" hidden>
+            <figure class="code-block"><figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption><pre><code>SELECT * FROM students
+WHERE department_id = 1;</code></pre></figure>
+          </div>
+        </article>
+
+        <article class="pq">
+          <p class="pq-q"><b>Q12.</b> Display each student with their department name (use INNER JOIN).</p>
+          <button class="answer-btn" type="button" aria-expanded="false">Show Answer</button>
+          <div class="pq-a" hidden>
+            <figure class="code-block"><figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption><pre><code>SELECT s.name, d.department_name
+FROM students s
+INNER JOIN departments d
+    ON s.department_id = d.department_id;</code></pre></figure>
+          </div>
+        </article>
+
+        <article class="pq">
+          <p class="pq-q"><b>Q13.</b> Show ALL students with their department name, even if the department is missing (use LEFT JOIN).</p>
+          <button class="answer-btn" type="button" aria-expanded="false">Show Answer</button>
+          <div class="pq-a" hidden>
+            <figure class="code-block"><figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption><pre><code>SELECT s.name, d.department_name
+FROM students s
+LEFT JOIN departments d
+    ON s.department_id = d.department_id;</code></pre></figure>
+          </div>
+        </article>
+
+        <article class="pq">
+          <p class="pq-q"><b>Q14.</b> Find departments having more than 2 students.</p>
+          <button class="answer-btn" type="button" aria-expanded="false">Show Answer</button>
+          <div class="pq-a" hidden>
+            <figure class="code-block"><figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption><pre><code>SELECT department_id, COUNT(*)
+FROM students
+GROUP BY department_id
+HAVING COUNT(*) &gt; 2;</code></pre></figure>
+          </div>
+        </article>
+
+        <article class="pq">
+          <p class="pq-q"><b>Q15.</b> Show each employee and their manager's name (use SELF JOIN).</p>
+          <button class="answer-btn" type="button" aria-expanded="false">Show Answer</button>
+          <div class="pq-a" hidden>
+            <figure class="code-block"><figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption><pre><code>SELECT e.name AS employee,
+       m.name AS manager
+FROM employees e
+LEFT JOIN employees m
+    ON e.manager_id = m.employee_id;</code></pre></figure>
+          </div>
+        </article>
+
+        <div class="finish-banner">
+          <p>🎉 <b>Congratulations!</b> You just went from "What is data?" to mastering JOINs. Next stop: subqueries, indexes and normalization!</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    Built by @asif · <a href="index.html">Back to KCET Portal</a>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/dbms.js"></script>
+</body>
+</html>
