@@ -828,7 +828,7 @@ HAVING COUNT(*) &gt; 2;</code></pre>
                 <tbody>
                   <tr><td>101</td><td>Asif</td><td>1</td></tr>
                   <tr><td>102</td><td>Jasmine</td><td>2</td></tr>
-                  <tr><td>104</td><td>Divya</td><td>—</td></tr>
+                  <tr><td>104</td><td>Appu</td><td>—</td></tr>
                 </tbody>
               </table>
             </div>
@@ -873,7 +873,7 @@ INNER JOIN departments d
 Asif    | CSE
 Jasmine | ECE</code></pre>
         </figure>
-        <p>(Divya has no department → skipped. MECH has no students → skipped.)</p>
+        <p>(Appu has no department → skipped. MECH has no students → skipped.)</p>
 
         <h3 id="left-join">LEFT JOIN</h3>
         <div class="define"><p><strong>Keeps ALL rows from the left table</strong>, plus matches from the right. No match? Right side becomes NULL.</p></div>
@@ -894,7 +894,7 @@ LEFT JOIN departments d
           <pre><code>name    | department_name
 Asif    | CSE
 Jasmine | ECE
-Divya   | NULL  ← still here!</code></pre>
+Appu   | NULL  ← still here!</code></pre>
         </figure>
 
         <h3 id="right-join">RIGHT JOIN</h3>
@@ -937,8 +937,22 @@ NULL    | MECH  ← department kept!</code></pre>
         </div>
 
         <h3 id="self-join">SELF JOIN</h3>
-        <div class="define"><p><strong>A table joined with itself.</strong> Useful when rows refer to other rows of the same table.</p></div>
-        <div class="analogy"><p>🧠 <b>Example:</b> Employees table — each employee has a <code>manager_id</code>, which is another employee's id in the SAME table. Who reports to whom?</p></div>
+        <div class="define"><p><strong>A table joined with itself.</strong> One single table plays two roles at the same time.</p></div>
+
+        <p>Example table — <b>employees</b>. Each row stores who the employee's manager is:</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th class="pk">🔑 employee_id</th><th>name</th><th class="fk">🔗 manager_id</th></tr></thead>
+            <tbody>
+              <tr><td class="pk">1</td><td>Ravi</td><td class="fk">NULL</td></tr>
+              <tr><td class="pk">2</td><td>Arjun</td><td class="fk">1</td></tr>
+              <tr><td class="pk">3</td><td>Vijay</td><td class="fk">1</td></tr>
+              <tr><td class="pk">4</td><td>Karthik</td><td class="fk">2</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Look carefully: <code>manager_id</code> does NOT come from another table — it points to <code>employee_id</code> in this <b>same table</b>. (Ravi is the boss → no manager → NULL.)</p>
+
         <figure class="code-block">
           <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
           <pre><code>SELECT e.name AS employee,
@@ -947,15 +961,18 @@ FROM employees e
 LEFT JOIN employees m
     ON e.manager_id = m.employee_id;</code></pre>
         </figure>
-        <p class="muted">The same table plays two roles: <code>e</code> (employee) and <code>m</code> (manager).</p>
+
+        <p><b>How it works:</b> the table pretends to be two copies — <code>e</code> (each employee asking) and <code>m</code> (possible managers). For every employee row <code>e</code>, we find the row <code>m</code> whose <code>employee_id</code> equals <code>e.manager_id</code>.</p>
+
         <figure class="code-block result">
           <figcaption><span class="code-lang">Result</span></figcaption>
           <pre><code>employee | manager
-Priya    | Ravi
 Arjun    | Ravi
-Sneha    | Priya
-Ravi     | NULL  ← the boss!</code></pre>
+Vijay    | Ravi
+Karthik  | Arjun
+Ravi     | NULL  ← he is the boss!</code></pre>
         </figure>
+        <p class="muted">(LEFT JOIN keeps Ravi too — with NULL because nobody is above him.)</p>
 
         <h3 id="cross-join">CROSS JOIN</h3>
         <div class="define"><p><strong>Creates every possible combination of rows</strong> — no matching rule at all.</p></div>
@@ -968,7 +985,7 @@ Ravi     | NULL  ← the boss!</code></pre>
   -------+------+--------
   Asif   |  ✔   |   ✔
   Aman   |  ✔   |   ✔
-  Divya  |  ✔   |   ✔</code></pre>
+  Appu  |  ✔   |   ✔</code></pre>
         </figure>
         <figure class="code-block">
           <figcaption><span class="code-lang">SQL</span><button class="copy-btn" type="button">Copy</button></figcaption>
