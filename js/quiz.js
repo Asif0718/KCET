@@ -45,7 +45,7 @@
      ========================================================== */
   async function init() {
     state.subject = new URLSearchParams(window.location.search).get("subject") || "chemistry";
-    const meta = SUBJECTS.find((s) => s.key === state.subject);
+    const meta = quizMeta(state.subject);
     if (meta) {
       DOM.subjectTitle.textContent = meta.name;
       DOM.subjectSub.textContent = meta.tagline;
@@ -74,6 +74,7 @@
     state.filtered = state.questions.slice();
 
     buildChapterFilter();
+    buildPaperBox();
     attachEventListeners();
     renderAll();
   }
@@ -90,6 +91,54 @@
     DOM.chapterFilter.addEventListener("change", () => {
       applyFilters();
     });
+  }
+
+  /* ==========================================================
+     Previous Year Papers box (sidebar)
+     Shows year-specific practice papers for the current subject
+     and a "back to subject" link when viewing a paper.
+     ========================================================== */
+  async function buildPaperBox() {
+    const paperBox = $("#paperBox");
+    const paperLinks = $("#paperLinks");
+    if (!paperBox || !paperLinks) return;
+
+    const { subjectKey, year } = parseQuizKey(state.subject);
+    const meta = subjectMeta(subjectKey);
+
+    const YEARS = [2026, 2025, 2024, 2023];
+    const available = [];
+
+    /* Probe year files for this subject (from regular or paper view) */
+    for (const y of YEARS) {
+      try {
+        const data = await loadDataFile(`data/${y}/${subjectKey}.json`);
+        if (Array.isArray(data) && data.length) available.push(y);
+      } catch (e) {
+        /* missing file — skip */
+      }
+    }
+
+    if (available.length === 0) return;
+
+    paperBox.classList.remove("hidden");
+
+    /* Build links */
+    let html = "";
+    if (!year) {
+      available.forEach((y) => {
+        html += `<a href="practice.html?subject=${subjectKey}-${y}" title="${y} ${meta?.name} paper">📜 ${y} ${meta?.name}</a>`;
+      });
+    } else {
+      /* Viewing a year paper → offer all available years + back to subject */
+      html += `<a href="practice.html?subject=${subjectKey}" title="${meta?.name} practice">↩️ ${meta?.name} practice</a>`;
+      available.sort((a, b) => b - a).forEach((y) => {
+        const active = y === year ? " active" : "";
+        html += `<a class="${active}" href="practice.html?subject=${subjectKey}-${y}" title="${y} ${meta?.name} paper">📜 ${y} ${meta?.name}</a>`;
+      });
+    }
+
+    paperLinks.innerHTML = html;
   }
 
   function applyFilters() {

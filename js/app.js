@@ -55,6 +55,38 @@ function initTheme() {
 }
 
 /* ------------------------------------------------------------
+   Quiz keys
+   A quiz key is "physics", "maths-2026", etc. Year-paper keys
+   ("<subject>-<year>") resolve to data/<year>/<subject>.json and
+   get their own storage + result slot.
+   ------------------------------------------------------------ */
+function parseQuizKey(key) {
+  const m = /^(\w+)-(\d{4})$/.exec(key || "");
+  if (m) return { subjectKey: m[1], year: Number(m[2]) };
+  return { subjectKey: key, year: null };
+}
+
+function subjectMeta(subjectKey) {
+  return SUBJECTS.find((s) => s.key === subjectKey) || null;
+}
+
+/* Display metadata for a quiz key (handles year papers). */
+function quizMeta(key) {
+  const { subjectKey, year } = parseQuizKey(key);
+  const base = subjectMeta(subjectKey);
+  if (!base) return null;
+  if (year) {
+    return {
+      ...base,
+      key,
+      name: `${base.name} ${year} Paper`,
+      tagline: `KCET ${year} previous year paper`,
+    };
+  }
+  return { ...base, key: subjectKey };
+}
+
+/* ------------------------------------------------------------
    Data loading
    Works over http(s) (VS Code Live Server, GitHub Pages) using
    fetch(), and also over the file:// protocol by falling back
@@ -67,26 +99,37 @@ async function loadDataFile(path) {
 }
 
 async function loadSubjectData(key) {
-  const meta = SUBJECTS.find((s) => s.key === key);
-  if (!meta) throw new Error(`Unknown subject: ${key}`);
+  const { subjectKey, year } = parseQuizKey(key);
+  const meta = subjectMeta(subjectKey);
+  if (!meta) throw new Error(`Unknown subject: ${subjectKey}`);
+
+  const file = year ? `data/${year}/${subjectKey}.json` : meta.file;
 
   /* Prefer fetched JSON ... */
   try {
-    const data = await loadDataFile(meta.file);
+    const data = await loadDataFile(file);
     if (Array.isArray(data) && data.length) return data;
   } catch (err) {
-    /* fetch fails under file:// in most browsers */
+    /* fetch fails under file:// or when the year file is missing */
   }
 
   /* ... otherwise fall back to embedded data (works when opened
-     directly as index.html without a server). */
-  if (window.EMBEDDED_DATA && window.EMBEDDED_DATA[key]) {
-    return window.EMBEDDED_DATA[key];
+     directly as index.html without a server). Year papers use the
+     full key, e.g. "maths-2026". */
+  if (window.EMBEDDED_DATA) {
+    const embedded = window.EMBEDDED_DATA;
+    const candidates = year ? [key, subjectKey] : [subjectKey];
+    for (const c of candidates) {
+      if (embedded[c]) return embedded[c];
+    }
   }
 
+  const label = year ? `${year} ${meta.name}` : meta.name;
   throw new Error(
-    `Could not load questions for "${meta.name}". ` +
-      "Start a local server (e.g. VS Code Live Server) or add data/embedded.js."
+    `Could not load questions for "${label}". ` +
+      (year
+        ? `Make sure data/${year}/${subjectKey}.json exists.`
+        : "Start a local server (e.g. VS Code Live Server) or add data/embedded.js.")
   );
 }
 

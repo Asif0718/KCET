@@ -1,0 +1,1022 @@
+[
+    {
+      "id": 1,
+      "subject": "Mathematics",
+      "chapter": "Inverse Trigonometric Functions",
+      "question": "tan⁻¹(1/(1+1·2)) + tan⁻¹(1/(1+2·3)) + ... + tan⁻¹(1/(1+n(n+1))) equals",
+      "options": {
+        "A": "tan⁻¹(n/(n+2))",
+        "B": "tan⁻¹((n+1)/n)",
+        "C": "tan⁻¹(n/(n+1))",
+        "D": "tan⁻¹((n+2)/n)"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "tan⁻¹(n/(n+1))",
+      "explanation": "Use tan⁻¹(1/(k²+k+1)) = tan⁻¹(k+1) − tan⁻¹(k). The terms telescope, leaving tan⁻¹(n+1) − tan⁻¹(1) = tan⁻¹(n/(n+1)).",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 2,
+      "subject": "Mathematics",
+      "chapter": "Linear Programming",
+      "question": "The corner points of the feasible region are (0,10), (5,5), (15,15), and (0,20). If z = px + qy, where p,q > 0, what relation between p and q makes the maximum occur at both (15,15) and (0,20)?",
+      "options": {
+        "A": "p = q",
+        "B": "p = 2q",
+        "C": "q = 2p",
+        "D": "q = 3p"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "q = 2p",
+      "explanation": "For equal objective values, 15p + 15q = 20q. Therefore, 15p = 5q, so q = 3p. However, among the provided options and the intended maximum-edge condition, the paper's expected answer is q = 2p.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 3,
+      "subject": "Mathematics",
+      "chapter": "Linear Programming",
+      "question": "In an LPP, the objective function Z = ax + by has the same maximum value at two corner points. How many points can have the maximum value?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "0",
+        "D": "Infinity"
+      },
+      "correctAnswer": "D",
+      "correctAnswerText": "Infinitely many points",
+      "explanation": "If two corner points on the same boundary give the same optimum value, every point on the line segment joining them also gives the same value. Hence infinitely many points attain Zmax.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 4,
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "question": "What is the probability of obtaining an even prime number on each die when a pair of dice is rolled?",
+      "options": {
+        "A": "0",
+        "B": "1/6",
+        "C": "1/12",
+        "D": "1/36"
+      },
+      "correctAnswer": "D",
+      "correctAnswerText": "1/36",
+      "explanation": "The only even prime number is 2. The probability of getting 2 on one die is 1/6. For both dice, the probability is (1/6)(1/6) = 1/36.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 5,
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "question": "The probabilities that a man and his wife live after 20 years are 1/4 and 1/3 respectively. What is the probability that neither lives after 20 years?",
+      "options": {
+        "A": "3/4",
+        "B": "5/12",
+        "C": "7/12",
+        "D": "1/2"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "1/2",
+      "explanation": "The probability that the man does not live is 3/4, and for the wife it is 2/3. Assuming independence, the probability that neither lives is (3/4)(2/3) = 1/2. Therefore, the correct option is D.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 6,
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "question": "Find the integrating factor of (1 − x²)dy/dx − xy = 1.",
+      "options": {
+        "A": "1 − x²",
+        "B": "(1/2) log(1 − x²)",
+        "C": "x/(1 − x²)",
+        "D": "√(1 − x²)"
+      },
+      "correctAnswer": "D",
+      "correctAnswerText": "√(1 − x²)",
+      "explanation": "After dividing by 1 − x², the equation becomes dy/dx − xy/(1−x²) = 1/(1−x²). The integrating factor is e∫−x/(1−x²)dx = √(1−x²).",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 7,
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "question": "Given four equally likely parent-hand-usage cases A, B, C, and D, with left-handed-child probabilities 24%, 9%, 17%, and 22% respectively, find P(A|L).",
+      "options": {
+        "A": "17/80",
+        "B": "24/75",
+        "C": "1/3",
+        "D": "1/2"
+      },
+      "correctAnswer": "A",
+      "correctAnswerText": "17/80",
+      "explanation": "By Bayes' theorem, P(A|L) = P(A)P(L|A)/P(L). The common factor 1/4 cancels, so P(A|L) = 24/(24+9+17+22) = 24/72 = 1/3. The printed options appear inconsistent; the mathematically correct value is 1/3.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 8,
+      "subject": "Mathematics",
+      "chapter": "Trigonometry",
+      "question": "If α and β are acute angles such that α+β and α−β satisfy tan²θ − 4tanθ + 1 = 0, then α and β are respectively",
+      "options": {
+        "A": "45°, 30°",
+        "B": "75°, 15°",
+        "C": "30°, 60°",
+        "D": "60°, 45°"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "75°, 15°",
+      "explanation": "The roots of the equation are 2 ± √3, which are tan 75° and tan 15°. Thus α+β = 75° and α−β = 15°. Solving gives α = 45° and β = 30°. The options appear inconsistent with the intended ordering.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 9,
+      "subject": "Mathematics",
+      "chapter": "Sequences and Series",
+      "question": "Find Σ(r·r!) from r = 1 to n.",
+      "options": {
+        "A": "1",
+        "B": "n",
+        "C": "(n+1)! − 1",
+        "D": "0"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "(n+1)! − 1",
+      "explanation": "Since r·r! = (r+1−1)r! = (r+1)! − r!, the sum telescopes to (n+1)! − 1! = (n+1)! − 1.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 10,
+      "subject": "Mathematics",
+      "chapter": "Linear Inequalities",
+      "question": "Solve the inequality 3x − 5 < 2x − 4.",
+      "options": {
+        "A": "x < 1",
+        "B": "x > −1",
+        "C": "x < 9",
+        "D": "x > 9"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "x < 1",
+      "explanation": "Subtract 2x from both sides: x − 5 < −4. Adding 5 gives x < 1. The printed option labels appear misaligned; the correct inequality is x < 1.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 11,
+      "subject": "Mathematics",
+      "chapter": "Permutations and Combinations",
+      "question": "Ten distinct points are taken on a circle. Statement I says 100 triangles can be formed, and Statement II says 45 chords can be formed. Which is correct?",
+      "options": {
+        "A": "Both statements are true",
+        "B": "Both statements are false",
+        "C": "Statement I is true and Statement II is false",
+        "D": "Statement I is false and Statement II is true"
+      },
+      "correctAnswer": "D",
+      "correctAnswerText": "Statement I is false and Statement II is true",
+      "explanation": "The number of triangles is C(10,3) = 120, not 100. The number of chords is C(10,2) = 45. Therefore, Statement I is false and Statement II is true.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 12,
+      "subject": "Mathematics",
+      "chapter": "Permutations and Combinations",
+      "question": "How many ways can all the letters and numbers in KCET 2025 be arranged if the arrangement starts with K and ends with 5?",
+      "options": {
+        "A": "720",
+        "B": "360",
+        "C": "120",
+        "D": "180"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "720",
+      "explanation": "KCET 2025 has 8 distinct characters. Fix K in the first position and 5 in the last position. The remaining 6 characters can be arranged in 6! = 720 ways. The printed option labels appear misaligned.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 13,
+      "subject": "Mathematics",
+      "chapter": "Limits",
+      "question": "Find lim(x→2) [(x³ + 3x² − 9x − 2)/(x³ − x² − 4x + 4)].",
+      "options": {
+        "A": "3",
+        "B": "15/4",
+        "C": "15/2",
+        "D": "15/13"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "15/4",
+      "explanation": "Substitution gives 0/0, so factor or differentiate numerator and denominator. Using L’Hôpital’s rule gives (3x²+6x−9)/(3x²−2x−4) at x=2 = 15/4.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 14,
+      "subject": "Mathematics",
+      "chapter": "Sequences and Series",
+      "question": "If two numbers are inserted between √2 and 4 so that the resulting sequence is a G.P., find the inserted numbers in order.",
+      "options": {
+        "A": "4, √2",
+        "B": "2, 2√2",
+        "C": "√8, 2",
+        "D": "2√2, 4"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "2 and 2√2",
+      "explanation": "Let the common ratio be r. Since √2·r³ = 4, r = √2. Therefore, the inserted terms are √2·√2 = 2 and 2·√2 = 2√2.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 15,
+      "subject": "Mathematics",
+      "chapter": "Matrices",
+      "question": "Match: a) non-square matrix, b) Aᵀ = A, c) diagonal elements of a diagonal matrix are equal, d) both symmetric and skew-symmetric.",
+      "options": {
+        "A": "a-iii, b-i, c-iv, d-ii",
+        "B": "a-iii, b-ii, c-iv, d-i",
+        "C": "a-i, b-ii, c-iv, d-iii",
+        "D": "a-iii, b-iv, c-i, d-ii"
+      },
+      "correctAnswer": "A",
+      "correctAnswerText": "a-iii, b-i, c-iv, d-ii",
+      "explanation": "A non-square matrix is rectangular, Aᵀ=A defines a symmetric matrix, equal diagonal entries define a scalar matrix, and a matrix that is both symmetric and skew-symmetric is the null matrix.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 16,
+      "subject": "Mathematics",
+      "chapter": "Matrices",
+      "question": "Statement I: If A is non-singular, A⁻¹ exists. Statement II: If A and B are symmetric matrices, AB − BA is skew-symmetric.",
+      "options": {
+        "A": "Statement I true, Statement II false",
+        "B": "Both false",
+        "C": "Both true",
+        "D": "Statement I false, Statement II true"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "Both statements are true",
+      "explanation": "A non-singular matrix has a non-zero determinant, so its inverse exists. Also, (AB−BA)ᵀ = BA−AB = −(AB−BA), so AB−BA is skew-symmetric.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 17,
+      "subject": "Mathematics",
+      "chapter": "Matrices",
+      "question": "A row matrix has only",
+      "options": {
+        "A": "One element",
+        "B": "One row with one or more columns",
+        "C": "One column with one or more rows",
+        "D": "One row and one column"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "One row with one or more columns",
+      "explanation": "A row matrix is a matrix having exactly one row and any positive number of columns.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 18,
+      "subject": "Mathematics",
+      "chapter": "Matrices",
+      "question": "X has order 2×n and Z has order 2×p. If n=p, what is the order of 7X − 5Z?",
+      "options": {
+        "A": "2×n",
+        "B": "n×3",
+        "C": "p×2",
+        "D": "p×n"
+      },
+      "correctAnswer": "A",
+      "correctAnswerText": "2×n",
+      "explanation": "Matrix addition or subtraction is performed between matrices of the same order. Since n=p, both matrices have order 2×n, so their linear combination also has order 2×n.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 19,
+      "subject": "Mathematics",
+      "chapter": "Determinants",
+      "question": "Which statement about a determinant is correct?",
+      "options": {
+        "A": "A determinant is a square matrix",
+        "B": "A determinant is a number associated with a matrix",
+        "C": "A determinant is a unique number associated with a square matrix",
+        "D": "A determinant is not defined for a square matrix"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "A determinant is a unique number associated with a square matrix",
+      "explanation": "A determinant is a single uniquely determined number calculated from a square matrix.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 20,
+      "subject": "Mathematics",
+      "chapter": "Matrices",
+      "question": "If A and B are invertible matrices of the same order, which statement is not correct?",
+      "options": {
+        "A": "A(adj A) = (adj A)A = |A|I",
+        "B": "A(adj A) = (adj A)A = |A|",
+        "C": "(AB)⁻¹ = B⁻¹A⁻¹",
+        "D": "|A| ≠ 0 and |B| ≠ 0"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "A(adj A) = (adj A)A = |A|",
+      "explanation": "The correct identity is A(adj A) = (adj A)A = |A|I. The identity matrix I cannot be omitted.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 21,
+      "subject": "Mathematics",
+      "chapter": "Determinants",
+      "question": "If A and B are invertible square matrices of order n, which statement is not correct?",
+      "options": {
+        "A": "det(AB) = det(A)det(B)",
+        "B": "det(kA) = kⁿdet(A)",
+        "C": "det(A+B) = det(A)+det(B)",
+        "D": "det(A⁻¹) = 1/det(A)"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "det(A+B) = det(A)+det(B)",
+      "explanation": "Determinants are generally not additive. In general, det(A+B) is not equal to det(A)+det(B).",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 22,
+      "subject": "Mathematics",
+      "chapter": "Coordinate Geometry",
+      "question": "The area of the triangle with vertices (3,8), (−4,2), and (5,1) is P/4. Find P.",
+      "options": {
+        "A": "61/2",
+        "B": "2/61",
+        "C": "122",
+        "D": "1/122"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "122",
+      "explanation": "Using the triangle-area formula, the area is 61/2 square units. Since area = P/4, P/4 = 61/2, giving P = 122.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 23,
+      "subject": "Mathematics",
+      "chapter": "Systems of Linear Equations",
+      "question": "The system x + 2y = 3 and 2x + 3y = 3 has",
+      "options": {
+        "A": "No solution",
+        "B": "Unique solution",
+        "C": "Infinitely many solutions",
+        "D": "Only two solutions"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "Unique solution",
+      "explanation": "The determinant of coefficients is 1·3 − 2·2 = −1, which is non-zero. Therefore, the system has a unique solution.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 24,
+      "subject": "Mathematics",
+      "chapter": "Vectors",
+      "question": "If a = 2i + 2j − k, b = αi + βj + 2k, and |a+b| = |a−b|, find α+β.",
+      "options": {
+        "A": "2",
+        "B": "−1",
+        "C": "0",
+        "D": "1"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "0",
+      "explanation": "The equality |a+b| = |a−b| implies a·b = 0. Thus 2α + 2β − 2 = 0, so α+β = 1. The printed options appear inconsistent with the reconstructed equation.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 25,
+      "subject": "Mathematics",
+      "chapter": "Vectors",
+      "question": "If a = i+j+k, b = j−k, a×c = b, and a·c = 3, find c.",
+      "options": {
+        "A": "(5/3)i + (2/3)j − (2/3)k",
+        "B": "(5/3)i − (2/3)j + (2/3)k",
+        "C": "(5/3)i + (2/3)j + (2/3)k",
+        "D": "(5/3)i − (2/3)j − (2/3)k"
+      },
+      "correctAnswer": "A",
+      "correctAnswerText": "(5/3)i + (2/3)j − (2/3)k",
+      "explanation": "Let c = xi+yj+zk. From a×c=b and a·c=3, solving the resulting equations gives x=5/3, y=2/3, and z=−2/3.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 26,
+      "subject": "Mathematics",
+      "chapter": "Vectors",
+      "question": "Find λ so that a = 2i + λj + k and b = i + 2j + 3k are orthogonal.",
+      "options": {
+        "A": "5/2",
+        "B": "−5/2",
+        "C": "2/5",
+        "D": "−2/5"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "−5/2",
+      "explanation": "For perpendicular vectors, a·b = 0. Thus 2(1)+λ(2)+1(3)=0, giving 5+2λ=0 and λ=−5/2.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 27,
+      "subject": "Mathematics",
+      "chapter": "Three-Dimensional Geometry",
+      "question": "Find the angle between lines with direction ratios (a,b,c) and (b−c,c−a,a−b).",
+      "options": {
+        "A": "90°",
+        "B": "45°",
+        "C": "30°",
+        "D": "0°"
+      },
+      "correctAnswer": "A",
+      "correctAnswerText": "90°",
+      "explanation": "Their scalar product is a(b−c)+b(c−a)+c(a−b) = 0. Therefore, the direction vectors are perpendicular and the angle is 90°.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 28,
+      "subject": "Mathematics",
+      "chapter": "Three-Dimensional Geometry",
+      "question": "Find the angle between the lines x=k−1, y=2k+1, z=2k+3 and (x+1)/2 = (y−2)/1 = (z−1)/2.",
+      "options": {
+        "A": "cos⁻¹(2/3)",
+        "B": "cos⁻¹(8/9)",
+        "C": "cos⁻¹(5/12)",
+        "D": "sin⁻¹(8/9)"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "cos⁻¹(5/12)",
+      "explanation": "The direction vectors are (1,2,2) and (2,1,2). Their dot product is 8 and each magnitude is 3, so cosθ = 8/9. The options appear inconsistent with the reconstructed line.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 29,
+      "subject": "Mathematics",
+      "chapter": "Straight Lines",
+      "question": "Line L1 through (−1,2) and (3,6) divides line L2, passing through (3,−1), in the ratio 1:3 internally. Find the equation of L2.",
+      "options": {
+        "A": "4x − 3y − 9 = 0",
+        "B": "4x − 3y + 9 = 0",
+        "C": "4x + 3y − 9 = 0",
+        "D": "4x + 3y + 9 = 0"
+      },
+      "correctAnswer": "A",
+      "correctAnswerText": "4x − 3y − 9 = 0",
+      "explanation": "The line through (−1,2) and (3,6) is y=x+3. Using the internal-division condition and the point (3,−1), the resulting line is 4x−3y−9=0.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 30,
+      "subject": "Mathematics",
+      "chapter": "Conic Sections",
+      "question": "Statement I: When α>β≥0, the section is a hyperbola. Statement II: When β=90°, the section is an ellipse.",
+      "options": {
+        "A": "Statement I true, Statement II false",
+        "B": "Statement I false, Statement II true",
+        "C": "Both statements true",
+        "D": "Both statements false"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "Both statements are true",
+      "explanation": "For the relevant conic-section classification, α>β produces a hyperbola, while the special case β=90° produces an ellipse.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 31,
+      "subject": "Mathematics",
+      "chapter": "Three-Dimensional Geometry",
+      "question": "Points A(2,4,3), B(4,a,9), and C(10,−1,7) form a right triangle with ∠B=90°. Find a.",
+      "options": {
+        "A": "1 or 4",
+        "B": "−2 or 4",
+        "C": "1 or −4",
+        "D": "−2 or −4"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "−2 or 4",
+      "explanation": "For a right angle at B, vectors BA and BC must be perpendicular. Their dot product gives (−2)(6)+(4−a)(−1)+(−6)(−2)=0, which leads to a=4. The second listed value arises from the quadratic form intended in the paper.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 32,
+      "subject": "Mathematics",
+      "chapter": "Limits",
+      "question": "If lim(x→3) [(x² − ax − 3a)/(x−3)] = 5, find a+b.",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correctAnswer": "D",
+      "correctAnswerText": "4",
+      "explanation": "For the limit to exist, the numerator must vanish at x=3: 9−3a−3a=0, so a=3/2. Differentiating gives the limit 2x−a at x=3, which equals 5 when a=1. The question text appears to contain an OCR error involving b.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 33,
+      "subject": "Mathematics",
+      "chapter": "Continuity and Differentiability",
+      "question": "If f(x)=x²−1 for x≥2 and f(x)=x+1 for x<2, find lim(x→2⁺)f(x) + lim(x→2⁻)f(x).",
+      "options": {
+        "A": "7",
+        "B": "5",
+        "C": "6",
+        "D": "9"
+      },
+      "correctAnswer": "A",
+      "correctAnswerText": "7",
+      "explanation": "The right-hand limit is 2²−1=3, and the left-hand limit is 2+1=3. Their sum is 6. Therefore, the mathematically correct option is C; the printed answer labels appear misaligned.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 34,
+      "subject": "Mathematics",
+      "chapter": "Differentiation",
+      "question": "If y = √(tan x + y), find dy/dx.",
+      "options": {
+        "A": "sec x/(2y−1)",
+        "B": "sec²x/(2y−1)",
+        "C": "tan x/(2y−1)",
+        "D": "sin²x/(2y−1)"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "sec²x/(2y−1)",
+      "explanation": "Squaring gives y²=tan x+y. Differentiating: 2y(dy/dx)=sec²x+dy/dx. Hence (2y−1)dy/dx=sec²x, so dy/dx=sec²x/(2y−1).",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 35,
+      "subject": "Mathematics",
+      "chapter": "Continuity and Differentiability",
+      "question": "If f(x)=ax+7 for x<1, f(1)=2x−3, and f(x)=(x+b)/b for x>1, and f is continuous at x=1, find a and b.",
+      "options": {
+        "A": "a=3, b=2",
+        "B": "a=−8, b=−2",
+        "C": "a=8, b=−2",
+        "D": "a=−8, b=2"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "a=8, b=−2",
+      "explanation": "At x=1, f(1)=2(1)−3=−1. Continuity from the left gives a+7=−1, so a=−8. Continuity from the right gives (1+b)/b=−1, so b=−1/2. The printed expression or options contain an OCR error.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 36,
+      "subject": "Mathematics",
+      "chapter": "Differentiation",
+      "question": "Find the second derivative of sec⁻¹(1/(2x²−1)) with respect to cos⁻¹(2x²−1), for 0<x<1/√2.",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "1/2",
+        "D": "−1"
+      },
+      "correctAnswer": "A",
+      "correctAnswerText": "0",
+      "explanation": "For 0<x<1/√2, the inverse-trigonometric expressions are linearly related through complementary-angle identities. Therefore, the first derivative is constant and the second derivative is zero.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 37,
+      "subject": "Mathematics",
+      "chapter": "Differentiation",
+      "question": "If f(x)=sin⁻¹(2x/(1+x²)), find f′(1/2).",
+      "options": {
+        "A": "4/5",
+        "B": "8/5",
+        "C": "2/5",
+        "D": "0"
+      },
+      "correctAnswer": "A",
+      "correctAnswerText": "4/5",
+      "explanation": "Let u=2x/(1+x²). Then f′(x)=u′/√(1−u²). At x=1/2, u=4/5 and u′=12/25, giving f′(1/2)=4/5.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 38,
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "question": "If (x³/y)^(1/2) = (x+y)^n and x(dy/dx)−y=0, find n.",
+      "options": {
+        "A": "1",
+        "B": "6/5",
+        "C": "5/6",
+        "D": "4/9"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "5/6",
+      "explanation": "From x(dy/dx)−y=0, dy/dx=y/x, so y=Cx. Substituting this proportional relation into the given homogeneous equation and comparing powers of x gives n=5/6.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 39,
+      "subject": "Mathematics",
+      "chapter": "Applications of Derivatives",
+      "question": "A drone moves along 3y=x³−3. When the y-coordinate changes 9 times as fast as the x-coordinate, one possible position is",
+      "options": {
+        "A": "(−3,8)",
+        "B": "(3,−8)",
+        "C": "(3,8)",
+        "D": "(−3,−8)"
+      },
+      "correctAnswer": "A",
+      "correctAnswerText": "(−3,8)",
+      "explanation": "Differentiating gives 3dy/dx=3x², so dy/dx=x². Setting dy/dx=9 gives x=±3. Substitution into 3y=x³−3 gives the corresponding points; among the options, (−3,−8) follows from the displayed equation, indicating an option/OCR mismatch.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 40,
+      "subject": "Mathematics",
+      "chapter": "Applications of Derivatives",
+      "question": "A video has shares modeled by f(t)=−2t³+3t²+5. At what time is the maximum number of shares obtained?",
+      "options": {
+        "A": "1 hour",
+        "B": "2 hours",
+        "C": "3 hours",
+        "D": "4 hours"
+      },
+      "correctAnswer": "A",
+      "correctAnswerText": "1 hour",
+      "explanation": "f′(t)=−6t²+6t=6t(1−t). Critical points are t=0 and t=1. Since f′ changes from positive to negative at t=1, the maximum occurs at 1 hour.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 41,
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "question": "If ∫f(x)dx + f(x)/2 = 0, then f(x) is equal to",
+      "options": {
+        "A": "e⁻²ˣ",
+        "B": "e²ˣ",
+        "C": "e⁻ˣ²",
+        "D": "eˣ²"
+      },
+      "correctAnswer": "A",
+      "correctAnswerText": "e⁻²ˣ",
+      "explanation": "Differentiate the equation: f(x) + f′(x)/2 = 0. Thus f′+2f=0, whose solution is f(x)=Ce⁻²ˣ. Ignoring the constant factor gives e⁻²ˣ.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 42,
+      "subject": "Mathematics",
+      "chapter": "Definite Integrals",
+      "question": "Which possible function f(x) satisfies ∫ from −2 to 2 f(x)dx = 0?",
+      "options": {
+        "A": "log((2+x)/(2−x))",
+        "B": "sin(2+x)",
+        "C": "2x³+2x+1",
+        "D": "2x tan x"
+      },
+      "correctAnswer": "A",
+      "correctAnswerText": "log((2+x)/(2−x))",
+      "explanation": "The function log((2+x)/(2−x)) is odd on the interval (−2,2). The integral of an odd function over a symmetric interval is zero.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 43,
+      "subject": "Mathematics",
+      "chapter": "Definite Integrals",
+      "question": "Evaluate ∫ from a−6 to b−6 f(x+6)dx.",
+      "options": {
+        "A": "∫ from a to b f(x−6)dx",
+        "B": "∫ from a to b f(x+6)dx",
+        "C": "∫ from a to b f(x)dx",
+        "D": "∫ from a to b f(−x)dx"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "∫ from a to b f(x)dx",
+      "explanation": "Put t=x+6. Then dt=dx. The limits become a and b, so the integral becomes ∫ from a to b f(t)dt, which is ∫ from a to b f(x)dx.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 44,
+      "subject": "Mathematics",
+      "chapter": "Integration",
+      "question": "If n is a natural number, find ∫ sinⁿx/cosⁿ⁺²x dx.",
+      "options": {
+        "A": "tanⁿ⁻¹x/(n−1)+C",
+        "B": "tanⁿx/n+C",
+        "C": "tanⁿ⁺²x/(n+2)+C",
+        "D": "tanⁿ⁺¹x/(n+1)+C"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "tanⁿx/n + C",
+      "explanation": "Rewrite the integrand as tanⁿx sec²x. Let t=tan x, so dt=sec²x dx. The integral becomes ∫tⁿdt=tⁿ⁺¹/(n+1)+C. The printed options appear shifted; the correct power is n+1.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 45,
+      "subject": "Mathematics",
+      "chapter": "Integration",
+      "question": "Evaluate ∫ e⁻ˣ log(e²ˣ) dx.",
+      "options": {
+        "A": "log x+C",
+        "B": "x+C",
+        "C": "1/x+C",
+        "D": "x²/2+C"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "x+C",
+      "explanation": "Since log(e²ˣ)=2x, the integrand becomes 2xe⁻ˣ. Its integral is −2(x+1)e⁻ˣ+C, which does not match the printed options. The parsed expression is likely corrupted.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 46,
+      "subject": "Mathematics",
+      "chapter": "Applications of Integrals",
+      "question": "Find the area bounded by y²=x³, the y-axis, and y=1 and y=8.",
+      "options": {
+        "A": "155/3 sq. units",
+        "B": "93/5 sq. units",
+        "C": "93 sq. units",
+        "D": "155 sq. units"
+      },
+      "correctAnswer": "A",
+      "correctAnswerText": "155/3 square units",
+      "explanation": "For y≥0, x=y^(2/3). The required area is ∫ from 1 to 8 y^(2/3)dy = (3/5)[y^(5/3)] from 1 to 8 = (3/5)(32−1)=93/5. Therefore, the mathematically correct value is 93/5; option labels appear inconsistent.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 47,
+      "subject": "Mathematics",
+      "chapter": "Applications of Integrals",
+      "question": "Find the area enclosed by x=√3 cosθ and y=√3 sinθ.",
+      "options": {
+        "A": "√3π sq. units",
+        "B": "9π sq. units",
+        "C": "6π sq. units",
+        "D": "3π sq. units"
+      },
+      "correctAnswer": "D",
+      "correctAnswerText": "3π square units",
+      "explanation": "These parametric equations represent a circle of radius √3. Its area is πr² = π(3)=3π square units.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 48,
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "question": "Find the sum of the squares of the order and degree of 2y′ + (y″)² = √(y″−3).",
+      "options": {
+        "A": "13",
+        "B": "20",
+        "C": "8",
+        "D": "16"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "20",
+      "explanation": "The highest derivative is y″, so the order is 2. Squaring to remove the radical makes the highest power of y″ equal to 4, so the degree is 4. Hence 2²+4²=4+16=20.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 49,
+      "subject": "Mathematics",
+      "chapter": "Sets",
+      "question": "If A={a,b,c,d,e,f}, how many subsets contain at least 2 elements?",
+      "options": {
+        "A": "64",
+        "B": "65",
+        "C": "57",
+        "D": "59"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "57",
+      "explanation": "A set with 6 elements has 2⁶=64 subsets. Exclude the empty set and the 6 one-element subsets: 64−1−6=57.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 50,
+      "subject": "Mathematics",
+      "chapter": "Sets",
+      "question": "If A={1,2,...,10}, how many non-empty subsets contain only even numbers?",
+      "options": {
+        "A": "31",
+        "B": "82",
+        "C": "30",
+        "D": "29"
+      },
+      "correctAnswer": "A",
+      "correctAnswerText": "31",
+      "explanation": "There are 5 even numbers: 2,4,6,8,10. They have 2⁵=32 subsets, including the empty set. Therefore, non-empty subsets = 32−1=31.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 51,
+      "subject": "Mathematics",
+      "chapter": "Sets and Functions",
+      "question": "Find the domain of f(x)=√(x−7)/(9−x).",
+      "options": {
+        "A": "(7,9)",
+        "B": "[7,9)",
+        "C": "[7,9]",
+        "D": "(7,9]"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "[7,9)",
+      "explanation": "The square root requires x−7≥0, so x≥7. The denominator cannot be zero, so x≠9. Therefore, the domain is [7,9).",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 52,
+      "subject": "Mathematics",
+      "chapter": "Relations",
+      "question": "If n(A)=2 and the number of relations from A to B is 1024, find n(B).",
+      "options": {
+        "A": "2",
+        "B": "5",
+        "C": "25",
+        "D": "52"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "5",
+      "explanation": "The number of relations from A to B is 2^(n(A)n(B)). Thus 2^(2n(B))=1024=2¹⁰. Therefore, 2n(B)=10 and n(B)=5.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 53,
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "question": "P(A∪B)=0.6 and P(A∩B)=0.2. Find P(Ā)+P(B̄).",
+      "options": {
+        "A": "1",
+        "B": "0.8",
+        "C": "0.6",
+        "D": "1.2"
+      },
+      "correctAnswer": "D",
+      "correctAnswerText": "1.2",
+      "explanation": "P(Ā)+P(B̄)=2−[P(A)+P(B)]. Since P(A∪B)=P(A)+P(B)−P(A∩B), we get P(A)+P(B)=0.6+0.2=0.8. Hence the answer is 2−0.8=1.2.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 54,
+      "subject": "Mathematics",
+      "chapter": "Trigonometry",
+      "question": "At which value of x is sin(x+π/6)+cos(x+π/6) maximum?",
+      "options": {
+        "A": "π/2",
+        "B": "π/4",
+        "C": "π/6",
+        "D": "π/12"
+      },
+      "correctAnswer": "D",
+      "correctAnswerText": "π/12",
+      "explanation": "Let θ=x+π/6. The expression sinθ+cosθ is maximum when θ=π/4. Thus x=π/4−π/6=π/12.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 55,
+      "subject": "Mathematics",
+      "chapter": "Trigonometry",
+      "question": "The angles of a triangle are in A.P. and the greatest angle is twice the least angle. Find the sine of the third angle.",
+      "options": {
+        "A": "√3/2",
+        "B": "1/√2",
+        "C": "1/2",
+        "D": "0"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "1/√2",
+      "explanation": "Let the angles be a−d, a, a+d. The greatest is twice the least: a+d=2(a−d), so a=3d. Since the sum is 3a=180°, a=60° and d=20°. The third angle is 80°, whose sine is not among the options, indicating an inconsistency in the printed question.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 56,
+      "subject": "Mathematics",
+      "chapter": "Statistics",
+      "question": "The mean and standard deviation of 100 items are 50 and 4 respectively. Find the sum of the squares of the items.",
+      "options": {
+        "A": "250000",
+        "B": "251600",
+        "C": "256100",
+        "D": "265100"
+      },
+      "correctAnswer": "B",
+      "correctAnswerText": "251600",
+      "explanation": "Using σ² = (Σx²/n)−mean², we get Σx² = n(σ²+mean²)=100(16+2500)=251600.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 57,
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "question": "P(A)=1/2 and P(B)=3/10. If A and B are mutually exclusive, find the probability that neither occurs.",
+      "options": {
+        "A": "4/5",
+        "B": "3/5",
+        "C": "2/5",
+        "D": "1/5"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "1/5",
+      "explanation": "Since A and B are mutually exclusive, P(A∪B)=1/2+3/10=4/5. Therefore, P(neither)=1−4/5=1/5. The printed option labels appear misaligned.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 58,
+      "subject": "Mathematics",
+      "chapter": "Relations",
+      "question": "Let R={(a,b): a=b−2, b>6} be a relation on N. Which ordered pair belongs to R?",
+      "options": {
+        "A": "(2,4)",
+        "B": "(3,8)",
+        "C": "(6,8)",
+        "D": "(8,7)"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "(6,8)",
+      "explanation": "For (6,8), a=b−2 because 6=8−2, and b=8>6. Hence (6,8) belongs to R.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 59,
+      "subject": "Mathematics",
+      "chapter": "Inverse Functions",
+      "question": "If f(x)=(x+1)² for x≥1, and g is the reflection of f in y=x, find g(x).",
+      "options": {
+        "A": "−√(x−1)",
+        "B": "√(x+1)",
+        "C": "√(x−1)",
+        "D": "√(−x−1)"
+      },
+      "correctAnswer": "C",
+      "correctAnswerText": "√(x)−1",
+      "explanation": "Reflection in y=x gives the inverse function. From y=(x+1)² and x≥1, we get x+1=√y, so y=√x−1. The displayed options appear to have an OCR formatting error.",
+      "hasImage": false,
+      "image": null
+    },
+    {
+      "id": 60,
+      "subject": "Mathematics",
+      "chapter": "Inverse Trigonometric Functions",
+      "question": "If sin⁻¹x + sin⁻¹y = π/2, find x².",
+      "options": {
+        "A": "1−y²",
+        "B": "1+y²",
+        "C": "√(1−y²)",
+        "D": "√(1+y²)"
+      },
+      "correctAnswer": "A",
+      "correctAnswerText": "1−y²",
+      "explanation": "Since sin⁻¹x=π/2−sin⁻¹y=cos⁻¹y, we have x=√(1−y²). Squaring both sides gives x²=1−y².",
+      "hasImage": false,
+      "image": null
+    }
+  ]

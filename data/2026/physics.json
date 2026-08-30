@@ -1,0 +1,1022 @@
+[
+  {
+    "id": 1,
+    "subject": "Physics",
+    "chapter": "Electric Charges and Fields",
+    "question": "An electron falls through a distance 1.5 cm in a uniform electric field of magnitude 2.0 × 10⁴ N/C from rest. The time taken to cover this distance in seconds is _____ (e = 1.6 × 10⁻¹⁹ C, me = 9.11 × 10⁻³¹ kg).",
+    "options": {
+      "A": "2.9 × 10⁻⁹",
+      "B": "2.9 × 10⁹",
+      "C": "4 × 10⁻⁶",
+      "D": "4 × 10⁶"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "2.9 × 10⁻⁹",
+    "explanation": "Force on electron F = eE = 1.6×10⁻¹⁹ × 2.0×10⁴ = 3.2×10⁻¹⁵ N. Acceleration a = F/m = 3.2×10⁻¹⁵ / 9.11×10⁻³¹ = 3.51×10¹⁵ m/s². Using s = ½at²: t = √(2s/a) = √(2 × 0.015 / 3.51×10¹⁵) = √(8.55×10⁻¹⁸) ≈ 2.9×10⁻⁹ s. Hence option A is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 2,
+    "subject": "Physics",
+    "chapter": "Electric Charges and Fields",
+    "question": "What will be the total electric flux through the faces of the cube if a charge Q is placed at B, midpoint of an edge of the cube (side of length 'a')?",
+    "options": {
+      "A": "Q / 8ε₀",
+      "B": "Q / 3ε₀",
+      "C": "Q / 4ε₀",
+      "D": "Q / 2ε₀"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "Q / 2ε₀",
+    "explanation": "A charge placed at the midpoint of an edge is shared equally by the 2 cubes that share that edge. By Gauss's law, total flux through a closed surface = Q_enclosed / ε₀. Since only half the charge (Q/2) effectively contributes to one cube, the total flux through all faces of the cube = Q / 2ε₀. Hence option D is correct.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 3,
+    "subject": "Physics",
+    "chapter": "Electric Charges and Fields",
+    "question": "Consider three point charges −2Q, Q and −Q and three surfaces S₁, S₂ and S₃. Match the entries of List-I with that of List-II. List-I: (a) Net flux through S₁, (b) Net flux through S₂, (c) Net flux through S₃. List-II: (i) −2Q/ε₀, (ii) −Q/ε₀, (iii) Zero.",
+    "options": {
+      "A": "a - ii, b - i, c - iii",
+      "B": "a - iii, b - ii, c - i",
+      "C": "a - i, b - ii, c - iii",
+      "D": "a - ii, b - iii, c - i"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "a - ii, b - iii, c - i",
+    "explanation": "By Gauss's law, net flux through a surface = Q_enclosed / ε₀. S₁ encloses only −Q, so flux = −Q/ε₀ (ii). S₂ encloses no charge, so flux = Zero (iii). S₃ encloses both −2Q and Q, total = −2Q, so flux = −2Q/ε₀ (i). Hence a-ii, b-iii, c-i. Option D is correct.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 4,
+    "subject": "Physics",
+    "chapter": "Electrostatic Potential and Capacitance",
+    "question": "A parallel plate capacitor has a uniform electric field 'E' in the space between the plates. If the distance between the plates is 'd' and area of each plate is 'A', the energy stored in the capacitor is:",
+    "options": {
+      "A": "½ε₀E²",
+      "B": "ε₀EAd",
+      "C": "½ε₀E²Ad",
+      "D": "E²Ad / ε₀"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "½ε₀E²Ad",
+    "explanation": "Energy stored U = ½CV². Here C = ε₀A/d and V = Ed. So U = ½(ε₀A/d)(Ed)² = ½ε₀E²Ad. This is the standard formula for energy density (½ε₀E²) multiplied by volume (Ad). Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 5,
+    "subject": "Physics",
+    "chapter": "Electrostatic Potential and Capacitance",
+    "question": "In the circuit shown in the figure, the potential difference across the 4μF capacitor is:",
+    "options": {
+      "A": "3 V",
+      "B": "4 V",
+      "C": "9 V",
+      "D": "12 V"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "4 V",
+    "explanation": "In a series combination of capacitors, charge Q is same on all capacitors. For capacitors C₁ = 2μF and C₂ = 4μF in series with a 12V battery: Q = C_eq × V = (C₁C₂/(C₁+C₂)) × V = (2×4/6) × 12 = 16μC. Voltage across 4μF = Q/C₂ = 16/4 = 4V. Hence option B is correct.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 6,
+    "subject": "Physics",
+    "chapter": "Electric Charges and Fields",
+    "question": "An electric dipole of dipole moment P⃗ is placed in the uniform electric field E⃗. Then which of the following statements are correct? Statement I: The torque on the dipole is P⃗ × E⃗. Statement II: The potential energy of the dipole is −P⃗ · E⃗. Statement III: The net force on the dipole is non-zero.",
+    "options": {
+      "A": "I, II and III",
+      "B": "I and II only",
+      "C": "II and III only",
+      "D": "I and III only"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "I and II only",
+    "explanation": "In a uniform electric field: (I) Torque on dipole τ = P⃗ × E⃗ — CORRECT. (II) Potential energy U = −P⃗ · E⃗ — CORRECT. (III) Net force on dipole in uniform field is ZERO, not non-zero — INCORRECT. Only statements I and II are correct. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 7,
+    "subject": "Physics",
+    "chapter": "Electrostatic Potential and Capacitance",
+    "question": "A 200 J of work is done in moving a charge 5C from a point A where the potential is −20V to another point B where potential is V volt. The value of V at B is:",
+    "options": {
+      "A": "10 V",
+      "B": "20 V",
+      "C": "40 V",
+      "D": "60 V"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "20 V",
+    "explanation": "Work done W = q(V_B − V_A). So 200 = 5(V − (−20)) = 5(V + 20). This gives V + 20 = 40, so V = 20V. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 8,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "question": "In the circuit shown in the figure, the values of currents I₁, I₂ and I₃ respectively are:",
+    "options": {
+      "A": "6A, 1.5A and 1A",
+      "B": "4A, 2.5A and 2A",
+      "C": "4A, 2.5A and 1A",
+      "D": "6A, 4.5A and 1.5A"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "4A, 2.5A and 1A",
+    "explanation": "Using Kirchhoff's current law (KCL) at junctions and Kirchhoff's voltage law (KVL) for loops in the given circuit, we can solve for the three currents. At each junction, the sum of currents entering equals sum leaving. Solving the simultaneous equations gives I₁ = 4A, I₂ = 2.5A, I₃ = 1A. Hence option C is correct.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 9,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "question": "The number of electrons moving per second through the filament of a lamp of 60W operating at 120V is nearly (e = 1.6 × 10⁻¹⁹ C):",
+    "options": {
+      "A": "6.2 × 10¹⁸",
+      "B": "6.2 × 10¹⁹",
+      "C": "3.1 × 10¹⁸",
+      "D": "3.1 × 10¹⁹"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "3.1 × 10¹⁸",
+    "explanation": "Current I = P/V = 60/120 = 0.5A. Number of electrons n = I/e = 0.5 / (1.6×10⁻¹⁹) = 3.125 × 10¹⁸ ≈ 3.1 × 10¹⁸ per second. Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 10,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "question": "Given below are two statements: Statement I: The resistivity of a conductor is independent of its temperature. Statement II: The resistivity of a semiconductor decreases with increase in temperature. Select the correct option.",
+    "options": {
+      "A": "Both Statement I and Statement II are false",
+      "B": "Both Statement I and Statement II are true",
+      "C": "Statement I is true but Statement II is false",
+      "D": "Statement I is false but Statement II is true"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "Statement I is false but Statement II is true",
+    "explanation": "Statement I is FALSE: Resistivity of a conductor INCREASES with temperature (more collisions at higher T). Statement II is TRUE: Resistivity of a semiconductor DECREASES with temperature (more charge carriers freed at higher T). Hence option D is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 11,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "question": "Current flowing through a wire decreases linearly from 10A to zero in 4s as shown in the graph. Find the total charge flowing through the wire in the given time interval.",
+    "options": {
+      "A": "40 C",
+      "B": "20 C",
+      "C": "10 C",
+      "D": "80 C"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "20 C",
+    "explanation": "Charge Q = Area under I-t graph = ½ × base × height = ½ × 4 × 10 = 20C. For a linear decrease from 10A to 0A in 4s, the area of the triangle gives the total charge. Hence option B is correct.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 12,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "question": "In a conducting region, 10¹⁹ electrons and 10¹⁹ protons move to the left, while 10¹⁹ α-particles move to the right per second. The resulting electric current is (e = 1.6 × 10⁻¹⁹ C):",
+    "options": {
+      "A": "3.2 A towards left",
+      "B": "3.2 A towards right",
+      "C": "1.6 A towards left",
+      "D": "1.6 A towards right"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "3.2 A towards right",
+    "explanation": "Electrons moving left → conventional current to RIGHT = 10¹⁹ × 1.6×10⁻¹⁹ = 1.6A. Protons moving left → conventional current to LEFT = 1.6A. α-particles (charge +2e) moving right → conventional current to RIGHT = 10¹⁹ × 2 × 1.6×10⁻¹⁹ = 3.2A. Net current = 1.6 (right) − 1.6 (left) + 3.2 (right) = 3.2A towards right. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 13,
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "question": "A point charge is placed in a moving train. A passenger A sitting in the train and person B on the ground observe the fields due to this charge. Then:",
+    "options": {
+      "A": "A observes both electric and magnetic fields",
+      "B": "B observes both electric and magnetic fields",
+      "C": "A observes only magnetic field",
+      "D": "B observes only electric field"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "B observes both electric and magnetic fields",
+    "explanation": "Passenger A is at rest relative to the charge, so A observes only an electric field (no magnetic field since charge is stationary in A's frame). Person B on the ground sees the charge moving, so B observes both electric field and magnetic field (moving charge produces magnetic field). Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 14,
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "question": "A proton, an electron and an α-particle enter at right angles to a uniform magnetic field with the same velocity. If Rp, Re and Rα are the radii of circular paths of these particles, then:",
+    "options": {
+      "A": "Rα = Rp = Re",
+      "B": "Rα > Rp > Re",
+      "C": "Rα < Rp < Re",
+      "D": "Rα > Rp = Re"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Rα > Rp > Re",
+    "explanation": "Radius R = mv/(qB). For proton: Rp = mpv/(eB). For electron: Re = mev/(eB). For α-particle (mass 4mp, charge 2e): Rα = 4mpv/(2eB) = 2mpv/(eB) = 2Rp. Since mp >> me, we get Rp >> Re. Therefore Rα = 2Rp > Rp > Re. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 15,
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "question": "Biot-Savart law indicates that an electron moving with a velocity V⃗ produces a magnetic field B⃗ around it such that:",
+    "options": {
+      "A": "B⃗ is parallel to V⃗",
+      "B": "B⃗ is perpendicular to V⃗",
+      "C": "B⃗ is anti-parallel to V⃗",
+      "D": "B⃗ is inclined to V⃗ by 45°"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "B⃗ is perpendicular to V⃗",
+    "explanation": "According to Biot-Savart law, dB⃗ = (μ₀/4π) × q(v⃗ × r̂)/r². The magnetic field is perpendicular to both velocity v⃗ and position vector r⃗ (cross product). So B⃗ is always perpendicular to V⃗. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 16,
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "question": "Two identical circular current loops carrying equal currents are placed with their axes inclined at 45° to each other as shown in the figure. The resultant magnetic field at P is:",
+    "options": {
+      "A": "(μ₀I/16π²R)[(π²+1)î + ĵ]",
+      "B": "(μ₀I/16π²R)[π²î + ĵ]",
+      "C": "(μ₀I/16R)[(π²+1)î + ĵ]",
+      "D": "(μ₀I/16R)[π²î + ĵ]"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "(μ₀I/16π²R)[π²î + ĵ]",
+    "explanation": "For two identical loops with axes at 45°, the magnetic field at point P is the vector sum of fields from both loops. Each loop produces B = μ₀IR²/[2(R²+x²)^(3/2)] along its axis. Resolving into components along î and ĵ and adding vectorially at 45° inclination gives the resultant field. The correct vector sum matches option B.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 17,
+    "subject": "Physics",
+    "chapter": "Magnetism and Matter",
+    "question": "If a paramagnetic bar is brought near a bar magnet, then it is:",
+    "options": {
+      "A": "Attracted by both the poles of the bar magnet",
+      "B": "Repelled by both the poles of the bar magnet",
+      "C": "Attracted by the South-pole and repelled by the North-pole",
+      "D": "Attracted by the North-pole and repelled by the South-pole"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "Attracted by both the poles of the bar magnet",
+    "explanation": "Paramagnetic materials have a tendency to align with the external magnetic field. When brought near a bar magnet, the paramagnetic material gets weakly attracted by BOTH poles (North and South) because the induced magnetism aligns with the field. Unlike ferromagnetic materials, paramagnetic materials are not permanently magnetized. Hence option A is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 18,
+    "subject": "Physics",
+    "chapter": "Magnetism and Matter",
+    "question": "Pick out the WRONG statements about magnetic substances (χ = magnetic susceptibility, μᵣ = relative permeability). I. Substances with −1 ≤ χ < 0 are diamagnetic. II. Substances with χ ≈ 1 are paramagnetic. III. Substances with χ >> 1 are ferromagnetic. IV. Substances with μᵣ ≈ 1 are ferromagnetic.",
+    "options": {
+      "A": "I and II",
+      "B": "III and IV",
+      "C": "II and III",
+      "D": "II and IV"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "II and IV",
+    "explanation": "Statement I is CORRECT: Diamagnetic substances have small negative χ (between −1 and 0). Statement II is WRONG: Paramagnetic substances have small positive χ (χ << 1), NOT χ ≈ 1. Statement III is CORRECT: Ferromagnetic substances have χ >> 1. Statement IV is WRONG: Ferromagnetic substances have μᵣ >> 1, NOT μᵣ ≈ 1. Statements II and IV are wrong. Hence option D is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 19,
+    "subject": "Physics",
+    "chapter": "Photoelectric Effect and Wave Nature of Light",
+    "question": "Work function of the metal is:",
+    "options": {
+      "A": "Maximum possible energy acquired by an electron",
+      "B": "Equal for all metals",
+      "C": "Minimum energy required by an electron to just eject from metal surface",
+      "D": "Maximum energy which is given to electron to move out of metal surface"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Minimum energy required by an electron to just eject from metal surface",
+    "explanation": "Work function (φ) is defined as the MINIMUM energy required to eject an electron from the surface of a metal. It is different for different metals (option B is wrong). The maximum kinetic energy of ejected electrons is hν − φ (option A describes something else). Option C is the correct definition. Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 20,
+    "subject": "Physics",
+    "chapter": "Photoelectric Effect and Wave Nature of Light",
+    "question": "Variation of photoelectric current with anode potential is shown below. Choose the correct option (V₀ = stopping potential).",
+    "options": {
+      "A": "Graph-I",
+      "B": "Graph-II",
+      "C": "Graph-III",
+      "D": "Graph-IV"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Graph-II",
+    "explanation": "The correct graph for photoelectric current vs anode potential should show: (1) Current is zero when anode potential is more negative than stopping potential −V₀. (2) Current increases as anode potential increases from −V₀. (3) Current reaches a saturation value at sufficiently positive anode potential. Graph-II correctly shows these characteristics.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 21,
+    "subject": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "question": "In Faraday-Henry's experiment, a coil is connected to a galvanometer. For the deflection of pointer in the galvanometer, which of the following statement/s is/are WRONG? The pointer in the galvanometer deflects: (a) When bar magnet is moved towards stationary coil along its axis. (b) When bar magnet is moved away from stationary coil along its axis. (c) When coil is moved towards stationary bar magnet along its axis. (d) When coil and magnet are moved without relative motion between them.",
+    "options": {
+      "A": "a and b",
+      "B": "b and c",
+      "C": "a, b and c",
+      "D": "Only d"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "Only d",
+    "explanation": "Electromagnetic induction requires RELATIVE motion between coil and magnet to change magnetic flux. (a) Magnet moved towards coil → deflection occurs ✓. (b) Magnet moved away → deflection occurs ✓. (c) Coil moved towards magnet → deflection occurs ✓. (d) Both moved WITHOUT relative motion → NO deflection. Statement (d) is WRONG. Hence option D is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 22,
+    "subject": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "question": "The conductor PQ of length l is moved from x = 0 to x = b and then up to x = 2b with constant velocity v⃗. A uniform magnetic field B⃗ is perpendicular to the plane and extends from x = 0 to x = b, and is zero for x > b. The magnitude of emf induced in the conductor is:",
+    "options": {
+      "A": "Blx; 0 ≤ x < b",
+      "B": "Zero; 0 ≤ x < b",
+      "C": "Blv; 0 ≤ x ≤ b",
+      "D": "Blv; b ≤ x < 2b"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Blv; 0 ≤ x ≤ b",
+    "explanation": "When the conductor moves through the magnetic field (0 ≤ x ≤ b), the motional emf is ε = Blv since the conductor cuts magnetic field lines. When x > b, B = 0 so ε = 0. The induced emf is Blv only in the region 0 ≤ x ≤ b. Hence option C is correct.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 23,
+    "subject": "Physics",
+    "chapter": "Alternating Current",
+    "question": "In a circuit containing a pure resistor connected to an AC source:",
+    "options": {
+      "A": "Voltage leads the current by 90°",
+      "B": "Current leads the voltage by 90°",
+      "C": "Voltage and current are in same phase with each other",
+      "D": "Current leads the voltage by 180°"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Voltage and current are in same phase with each other",
+    "explanation": "In a pure resistive AC circuit, there is no phase difference between voltage and current. Both V and I reach their maximum and zero values at the same time. The phase angle φ = tan⁻¹(XL/R) = tan⁻¹(0/R) = 0. Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 24,
+    "subject": "Physics",
+    "chapter": "Alternating Current",
+    "question": "A light bulb rated 100W is connected to an AC source of 220V, 50Hz. The rms current through the bulb is:",
+    "options": {
+      "A": "0.454 A",
+      "B": "0.545 A",
+      "C": "2.20 A",
+      "D": "0.22 A"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "0.454 A",
+    "explanation": "Using P = V_rms × I_rms: I_rms = P/V_rms = 100/220 = 5/11 ≈ 0.454A. The rms current through the bulb is approximately 0.454A. Hence option A is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 25,
+    "subject": "Physics",
+    "chapter": "Alternating Current",
+    "question": "A small town with a demand of 900 kW of electric power at 220V is situated 20 km away from a power generating station. The two-wire line has resistance per unit length of 5 × 10⁻⁴ Ωm⁻¹. The town gets power through 45000V to 220V step-down transformer. The line power loss in the form of heat is:",
+    "options": {
+      "A": "4 kW",
+      "B": "8 kW",
+      "C": "40 kW",
+      "D": "80 kW"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "8 kW",
+    "explanation": "Total length of two-wire line = 2 × 20000 = 40000m. Total resistance R = 40000 × 5×10⁻⁴ = 20Ω. Current in transmission line I = P/V = 900000/45000 = 20A. Power loss = I²R = (20)² × 20 = 8000W = 8kW. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 26,
+    "subject": "Physics",
+    "chapter": "Electromagnetic Waves",
+    "question": "Match the following Maxwell's equations: List-I: (a) Gauss's law for electrostatics, (b) Gauss's law for magnetism, (c) Faraday's law, (d) Ampere-Maxwell's law. List-II: (i) ∮E⃗·dA⃗ = Q/ε₀, (ii) ∮B⃗·dl⃗ = μ₀i_c + μ₀ε₀dΦE/dt, (iii) ∮B⃗·dA⃗ = 0, (iv) ∮E⃗·dl⃗ = −dΦB/dt.",
+    "options": {
+      "A": "a - i, b - iii, c - iv, d - ii",
+      "B": "a - ii, b - iii, c - i, d - iv",
+      "C": "a - i, b - ii, c - iii, d - iv",
+      "D": "a - ii, b - iii, c - iv, d - i"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "a - i, b - iii, c - iv, d - ii",
+    "explanation": "Gauss's law for electrostatics: ∮E⃗·dA⃗ = Q/ε₀ → (i). Gauss's law for magnetism: ∮B⃗·dA⃗ = 0 → (iii). Faraday's law: ∮E⃗·dl⃗ = −dΦB/dt → (iv). Ampere-Maxwell law: ∮B⃗·dl⃗ = μ₀i_c + μ₀ε₀dΦE/dt → (ii). Hence a-i, b-iii, c-iv, d-ii. Option A is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 27,
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "question": "Match the following with reference to the figure shown: List-I: (a) Angle of reflection, (b) Value of α, (c) Angle of deviation. List-II: (i) 60°, (ii) 120°, (iii) 30°.",
+    "options": {
+      "A": "a - i, b - ii, c - iii",
+      "B": "a - ii, b - i, c - iii",
+      "C": "a - iii, b - i, c - ii",
+      "D": "a - iii, b - ii, c - i"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "a - iii, b - i, c - ii",
+    "explanation": "For the given reflection figure: If the angle of incidence is 30°, then angle of reflection = 30° → (iii). The angle α (likely angle between incident and reflected ray extension) = 60° → (i). Angle of deviation = 180° − 2i = 180° − 60° = 120° → (ii). Hence a-iii, b-i, c-ii. Option C is correct.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 28,
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "question": "The direction of a ray of light incident on a concave mirror is shown by PQ, while direction in which the ray would travel after reflection is shown by four rays marked A, B, C and D. Which of the four rays correctly shows the direction of the reflected ray?",
+    "options": {
+      "A": "D",
+      "B": "C",
+      "C": "B",
+      "D": "A"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "C",
+    "explanation": "For a concave mirror, when a ray is incident parallel to the principal axis, it reflects through the focus. For rays not parallel to principal axis, the reflected ray obeys the law of reflection (angle of incidence = angle of reflection). Ray C correctly represents the reflected ray for the given incident ray PQ on the concave mirror.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 29,
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "question": "The incorrect statement about refractive index for a pair of media is:",
+    "options": {
+      "A": "It depends upon nature of the first medium",
+      "B": "It depends upon nature of the second medium",
+      "C": "It depends upon wavelength of light",
+      "D": "It depends upon angle of incidence"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "It depends upon angle of incidence",
+    "explanation": "Refractive index depends on: nature of both media (A and B are correct), wavelength of light (C is correct — different colors refract differently). However, refractive index does NOT depend on the angle of incidence (D is incorrect). The angle of incidence affects Snell's law application, not the refractive index itself. Hence option D is correct (as the incorrect statement).",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 30,
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "question": "The critical angle for a monochromatic light going from medium A to medium B is θ. If the speed of light in medium A is V, then the speed of light in medium B is:",
+    "options": {
+      "A": "V(1 − cos θ)",
+      "B": "V / cos θ",
+      "C": "V / sin θ",
+      "D": "V(1 − sin θ)"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "V / sin θ",
+    "explanation": "Critical angle formula: sin θ = n_B/n_A. Since n_A = c/V and n_B = c/v_B, we get sin θ = (c/v_B)/(c/V) = V/v_B. Therefore v_B = V/sin θ. Since medium B is optically rarer (sin θ < 1), v_B > V, which is consistent. Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 31,
+    "subject": "Physics",
+    "chapter": "Electromagnetic Waves",
+    "question": "What range of electromagnetic spectrum is considered as light?",
+    "options": {
+      "A": "1 mm to 700 nm",
+      "B": "400 nm to 1 nm",
+      "C": "400 nm to 700 nm",
+      "D": "1 nm to 10⁻³ nm"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "400 nm to 700 nm",
+    "explanation": "Visible light (what we can see) occupies the wavelength range approximately 400 nm (violet) to 700 nm (red) in the electromagnetic spectrum. This is the portion of EM spectrum detected by the human eye. Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 32,
+    "subject": "Physics",
+    "chapter": "Wave Optics",
+    "question": "In Young's double slit experiment, how many maxima can be seen on a screen (including central maxima) if d = 5λ/2 (where λ is wavelength and d is distance between two slits)?",
+    "options": {
+      "A": "5",
+      "B": "4",
+      "C": "7",
+      "D": "1"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "5",
+    "explanation": "For maxima: d sin θ = nλ. Maximum value of n: sin θ ≤ 1, so n ≤ d/λ = (5λ/2)/λ = 5/2 = 2.5. So n can be −2, −1, 0, +1, +2 (5 values). Total maxima including central = 5. Hence option A is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 33,
+    "subject": "Physics",
+    "chapter": "Atoms",
+    "question": "The radius of first orbit in hydrogen atom is 5.3 × 10⁻¹¹ m. The kinetic energy EK, potential energy EP and total energy ET of electron in first orbit are:",
+    "options": {
+      "A": "EK = −13.6 eV, EP = 27.2 eV, ET = 13.6 eV",
+      "B": "EK = 13.6 eV, EP = −27.2 eV, ET = −13.6 eV",
+      "C": "EK = −27.2 eV, EP = −13.6 eV, ET = 13.6 eV",
+      "D": "EK = 13.6 eV, EP = −6.8 eV, ET = −13.6 eV"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "EK = 13.6 eV, EP = −27.2 eV, ET = −13.6 eV",
+    "explanation": "In hydrogen atom first orbit (n=1): KE = 13.6 eV (always positive). PE = −2 × KE = −27.2 eV (always negative, twice the magnitude of KE). Total energy E = KE + PE = 13.6 − 27.2 = −13.6 eV. This is the ground state energy of hydrogen. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 34,
+    "subject": "Physics",
+    "chapter": "Atoms",
+    "question": "Bohr's second postulate implies quantisation of:",
+    "options": {
+      "A": "Charge of an electron",
+      "B": "Energy of an electron",
+      "C": "Angular momentum of electron",
+      "D": "Radiated energy by an electron"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Angular momentum of electron",
+    "explanation": "Bohr's second postulate states that only those orbits are allowed in which the angular momentum of the electron is an integral multiple of h/2π: L = nh/2π (n = 1, 2, 3...). This implies quantisation of angular momentum. Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 35,
+    "subject": "Physics",
+    "chapter": "Atoms",
+    "question": "An electron transition takes place from excited state to ground state in hydrogen atom, then:",
+    "options": {
+      "A": "Its kinetic energy increases but potential energy and total energy decrease",
+      "B": "Its kinetic energy, potential energy and total energy decrease",
+      "C": "Kinetic energy decreases, potential energy increases but total energy remains same",
+      "D": "Kinetic energy and total energy decrease but potential energy increases"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "Its kinetic energy increases but potential energy and total energy decrease",
+    "explanation": "Going from higher orbit (excited state) to lower orbit (ground state): KE = 13.6/n² eV increases (more negative orbit means faster electron). PE = −27.2/n² eV becomes more negative (decreases). Total energy E = −13.6/n² eV becomes more negative (decreases). So KE increases while PE and TE decrease. Hence option A is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 36,
+    "subject": "Physics",
+    "chapter": "Semiconductor Electronics",
+    "question": "An n-type and p-type semiconductor can be obtained by respectively doping pure silicon with:",
+    "options": {
+      "A": "Arsenic and Phosphorous respectively",
+      "B": "Indium and Aluminium respectively",
+      "C": "Phosphorous and Indium respectively",
+      "D": "Aluminium and Boron respectively"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Phosphorous and Indium respectively",
+    "explanation": "n-type: Dope silicon with pentavalent impurity (Group 15) like Phosphorous, Arsenic — extra electron becomes free carrier. p-type: Dope silicon with trivalent impurity (Group 13) like Indium, Boron, Aluminium — creates hole. So Phosphorous (n-type) and Indium (p-type) is correct. Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 37,
+    "subject": "Physics",
+    "chapter": "Semiconductor Electronics",
+    "question": "In which of the following figures, diode is reverse biased?",
+    "options": {
+      "A": "Figure (1)",
+      "B": "Figure (2)",
+      "C": "Figure (3)",
+      "D": "Figure (4)"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Figure (2)",
+    "explanation": "A diode is reverse biased when the positive terminal of battery is connected to n-side and negative terminal to p-side. In this configuration, the depletion region widens and negligible current flows. Figure (2) shows the battery connected in reverse bias configuration. Hence option B is correct.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 38,
+    "subject": "Physics",
+    "chapter": "Semiconductor Electronics",
+    "question": "A wafer of pure germanium crystal has two parts X and Y. The end X is obtained by doping with arsenic and Y with indium. It is connected to a battery as shown. Which statement is correct?",
+    "options": {
+      "A": "X is p-type, Y is n-type and junction is forward biased",
+      "B": "X is n-type, Y is p-type and junction is forward biased",
+      "C": "X is p-type, Y is n-type and junction is reverse biased",
+      "D": "X is n-type, Y is p-type and junction is reverse biased"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "X is n-type, Y is p-type and junction is forward biased",
+    "explanation": "Arsenic is pentavalent → doping creates n-type semiconductor (X). Indium is trivalent → doping creates p-type semiconductor (Y). The battery connection shown forward biases the p-n junction (positive terminal to p-side, negative to n-side). Hence option B is correct.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 39,
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "question": "From the graph of angle of deviation versus angle of incidence for an equilateral prism, the refractive index of material of prism is:",
+    "options": {
+      "A": "√3/2",
+      "B": "3/2",
+      "C": "√3",
+      "D": "√2"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "√3",
+    "explanation": "For an equilateral prism, A = 60°. At minimum deviation: n = sin((A+δm)/2)/sin(A/2). From the graph, at minimum deviation δm = 60°. So n = sin((60°+60°)/2)/sin(60°/2) = sin(60°)/sin(30°) = (√3/2)/(1/2) = √3. Hence option C is correct.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 40,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "question": "Which of the following circuits is correct for verification of Ohm's law?",
+    "options": {
+      "A": "Figure (1)",
+      "B": "Figure (2)",
+      "C": "Figure (3)",
+      "D": "Figure (4)"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "Figure (1)",
+    "explanation": "For verification of Ohm's law, the circuit must have: a resistor, a battery/source, an ammeter (in series to measure current), a voltmeter (in parallel across resistor to measure voltage), and a rheostat (to vary current). Figure (1) correctly shows all these components in proper arrangement. Hence option A is correct.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 41,
+    "subject": "Physics",
+    "chapter": "Physical World and Measurement",
+    "question": "Match the physical quantities in List-I with dimensions in List-II: (a) Torque, (b) Gravitational constant, (c) Capacitance, (d) Planck's constant. List-II: (i) [M⁻¹L⁻²T⁴A²], (ii) [M¹L²T⁻¹], (iii) [M⁻¹L³T⁻²], (iv) [M¹L²T⁻²].",
+    "options": {
+      "A": "a - iv, b - ii, c - iii, d - i",
+      "B": "a - iv, b - iii, c - i, d - ii",
+      "C": "a - iv, b - i, c - iii, d - ii",
+      "D": "a - ii, b - i, c - iii, d - iv"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "a - iv, b - iii, c - i, d - ii",
+    "explanation": "Torque = Force × distance = [MLT⁻²][L] = [ML²T⁻²] → (iv). Gravitational constant: G = Fr²/(m₁m₂) = [MLT⁻²][L²]/[M²] = [M⁻¹L³T⁻²] → (iii). Capacitance: C = Q/V = [AT]/[ML²T⁻³A⁻¹] = [M⁻¹L⁻²T⁴A²] → (i). Planck's constant: h = E/ν = [ML²T⁻²]/[T⁻¹] = [ML²T⁻¹] → (ii). Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 42,
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "question": "A car covers the first half of the distance between two places at 40 km/h and another half at 50 km/h. The average speed of the car is:",
+    "options": {
+      "A": "45.00 km/h",
+      "B": "44.44 km/h",
+      "C": "43.14 km/h",
+      "D": "42.04 km/h"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "44.44 km/h",
+    "explanation": "For equal distances with speeds v₁ and v₂, average speed = 2v₁v₂/(v₁+v₂) = 2×40×50/(40+50) = 4000/90 = 44.44 km/h. This is always less than the arithmetic mean (45 km/h) because more time is spent at the lower speed. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 43,
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "question": "Two bodies are projected with the same velocity. If one is projected at an angle of 30° and the other at 45° to the horizontal, then the ratio of maximum heights attained is:",
+    "options": {
+      "A": "3:1",
+      "B": "1:2",
+      "C": "4:1",
+      "D": "1:3"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "1:2",
+    "explanation": "Maximum height H = u²sin²θ/(2g). For same velocity u: H₁/H₂ = sin²30°/sin²45° = (1/2)²/(1/√2)² = (1/4)/(1/2) = 1/2. So ratio H₁:H₂ = 1:2. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 44,
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "question": "The velocity of a particle moving along x-axis is given as V = x² − 5x + 4 (in m/s) where x denotes the x-coordinate in metres. The magnitude of acceleration when the velocity is zero is:",
+    "options": {
+      "A": "2 m/s²",
+      "B": "3 m/s²",
+      "C": "Zero",
+      "D": "1 m/s²"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Zero",
+    "explanation": "V = x² − 5x + 4 = (x−1)(x−4). V = 0 when x = 1 or x = 4. Acceleration a = dV/dt = (dV/dx)(dx/dt) = (2x−5) × V. When V = 0: a = (2x−5)(0) = 0. The acceleration is zero whenever velocity is zero. Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 45,
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "question": "A man weighs 80 kg. He stands on a weighing scale in a lift which is moving upwards with a uniform acceleration of 6 m/s². What would be his weight in kg? (g = 10 m/s²)",
+    "options": {
+      "A": "Zero",
+      "B": "48 kg",
+      "C": "120 kg",
+      "D": "128 kg"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "128 kg",
+    "explanation": "Apparent weight = m(g + a) = 80(10 + 6) = 80 × 16 = 1280N. In kg, apparent weight = 1280/10 = 128 kg. When lift accelerates upward, the normal reaction (apparent weight) increases beyond actual weight. Hence option D is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 46,
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "question": "A mass M is hung with a light inextensible string as shown in figure. Find the tension of the horizontal string.",
+    "options": {
+      "A": "√2 Mg",
+      "B": "√3 Mg",
+      "C": "Mg",
+      "D": "3 Mg"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Mg",
+    "explanation": "In the typical setup, mass M is suspended by a string at 45° from vertical, held by a horizontal string. Resolving forces: vertical component of angled string T_v cos 45° = Mg, horizontal component T_h = T_v sin 45° = Mg tan 45° = Mg. Hence option C is correct.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 47,
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "question": "Two bodies with kinetic energies in the ratio 3:1 are moving with equal linear momentum. The ratio of their masses is:",
+    "options": {
+      "A": "1:4",
+      "B": "1:3",
+      "C": "1:2",
+      "D": "1:1"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "1:3",
+    "explanation": "KE = p²/(2m). Since momentum p is same: KE₁/KE₂ = m₂/m₁ = 3/1. Therefore m₁/m₂ = 1/3. The ratio of masses is 1:3. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 48,
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "question": "A horizontal force of 5N is applied on a stationary body of mass 5kg, which is initially at rest on a frictionless table. The change in kinetic energy of the body in 10s is:",
+    "options": {
+      "A": "25 J",
+      "B": "Zero",
+      "C": "125 J",
+      "D": "250 J"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "250 J",
+    "explanation": "Acceleration a = F/m = 5/5 = 1 m/s². Velocity after 10s: v = u + at = 0 + 1(10) = 10 m/s. KE = ½mv² = ½(5)(10²) = ½(5)(100) = 250J. Since initial KE = 0, change in KE = 250J. Hence option D is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 49,
+    "subject": "Physics",
+    "chapter": "Rotational Motion",
+    "question": "The angular momentum of a moving body remains constant, if:",
+    "options": {
+      "A": "net external force is applied",
+      "B": "net pressure is applied",
+      "C": "net external torque is applied",
+      "D": "net external torque is not applied"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "net external torque is not applied",
+    "explanation": "By the rotational analogue of Newton's second law: τ_net = dL/dt. If net external torque τ_net = 0, then dL/dt = 0, meaning angular momentum L is constant (conserved). This is the law of conservation of angular momentum. Hence option D is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 50,
+    "subject": "Physics",
+    "chapter": "Rotational Motion",
+    "question": "If the earth were to suddenly contract to half of its present radius, what would be the duration of the day?",
+    "options": {
+      "A": "6 h",
+      "B": "18 h",
+      "C": "24 h",
+      "D": "30 h"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "6 h",
+    "explanation": "By conservation of angular momentum: I₁ω₁ = I₂ω₂. Moment of inertia I = (2/5)MR². I₁ = (2/5)MR², I₂ = (2/5)M(R/2)² = I₁/4. So ω₂ = 4ω₁. Since T = 2π/ω: T₂ = T₁/4 = 24/4 = 6 hours. Hence option A is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 51,
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "question": "Imagine a new planet having the same density as that of the earth, but it is two times bigger than the earth in size. If the acceleration due to gravity on the surface of the new planet is g' and that on earth is g, then:",
+    "options": {
+      "A": "g' = g/4",
+      "B": "g' = 8g",
+      "C": "g' = 2g",
+      "D": "g' = 4g"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "g' = 2g",
+    "explanation": "g = GM/R² = G(4/3πR³ρ)/R² = (4/3)GπRρ. Since density ρ is same and R' = 2R: g' = (4/3)Gπ(2R)ρ = 2 × (4/3)GπRρ = 2g. Gravity is proportional to radius when density is constant. Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 52,
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "question": "Suppose acceleration due to gravity at earth's surface is g m/s² and at moon's surface it is g' m/s². An M kg passenger goes from earth to moon in a spaceship moving with constant velocity. Which curve best represents the weight (net gravitational force) as a function of time?",
+    "options": {
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "C",
+    "explanation": "Near Earth: weight = Mg (towards Earth). Near Moon: weight = Mg' ≈ Mg/6 (towards Moon). During transit: weight = F_earth − F_moon (opposite directions). The weight decreases from Mg, passes through zero (midpoint where forces cancel), then increases in magnitude towards Moon direction. Curve C shows this behavior correctly.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 53,
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Fluids",
+    "question": "Instrument fitted in the carburetor of the automobile to provide the correct mixture of air and fuel necessary for combustion works on:",
+    "options": {
+      "A": "Pascal's Law",
+      "B": "Bernoulli's Principle",
+      "C": "Newton's Law of Cooling",
+      "D": "Archimedes' Principle"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Bernoulli's Principle",
+    "explanation": "A carburetor works on Bernoulli's principle. Air flows through a narrow constriction (venturi), increasing its speed and decreasing pressure. This pressure difference draws fuel from the float chamber into the airstream, creating the proper air-fuel mixture. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 54,
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Solids",
+    "question": "There are two wires of same material and same length while the diameter of second wire is two times the diameter of the first wire. Then the ratio of extensions produced in the wires by applying same load will be:",
+    "options": {
+      "A": "1:1",
+      "B": "1:2",
+      "C": "2:1",
+      "D": "4:1"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "4:1",
+    "explanation": "Extension ΔL = FL/(YA). Area A = π(d/2)² ∝ d². Since d₂ = 2d₁: A₂ = 4A₁. Same load F and length L: ΔL₁/ΔL₂ = A₂/A₁ = 4/1. The thinner wire extends 4 times more. Ratio ΔL₁:ΔL₂ = 4:1. Hence option D is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 55,
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Fluids",
+    "question": "In a capillary tube experiment, a vertical 30 cm long capillary tube is dipped in water, water rises upto a height of 10 cm due to capillarity. If this experiment is conducted in a freely falling elevator, then the length of the water column becomes:",
+    "options": {
+      "A": "10 cm",
+      "B": "20 cm",
+      "C": "30 cm",
+      "D": "Zero"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "30 cm",
+    "explanation": "Capillary rise h = 2Tcosθ/(ρgr). In free fall, effective g = 0, so h → ∞. The water rises without any gravitational opposition and fills the entire 30 cm tube. The water column length becomes 30 cm (length of the tube). Hence option C is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 56,
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "question": "In thermodynamic processes, which of the following statements is not true?",
+    "options": {
+      "A": "In an isothermal process, the temperature remains constant",
+      "B": "In an isobaric process, the volume remains constant",
+      "C": "In an adiabatic process, the system is insulated from the surroundings",
+      "D": "In an adiabatic process, PVᵞ = a constant"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "In an isobaric process, the volume remains constant",
+    "explanation": "Isothermal: T = constant ✓. Adiabatic: no heat exchange (insulated) ✓. Adiabatic: PVᵞ = constant ✓. But ISOBARIC means constant PRESSURE, not constant volume. Constant volume process is called ISOCHORIC. Statement B is false. Hence option B is correct (as the not true statement).",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 57,
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "question": "The graph of pressure P and volume V of 1 mole of an ideal gas at constant temperature is:",
+    "options": {
+      "A": "Graph-I",
+      "B": "Graph-II",
+      "C": "Graph-III",
+      "D": "Graph-IV"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Graph-II",
+    "explanation": "For 1 mole of ideal gas at constant temperature: PV = RT = constant (Boyle's law). This gives a rectangular hyperbola on P-V graph. As P increases, V decreases proportionally. Graph-II correctly shows this hyperbolic relationship.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 58,
+    "subject": "Physics",
+    "chapter": "Oscillations",
+    "question": "A mass of 1 kg is executing SHM. Its displacement is given by x = 6.0 cos(100t + π/4) cm. What is the maximum kinetic energy?",
+    "options": {
+      "A": "3 J",
+      "B": "6 J",
+      "C": "9 J",
+      "D": "18 J"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "18 J",
+    "explanation": "From x = 6.0 cos(100t + π/4) cm: amplitude A = 0.06m, angular frequency ω = 100 rad/s, mass m = 1kg. Maximum velocity v_max = Aω = 0.06 × 100 = 6 m/s. Maximum KE = ½mv²_max = ½(1)(6²) = ½(36) = 18J. Hence option D is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 59,
+    "subject": "Physics",
+    "chapter": "Waves",
+    "question": "A source of frequency ν gives 6 beats/second when sounded with a source of frequency 200 Hz. The second harmonic of frequency 2ν gives 8 beats/second when sounded with a source of frequency 420 Hz. The value of ν is:",
+    "options": {
+      "A": "205 Hz",
+      "B": "206 Hz",
+      "C": "195 Hz",
+      "D": "210 Hz"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "206 Hz",
+    "explanation": "From first condition: |ν − 200| = 6, so ν = 206 or 194. From second condition: |2ν − 420| = 8, so 2ν = 428 or 412, giving ν = 214 or 206. The common value satisfying both conditions is ν = 206 Hz. Hence option B is correct.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 60,
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "question": "Following are statements of a few processes taking place in nature. I. Free expansion of a gas. II. The combustion of a mixture of petrol and air ignited by a spark. III. The leaking of gas from the kitchen cylinder. IV. The transfer of heat from one heated part of a liquid to the other colder part. Which amongst these processes are irreversible in nature?",
+    "options": {
+      "A": "I and II",
+      "B": "III and IV",
+      "C": "II, III and IV",
+      "D": "I, II, III and IV"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "I, II, III and IV",
+    "explanation": "All four processes are irreversible: (I) Free expansion — gas expands into vacuum spontaneously, cannot be reversed without external work. (II) Combustion — chemical reaction releasing heat, cannot spontaneously reverse. (III) Gas leaking — gas flows from high to low pressure, spontaneously irreversible. (IV) Heat transfer from hot to cold — spontaneous, increases entropy. All are irreversible. Hence option D is correct.",
+    "hasImage": false,
+    "image": null
+  }
+]

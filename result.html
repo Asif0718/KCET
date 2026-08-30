@@ -70,7 +70,7 @@
       const subject = new URLSearchParams(window.location.search).get("subject") || "chemistry";
       const result = Storage.getResult(subject);
 
-      const meta = SUBJECTS.find((s) => s.key === subject);
+      const meta = quizMeta(subject);
       if (meta) document.getElementById("resultSubject").textContent = `${meta.name} Result`;
 
       if (!result) {
