@@ -31,7 +31,6 @@
     explanationText: $("#explanationText"),
     prevBtn: $("#prevBtn"),
     nextBtn: $("#nextBtn"),
-    submitBtn: $("#submitBtn"),
     palette: $("#palette"),
     progressFill: $("#progressFill"),
     progressInfo: $("#progressInfo"),
@@ -178,7 +177,6 @@
     } else {
       DOM.feedback.classList.remove("show");
       DOM.explanation.classList.remove("show");
-      DOM.submitBtn.disabled = false;
       DOM.nextBtn.disabled = false;
     }
   
@@ -256,9 +254,6 @@
     /* Explanation card */
     DOM.explanationText.textContent = q.explanation;
     DOM.explanation.classList.add("show");
-
-    /* Submit button is disabled once the question is answered */
-    DOM.submitBtn.disabled = true;
 
     /* If restored from storage, keep feedback visible */
     if (isRestored) {
@@ -398,25 +393,17 @@
       if (opt) handleOptionClick(opt.dataset.key);
     });
 
-    DOM.submitBtn.addEventListener("click", () => {
-      const q = currentQuestion();
-      if (answered(q.id)) {
-        finishQuiz(); // already answered → acts as "finish" shortcut
-        return;
-      }
-      const selected = $(".option.selected", DOM.options);
-      if (selected) submitAnswer(selected.dataset.key);
-    });
-
     DOM.prevBtn.addEventListener("click", () => goToIndex(state.index - 1));
     DOM.nextBtn.addEventListener("click", () => goToIndex(state.index + 1));
     DOM.bookmark.addEventListener("click", toggleBookmark);
 
     DOM.searchBox.addEventListener("input", debounce(applyFilters));
 
-    /* Finish practice button in header */
-    const finishBtn = $("#finishBtn");
-    if (finishBtn) finishBtn.addEventListener("click", finishQuiz);
+    /* Finish practice buttons (header + nav) */
+    ["#finishBtn", "#finishNavBtn"].forEach((sel) => {
+      const finishBtn = $(sel);
+      if (finishBtn) finishBtn.addEventListener("click", finishQuiz);
+    });
   }
 
   /* ---- tiny HTML escaping util ---- */

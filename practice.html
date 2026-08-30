@@ -14,6 +14,9 @@
         <span class="logo">🎯</span>
         <span id="brandName">Practice</span>
       </a>
+      <div class="nav-links">
+        <a href="#topTopics" class="nav-link">Top Topics</a>
+      </div>
       <div class="nav-actions">
         <button id="finishBtn" class="btn btn-outline" title="Finish and view result">
           Finish 🏁
@@ -71,8 +74,8 @@
         <!-- -------- Navigation -------- -->
         <div class="question-nav">
           <button id="prevBtn" class="btn btn-outline" disabled>⬅ Previous</button>
-          <button id="submitBtn" class="btn btn-primary">Submit ✅</button>
           <button id="nextBtn" class="btn btn-primary">Next ➡</button>
+          <button id="finishNavBtn" class="btn btn-outline" title="Finish and view result">Finish 🏁</button>
         </div>
 
         <!-- -------- Progress -------- -->
@@ -115,6 +118,34 @@
         <a class="btn btn-primary" href="index.html">← Back to subjects</a>
       </div>
     </div>
+
+    <!-- ============ Top Topics section ============ -->
+    <section id="topTopics" class="top-topics">
+      <div class="tt-header">
+        <h2 class="tt-title">🔥 Top Topics</h2>
+        <p class="tt-sub">Most asked questions in KCET by subject</p>
+      </div>
+      <div class="tt-grid">
+        <a class="tt-card" href="https://questions.collegedunia.com/exams/kcet/physics-questions" target="_blank" rel="noopener">
+          <div class="tt-icon">⚛️</div>
+          <h3>Top Questions in Physics</h3>
+          <p>Most asked physics questions in KCET</p>
+          <span class="tt-link">Explore →</span>
+        </a>
+        <a class="tt-card" href="https://questions.collegedunia.com/exams/kcet/mathematics-questions" target="_blank" rel="noopener">
+          <div class="tt-icon">📐</div>
+          <h3>Top Questions in Mathematics</h3>
+          <p>Most asked maths questions in KCET</p>
+          <span class="tt-link">Explore →</span>
+        </a>
+        <a class="tt-card" href="https://questions.collegedunia.com/exams/kcet/chemistry-questions" target="_blank" rel="noopener">
+          <div class="tt-icon">🧪</div>
+          <h3>Top Questions in Chemistry</h3>
+          <p>Most asked chemistry questions in KCET</p>
+          <span class="tt-link">Explore →</span>
+        </a>
+      </div>
+    </section>
   </div>
 
   <script src="js/storage.js"></script>
