@@ -1019,6 +1019,14 @@ kbd {
   white-space: nowrap;
 }
 
+.paper-year-label {
+  margin: 0 0 14px;
+  font-size: 1.25rem;
+  color: var(--primary);
+}
+
+.paper-year-label + .year-grid { margin-bottom: 26px; }
+
 /* ============ Sidebar Previous Year Papers box ============ */
 .paper-box {
   margin-top: 22px;
