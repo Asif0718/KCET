@@ -192,6 +192,11 @@
     const total = state.filtered.length;
     const answeredCount = state.filtered.filter((fq) => state.answers[fq.id] !== undefined).length;
 
+    /* Bring the question into view (important on mobile where the
+       question panel can be below the fold after scrolling). */
+    const card = DOM.question.closest(".question-card");
+    if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
+
     /* Header + meta chips */
     DOM.qNumber.textContent = `Question ${state.index + 1} of ${total}`;
     DOM.qMeta.innerHTML =

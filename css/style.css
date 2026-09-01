@@ -351,6 +351,7 @@ body.dark .icon-sun { display: none; }
   padding: 26px;
   box-shadow: var(--shadow-sm);
   transition: background var(--transition);
+  scroll-margin-top: 80px;
 }
 
 .q-meta {

@@ -33,6 +33,15 @@ const SUBJECTS = [
     icon: "∑",
     tagline: "Algebra, Trigonometry, Calculus & Probability",
   },
+  {
+    key: "power_drive_vol_3",
+    name: "Power Drive Vol 3",
+    file: "data/power_drive_vol_3.json",
+    color: "#e11d48",
+    color2: "#f43f5e",
+    icon: "⚡",
+    tagline: "Electrostatics, Current Electricity, Magnetism & EM Waves",
+  },
 ];
 
 /* ---- Theme handling ---- */
