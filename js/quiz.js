@@ -44,7 +44,7 @@
   };
 
   /* ---- OpenRouter API key ---- */
-  const OPENROUTER_API_KEY = "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";
+  const OPENROUTER_API_KEY = "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";
 
   /* ==========================================================
      Loading & initialisation
