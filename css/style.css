@@ -397,6 +397,132 @@ body.dark .icon-sun { display: none; }
 .bookmark-btn:hover { transform: scale(1.2); }
 .bookmark-btn.active { color: var(--warning); }
 
+/* ---------- AI Explain Button ---------- */
+.ai-explain-btn {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font);
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: transform var(--transition), box-shadow var(--transition), opacity var(--transition);
+  white-space: nowrap;
+}
+
+.ai-explain-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4);
+}
+
+.ai-explain-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ---------- AI Explanation Card ---------- */
+.ai-explanation {
+  margin-top: 16px;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.06), rgba(168, 85, 247, 0.06));
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-left: 4px solid #7c3aed;
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  display: none;
+  animation: fadeUp 0.35s ease;
+}
+
+.ai-explanation.show { display: block; }
+
+.ai-explanation h4 {
+  font-size: 0.9rem;
+  color: #7c3aed;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ai-explanation p {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.ai-explanation strong {
+  color: #7c3aed;
+  font-weight: 700;
+}
+
+.ai-explanation .ai-correct {
+  background: var(--success-soft);
+  border-left: 3px solid var(--success);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--success);
+}
+
+.ai-explanation .ai-correct strong {
+  color: var(--success);
+}
+
+.ai-explanation .ai-example {
+  background: var(--primary-soft);
+  border-left: 3px solid var(--primary);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.ai-explanation .ai-example strong {
+  color: var(--primary);
+}
+
+.ai-explanation .ai-mistake {
+  background: var(--warning-soft);
+  border-left: 3px solid var(--warning);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.ai-explanation .ai-mistake strong {
+  color: var(--warning);
+}
+
+.ai-response-inner {
+  line-height: 1.8;
+}
+
+.ai-response-inner .ai-section-title {
+  display: inline;
+  background: none;
+  border-left: none;
+  padding: 0;
+  margin: 0 0 4px 0;
+  color: #7c3aed;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.ai-loader {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #7c3aed;
+  font-weight: 600;
+}
+
 .question-text {
   font-size: 1.08rem;
   font-weight: 500;

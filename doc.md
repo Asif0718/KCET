@@ -1753,3 +1753,4 @@ Most importantly:
 **Keep the explanations extremely simple because the learner is completely new to DBMS and SQL.**
 
 The final result should be **beautiful, responsive, interactive, beginner-friendly, and technically correct from DBMS basics through JOINs.**
+

@@ -23,12 +23,15 @@
     qNumber: $("#qNumber"),
     qMeta: $("#qMeta"),
     bookmark: $("#bookmarkBtn"),
+    aiBtn: $("#aiExplainBtn"),
     question: $("#questionText"),
     imageWrap: $("#imageWrap"),
     options: $("#optionsList"),
     feedback: $("#feedback"),
     explanation: $("#explanation"),
     explanationText: $("#explanationText"),
+    aiExplanation: $("#aiExplanation"),
+    aiExplanationContent: $("#aiExplanationContent"),
     prevBtn: $("#prevBtn"),
     nextBtn: $("#nextBtn"),
     palette: $("#palette"),
@@ -39,6 +42,9 @@
     empty: $("#emptyState"),
     mainArea: $("#mainArea"),
   };
+
+  /* ---- OpenRouter API key ---- */
+  const OPENROUTER_API_KEY = "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";
 
   /* ==========================================================
      Loading & initialisation
@@ -77,6 +83,12 @@
     buildPaperBox();
     attachEventListeners();
     renderAll();
+
+    /* Disable AI button if no API key configured */
+    if (!isAIConfigured()) {
+      DOM.aiBtn.disabled = true;
+      DOM.aiBtn.title = "Add your OpenRouter API key in quiz.js to enable AI explanations";
+    }
   }
 
   /* ==========================================================
@@ -231,6 +243,8 @@
     } else {
       DOM.feedback.classList.remove("show");
       DOM.explanation.classList.remove("show");
+      DOM.aiExplanation.classList.remove("show");
+      DOM.aiExplanationContent.innerHTML = "";
       DOM.nextBtn.disabled = false;
     }
   
@@ -439,6 +453,115 @@
   }
 
   /* ==========================================================
+     AI Explanation via OpenRouter
+     ========================================================== */
+  function isAIConfigured() {
+    return OPENROUTER_API_KEY && OPENROUTER_API_KEY !== "sk-or-v1-YOUR_API_KEY_HERE";
+  }
+
+  function formatAIResponse(raw) {
+    let html = escapeHtml(raw);
+    html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+
+    const sectionMap = [
+      { pattern: /^CORRECT\s*ANSWER/i, cls: "ai-correct" },
+      { pattern: /^STEP-BY-STEP/i, cls: "ai-section-title" },
+      { pattern: /^EXAMPLE/i, cls: "ai-example" },
+      { pattern: /^COMMON\s*MISTAKE/i, cls: "ai-mistake" },
+    ];
+
+    const lines = html.split("\n");
+    const result = [];
+    let currentSection = null;
+
+    lines.forEach((line) => {
+      const trimmed = line.trim();
+      if (trimmed === "") { result.push(""); return; }
+      let matched = false;
+      for (const sec of sectionMap) {
+        if (sec.pattern.test(trimmed)) {
+          if (currentSection) result.push("</div>");
+          currentSection = sec.cls;
+          result.push('<div class="' + sec.cls + '">' + trimmed);
+          matched = true;
+          break;
+        }
+      }
+      if (!matched) {
+        result.push(trimmed);
+      }
+    });
+    if (currentSection) result.push("</div>");
+
+    html = result.filter(l => l !== "").join("<br>");
+    return '<div class="ai-response-inner">' + html + '</div>';
+  }
+
+  async function getAIExplanation() {
+    if (!isAIConfigured()) {
+      DOM.aiExplanationContent.innerHTML =
+        '<p style="color:var(--danger);">⚠️ API key not configured. Add your OpenRouter key in quiz.js.</p>';
+      DOM.aiExplanation.classList.add("show");
+      return;
+    }
+
+    const q = currentQuestion();
+    DOM.aiExplanationContent.innerHTML =
+      '<span class="ai-loader">⏳ Generating explanation…</span>';
+    DOM.aiExplanation.classList.add("show");
+    DOM.aiBtn.disabled = true;
+    DOM.aiBtn.textContent = "⏳ Thinking…";
+
+    try {
+      const optionsText = Object.entries(q.options)
+        .map(([key, text]) => `${key}: ${text}`)
+        .join("\n");
+
+      const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+          "HTTP-Referer": window.location.origin,
+          "X-Title": "KCET MCQ Practice",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: "qwen/qwen3.8-27b",
+          messages: [
+            {
+              role: "system",
+              content:
+                "You are a friendly KCET tutor. Explain MCQ questions in very simple language a student can easily understand. Format your answer like this:\n\nCORRECT ANSWER: [the answer letter and text]\n\nSTEP-BY-STEP EXPLANATION: Explain why it is correct in simple numbered steps.\n\nEXAMPLE: Give a small real-life or practical example to make the concept clear.\n\nCOMMON MISTAKE: Mention one common mistake students make.\n\nKeep it short, clear, and encouraging. Never just say the answer — always explain the METHOD of solving. Use only basic Hindi or English, whatever the question language is.",
+            },
+            {
+              role: "user",
+              content: `Chapter: ${q.chapter}\n\nQuestion: ${q.question}\n\nOptions:\n${optionsText}\n\nCorrect Answer: ${q.correctAnswer}\n\nExplain this question in a simple and friendly way. Show the correct answer first, then explain the method step by step with an example if possible.`,
+            },
+          ],
+          temperature: 0.4,
+          max_tokens: 1000,
+        }),
+      });
+
+      if (!response.ok) {
+        const errBody = await response.text();
+        throw new Error(`API error ${response.status}: ${errBody}`);
+      }
+
+      const data = await response.json();
+      let aiAnswer = data.choices[0].message.content;
+      DOM.aiExplanationContent.innerHTML = formatAIResponse(aiAnswer);
+    } catch (err) {
+      console.error("AI explanation failed:", err);
+      DOM.aiExplanationContent.innerHTML =
+        `<p style="color:var(--danger);">⚠️ Could not get AI explanation: ${escapeHtml(err.message)}</p>`;
+    } finally {
+      DOM.aiBtn.disabled = false;
+      DOM.aiBtn.textContent = "🤖 Explain with AI";
+    }
+  }
+
+  /* ==========================================================
      Event wiring
      ========================================================== */
   function attachEventListeners() {
@@ -450,6 +573,7 @@
     DOM.prevBtn.addEventListener("click", () => goToIndex(state.index - 1));
     DOM.nextBtn.addEventListener("click", () => goToIndex(state.index + 1));
     DOM.bookmark.addEventListener("click", toggleBookmark);
+    DOM.aiBtn.addEventListener("click", getAIExplanation);
 
     DOM.searchBox.addEventListener("input", debounce(applyFilters));
 
