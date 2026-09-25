@@ -43,13 +43,12 @@
     mainArea: $("#mainArea"),
   };
 
-  /* ---- OpenRouter API key ---- */
-  const OPENROUTER_API_KEY = "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";
-
   /* ==========================================================
      Loading & initialisation
      ========================================================== */
   async function init() {
+    Auth.renderNav(await Auth.requireAuth());
+
     state.subject = new URLSearchParams(window.location.search).get("subject") || "chemistry";
     const meta = quizMeta(state.subject);
     if (meta) {
@@ -84,10 +83,9 @@
     attachEventListeners();
     renderAll();
 
-    /* Disable AI button if no API key configured */
     if (!isAIConfigured()) {
       DOM.aiBtn.disabled = true;
-      DOM.aiBtn.title = "Add your OpenRouter API key in quiz.js to enable AI explanations";
+      DOM.aiBtn.title = "Configure Supabase (js/supabase-config.js) to enable AI explanations";
     }
   }
 
@@ -199,10 +197,18 @@
     return state.filtered[state.index];
   }
 
-  function renderQuestion() {
+  function renderMeta() {
     const q = currentQuestion();
     const total = state.filtered.length;
     const answeredCount = state.filtered.filter((fq) => state.answers[fq.id] !== undefined).length;
+    DOM.qMeta.innerHTML =
+      `<span class="chip">📘 ${escapeHtml(q.chapter)}</span>` +
+      `<span class="chip">${answeredCount}/${total} answered</span>`;
+  }
+
+  function renderQuestion() {
+    const q = currentQuestion();
+    const total = state.filtered.length;
 
     /* Bring the question into view (important on mobile where the
        question panel can be below the fold after scrolling). */
@@ -211,9 +217,7 @@
 
     /* Header + meta chips */
     DOM.qNumber.textContent = `Question ${state.index + 1} of ${total}`;
-    DOM.qMeta.innerHTML =
-      `<span class="chip">📘 ${escapeHtml(q.chapter)}</span>` +
-      `<span class="chip">${answeredCount}/${total} answered</span>`;
+    renderMeta();
 
     /* Question text */
     DOM.question.textContent = q.question;
@@ -229,7 +233,7 @@
     DOM.options.innerHTML = Object.entries(q.options)
       .map(
         ([key, text], i) =>
-          `<button class="option" data-key="${key}" ${answered(key) ? "disabled" : ""}>
+          `<button class="option" data-key="${key}">
              <span class="key">${key}</span>
              <span>${escapeHtml(text)}</span>
            </button>`
@@ -292,6 +296,7 @@
     Storage.saveAnswer(state.subject, q.id, key);
 
     showResult(q, key, false);
+    renderMeta();
     renderPalette();
     renderProgress();
     updateBookmarkButton();
@@ -398,16 +403,45 @@
   /* ==========================================================
      Results
      ========================================================== */
-  function finishQuiz() {
-    const total = state.questions.length;
+  let finishing = false;
+
+  async function finishQuiz() {
+    if (finishing || state.questions.length === 0) return;
+    finishing = true;
+
+    const chapter_stats = {};
+    let attempted = 0;
     let correct = 0;
     state.questions.forEach((q) => {
-      if (state.answers[q.id] === q.correctAnswer) correct++;
+      const c = (chapter_stats[q.chapter] ||= { total: 0, attempted: 0, correct: 0 });
+      c.total++;
+      const ans = state.answers[q.id];
+      if (ans === undefined) return;
+      attempted++;
+      c.attempted++;
+      if (ans === q.correctAnswer) {
+        correct++;
+        c.correct++;
+      }
     });
-    const wrong = total - correct;
-    const percentage = total === 0 ? 0 : Math.round((correct / total) * 100);
 
-    Storage.saveResult(state.subject, { total, correct, wrong, percentage });
+    const total = state.questions.length;
+    const { subjectKey, year } = parseQuizKey(state.subject);
+    const result = {
+      quiz_key: state.subject,
+      subject: subjectKey,
+      year,
+      total,
+      attempted,
+      correct,
+      wrong: attempted - correct,
+      skipped: total - attempted,
+      percentage: Math.round((correct / total) * 100),
+      chapter_stats,
+    };
+
+    Storage.saveResult(state.subject, result);
+    if (attempted > 0) await Auth.saveAttempt(result);
     goTo(`result.html?subject=${state.subject}`);
   }
 
@@ -456,7 +490,7 @@
      AI Explanation via OpenRouter
      ========================================================== */
   function isAIConfigured() {
-    return OPENROUTER_API_KEY && OPENROUTER_API_KEY !== "sk-or-v1-YOUR_API_KEY_HERE";
+    return Auth.enabled;
   }
 
   function formatAIResponse(raw) {
@@ -500,7 +534,7 @@
   async function getAIExplanation() {
     if (!isAIConfigured()) {
       DOM.aiExplanationContent.innerHTML =
-        '<p style="color:var(--danger);">⚠️ API key not configured. Add your OpenRouter key in quiz.js.</p>';
+        '<p style="color:var(--danger);">⚠️ AI explanations need Supabase. Fill in js/supabase-config.js and deploy the "explain" function.</p>';
       DOM.aiExplanation.classList.add("show");
       return;
     }
@@ -513,44 +547,17 @@
     DOM.aiBtn.textContent = "⏳ Thinking…";
 
     try {
-      const optionsText = Object.entries(q.options)
-        .map(([key, text]) => `${key}: ${text}`)
-        .join("\n");
-
-      const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-          "HTTP-Referer": window.location.origin,
-          "X-Title": "KCET MCQ Practice",
-          "Content-Type": "application/json",
+      const { data, error } = await Auth.client.functions.invoke("explain", {
+        body: {
+          chapter: q.chapter,
+          question: q.question,
+          options: q.options,
+          correctAnswer: q.correctAnswer,
         },
-        body: JSON.stringify({
-          model: "qwen/qwen3.8-27b",
-          messages: [
-            {
-              role: "system",
-              content:
-                "You are a friendly KCET tutor. Explain MCQ questions in very simple language a student can easily understand. Format your answer like this:\n\nCORRECT ANSWER: [the answer letter and text]\n\nSTEP-BY-STEP EXPLANATION: Explain why it is correct in simple numbered steps.\n\nEXAMPLE: Give a small real-life or practical example to make the concept clear.\n\nCOMMON MISTAKE: Mention one common mistake students make.\n\nKeep it short, clear, and encouraging. Never just say the answer — always explain the METHOD of solving. Use only basic Hindi or English, whatever the question language is.",
-            },
-            {
-              role: "user",
-              content: `Chapter: ${q.chapter}\n\nQuestion: ${q.question}\n\nOptions:\n${optionsText}\n\nCorrect Answer: ${q.correctAnswer}\n\nExplain this question in a simple and friendly way. Show the correct answer first, then explain the method step by step with an example if possible.`,
-            },
-          ],
-          temperature: 0.4,
-          max_tokens: 1000,
-        }),
       });
-
-      if (!response.ok) {
-        const errBody = await response.text();
-        throw new Error(`API error ${response.status}: ${errBody}`);
-      }
-
-      const data = await response.json();
-      let aiAnswer = data.choices[0].message.content;
-      DOM.aiExplanationContent.innerHTML = formatAIResponse(aiAnswer);
+      if (error) throw error;
+      if (data.error) throw new Error(data.error);
+      DOM.aiExplanationContent.innerHTML = formatAIResponse(data.content);
     } catch (err) {
       console.error("AI explanation failed:", err);
       DOM.aiExplanationContent.innerHTML =

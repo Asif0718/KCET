@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login · KCET MCQ</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ============ Navbar ============ -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <span class="logo">🎯</span>
+        KCET Practice
+      </a>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" title="Toggle dark mode">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <form id="authForm" class="result-card auth-card" novalidate>
+      <h2 id="authTitle">Welcome back</h2>
+      <p class="sub" id="authSub">Log in to save your scores and track progress</p>
+
+      <div class="controls">
+        <label for="email">Email</label>
+        <input id="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" required minlength="6" placeholder="At least 6 characters" />
+      </div>
+
+      <div id="authMessage" class="auth-message hidden"></div>
+
+      <button id="submitBtn" type="submit" class="btn btn-primary auth-submit">Log in</button>
+
+      <p class="auth-switch">
+        <span id="switchText">New here?</span>
+        <button id="switchBtn" type="button" class="link-btn">Create an account</button>
+      </p>
+    </form>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    /* ============================================================
+       Login / sign-up page logic (Supabase email + password)
+       ============================================================ */
+    document.addEventListener("DOMContentLoaded", async () => {
+      const form = document.getElementById("authForm");
+      const email = document.getElementById("email");
+      const password = document.getElementById("password");
+      const submitBtn = document.getElementById("submitBtn");
+      const message = document.getElementById("authMessage");
+      let mode = "login";
+
+      /* Only allow redirects to local pages (no open redirect) */
+      const nextParam = new URLSearchParams(location.search).get("next") || "";
+      const next = /^[\w-]+\.html(\?[^#]*)?$/.test(nextParam) ? nextParam : "index.html";
+
+      function showMessage(text, type = "error") {
+        message.textContent = text;
+        message.className = `auth-message ${type}`;
+      }
+
+      if (!Auth.enabled) {
+        showMessage("Login is not configured yet (js/supabase-config.js). The site works without an account.", "info");
+        submitBtn.textContent = "Continue without login";
+        submitBtn.type = "button";
+        submitBtn.addEventListener("click", () => goTo("index.html"));
+        document.getElementById("switchBtn").parentElement.classList.add("hidden");
+        return;
+      }
+
+      if (await Auth.getUser()) {
+        location.replace(next);
+        return;
+      }
+
+      document.getElementById("switchBtn").addEventListener("click", () => {
+        mode = mode === "login" ? "signup" : "login";
+        const signup = mode === "signup";
+        document.getElementById("authTitle").textContent = signup ? "Create account" : "Welcome back";
+        document.getElementById("authSub").textContent = signup
+          ? "Sign up to save your scores and track progress"
+          : "Log in to save your scores and track progress";
+        submitBtn.textContent = signup ? "Sign up" : "Log in";
+        document.getElementById("switchText").textContent = signup ? "Already have an account?" : "New here?";
+        document.getElementById("switchBtn").textContent = signup ? "Log in" : "Create an account";
+        password.autocomplete = signup ? "new-password" : "current-password";
+        message.classList.add("hidden");
+      });
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        if (!email.value.trim() || password.value.length < 6) {
+          showMessage("Enter a valid email and a password of at least 6 characters.");
+          return;
+        }
+
+        submitBtn.disabled = true;
+        const creds = { email: email.value.trim(), password: password.value };
+        const { data, error } =
+          mode === "login"
+            ? await Auth.client.auth.signInWithPassword(creds)
+            : await Auth.client.auth.signUp(creds);
+        submitBtn.disabled = false;
+
+        if (error) {
+          showMessage(error.message);
+          return;
+        }
+        if (!data.session) {
+          showMessage("Account created! Check your email to confirm, then log in.", "success");
+          return;
+        }
+        location.replace(next);
+      });
+    });
+  </script>
+</body>
+</html>

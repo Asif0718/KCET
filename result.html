@@ -47,26 +47,41 @@
           <div class="stat-value" id="statWrong">0</div>
           <div class="stat-label">Wrong</div>
         </div>
+        <div class="stat skipped">
+          <div class="stat-value" id="statSkipped">0</div>
+          <div class="stat-label">Skipped</div>
+        </div>
       </div>
+
+      <div id="chapterBreakdown" class="chapter-breakdown hidden"></div>
 
       <div class="result-actions">
         <button id="restartBtn" class="btn btn-primary">🔄 Restart Practice</button>
         <button id="reviewBtn" class="btn btn-outline">📖 Review Questions</button>
+        <a id="historyBtn" href="history.html" class="btn btn-outline hidden">📊 History</a>
         <a href="index.html" class="btn btn-ghost">🏠 Home</a>
       </div>
     </div>
   </div>
 
   <script src="js/storage.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/auth.js"></script>
   <script src="js/app.js"></script>
   <script src="data/embedded.js"></script>
+  <script src="js/history-ui.js"></script>
   <script>
     /* ============================================================
        Result page logic
        Reads the saved summary from LocalStorage (computed in
        quiz.js) and renders it with an animated score ring.
        ============================================================ */
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", async () => {
+      const user = await Auth.requireAuth();
+      Auth.renderNav(user);
+      if (user) document.getElementById("historyBtn").classList.remove("hidden");
+
       const subject = new URLSearchParams(window.location.search).get("subject") || "chemistry";
       const result = Storage.getResult(subject);
 
@@ -80,11 +95,22 @@
           "No attempt found for this subject yet.";
       } else {
         const { total, correct, wrong, percentage } = result;
+        const skipped = result.skipped ?? 0;
         document.getElementById("statTotal").textContent = total;
         document.getElementById("statCorrect").textContent = correct;
         document.getElementById("statWrong").textContent = wrong;
+        document.getElementById("statSkipped").textContent = skipped;
         document.getElementById("scoreValue").textContent = percentage + "%";
         document.getElementById("scoreRing").style.setProperty("--score", percentage);
+
+        const attemptedChapters = Object.fromEntries(
+          Object.entries(result.chapter_stats || {}).filter(([, s]) => s.attempted > 0)
+        );
+        if (Object.keys(attemptedChapters).length > 0) {
+          const box = document.getElementById("chapterBreakdown");
+          box.innerHTML = "<h3>Chapter breakdown</h3>" + HistoryUI.chapterTable(attemptedChapters);
+          box.classList.remove("hidden");
+        }
       }
 
       /* Restart: clear saved session and go back to practice */
