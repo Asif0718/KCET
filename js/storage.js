@@ -5,7 +5,13 @@
    ============================================================ */
 
 const Storage = {
+  BASE: "kcet_mcq_",
   PREFIX: "kcet_mcq_",
+
+  /* Give each signed-in user their own keys on a shared browser. */
+  scope(userId) {
+    this.PREFIX = userId ? `${this.BASE}${userId}_` : this.BASE;
+  },
 
   /* ---- Generic get/set helpers ---- */
   get(key, fallback = null) {
@@ -31,12 +37,17 @@ const Storage = {
   },
 
   /* ---- Theme ---- */
+  /* Theme is a device preference, shared by all users (dbms.html reads this key directly). */
   getTheme() {
-    return this.get("theme", "light");
+    try {
+      return JSON.parse(localStorage.getItem(this.BASE + "theme")) || "light";
+    } catch (e) {
+      return "light";
+    }
   },
 
   setTheme(theme) {
-    this.set("theme", theme);
+    localStorage.setItem(this.BASE + "theme", JSON.stringify(theme));
   },
 
   /* ---- Session state (per subject) ---- */

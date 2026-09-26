@@ -12,7 +12,9 @@ const Auth = (() => {
   async function getUser() {
     if (!enabled) return null;
     const { data } = await client.auth.getSession();
-    return data.session ? data.session.user : null;
+    const user = data.session ? data.session.user : null;
+    Storage.scope(user && user.id);
+    return user;
   }
 
   /* Redirects to login.html when signed out. Resolves to the user (or null when auth is disabled). */
