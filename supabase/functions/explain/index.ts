@@ -4,6 +4,8 @@
 //
 // Deploy:
 //   supabase secrets set OPENROUTER_API_KEY=sk-or-v1-...
+//   supabase secrets set OPENROUTER_MODEL=<model-id>   (optional primary model, defaults to google/gemma-4-26b-a4b-it:free;
+//                                                        OpenRouter falls back to the other free models if it is rate-limited)
 //   supabase functions deploy explain
 
 const CORS = {
@@ -52,7 +54,11 @@ Deno.serve(async (req) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model: "qwen/qwen3.8-27b",
+      models: [
+        Deno.env.get("OPENROUTER_MODEL") ?? "google/gemma-4-26b-a4b-it:free",
+        "qwen/qwen3.8-27b:free",
+        "nvidia/nemotron-3-super-120b-a12b:free",
+      ],
       messages: [
         { role: "system", content: SYSTEM_PROMPT },
         {
@@ -65,6 +71,21 @@ Deno.serve(async (req) => {
     }),
   });
 
+  if (res.status === 402) return json({ error: "AI credits exhausted. Please try again later." }, 502);
+  if (res.status === 429) {
+    const detail = await res.text();
+    console.warn("OpenRouter 429:", detail);
+    const daily = /per-day|daily/i.test(detail);
+    return json(
+      {
+        error: daily
+          ? "Daily free AI limit reached. It resets tomorrow (or add credits on OpenRouter)."
+          : "AI is busy right now. Please try again in a minute.",
+        detail,
+      },
+      502,
+    );
+  }
   if (!res.ok) return json({ error: `OpenRouter error ${res.status}: ${await res.text()}` }, 502);
 
   const data = await res.json();

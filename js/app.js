@@ -156,5 +156,42 @@ function goTo(url) {
   window.location.href = url;
 }
 
+/* ---- Navbar: page links + mobile menu toggle. Returns the menu element. ---- */
+function initNav() {
+  const bar = $(".navbar .container");
+  const actions = bar && $(".nav-actions", bar);
+  if (!actions || bar.classList.contains("nav-inner")) return null; // dbms.html has its own nav
+  const existing = $(".nav-menu", bar);
+  if (existing) return existing;
+
+  const links = [["index.html", "Home"], ["dbms.html", "DBMS"]];
+  if (typeof Auth !== "undefined" && Auth.enabled) links.splice(1, 0, ["history.html", "History"]);
+  const page = location.pathname.split("/").pop() || "index.html";
+
+  const menu = document.createElement("div");
+  menu.className = "nav-menu";
+  menu.id = "navMenu";
+  menu.innerHTML = links
+    .map(([href, label]) => `<a href="${href}" class="nav-link${href === page ? " active" : ""}">${label}</a>`)
+    .join("");
+  bar.insertBefore(menu, actions);
+
+  const toggle = document.createElement("button");
+  toggle.className = "icon-btn nav-toggle";
+  toggle.type = "button";
+  toggle.setAttribute("aria-label", "Menu");
+  toggle.setAttribute("aria-controls", "navMenu");
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.innerHTML = "<span></span>";
+  toggle.addEventListener("click", () => {
+    toggle.setAttribute("aria-expanded", bar.parentElement.classList.toggle("open"));
+  });
+  actions.appendChild(toggle);
+  return menu;
+}
+
 /* ---- Boot shared features on every page ---- */
-document.addEventListener("DOMContentLoaded", initTheme);
+document.addEventListener("DOMContentLoaded", () => {
+  initTheme();
+  initNav();
+});

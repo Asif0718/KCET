@@ -32,22 +32,21 @@ const Auth = (() => {
     location.replace("login.html");
   }
 
-  /* Adds History link, user email and Logout button to the navbar. */
+  /* Adds user email and Logout button to the navbar menu. */
   function renderNav(user) {
-    const actions = document.querySelector(".nav-actions");
-    if (!enabled || !user || !actions) return;
+    const menu = initNav();
+    if (!enabled || !user || !menu) return;
 
     const wrap = document.createElement("div");
     wrap.className = "nav-user";
     wrap.innerHTML = `
-      <a href="history.html" class="btn btn-ghost" title="Score history">📊 History</a>
       <span class="nav-email"></span>
       <button class="btn btn-outline" type="button">Logout</button>
     `;
     const email = wrap.querySelector(".nav-email");
     email.textContent = email.title = user.email;
     wrap.querySelector("button").addEventListener("click", logout);
-    actions.prepend(wrap);
+    menu.appendChild(wrap);
   }
 
   async function saveAttempt(attempt) {

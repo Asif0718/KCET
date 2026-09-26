@@ -709,6 +709,8 @@ td.fk, th.fk {
   margin: 14px 0;
 }
 
+.dual-tables > * { min-width: 0; }
+
 /* ---------- Venn Diagrams ---------- */
 .venn {
   width: 260px;

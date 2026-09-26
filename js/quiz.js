@@ -555,7 +555,10 @@
           correctAnswer: q.correctAnswer,
         },
       });
-      if (error) throw error;
+      if (error) {
+        const body = await error.context?.json?.().catch(() => null);
+        throw new Error(body?.error || error.message);
+      }
       if (data.error) throw new Error(data.error);
       DOM.aiExplanationContent.innerHTML = formatAIResponse(data.content);
     } catch (err) {
