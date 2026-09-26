@@ -493,42 +493,58 @@
     return Auth.enabled;
   }
 
-  function formatAIResponse(raw) {
-    let html = escapeHtml(raw);
-    html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  /** Models often reply in LaTeX. The page has no math renderer, so turn it into plain text. */
+  function plainMath(text) {
+    return String(text)
+      .replace(/\\\[|\\\]|\\\(|\\\)|\$\$|\$/g, "")
+      .replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, "$1/$2")
+      .replace(/\\(?:text|mathrm|mathbf|textit)\{([^{}]*)\}/g, "$1")
+      .replace(/\\(?:left|right)/g, "")
+      .replace(/\\times/g, "×")
+      .replace(/\\cdot/g, "·")
+      .replace(/\\geq?|\\ge(?![a-z])/g, "≥")
+      .replace(/\\leq?|\\le(?![a-z])/g, "≤")
+      .replace(/\\neq/g, "≠")
+      .replace(/\\pm/g, "±")
+      .replace(/\\[ ,]/g, " ")
+      .replace(/\\[a-zA-Z]+/g, "")
+      .replace(/[{}]/g, "")
+      .replace(/[\u2010\u2011\u2012\u2013\u2014]/g, "-")
+      .replace(/[\u00a0\u202f]/g, " ");
+  }
 
-    const sectionMap = [
-      { pattern: /^CORRECT\s*ANSWER/i, cls: "ai-correct" },
-      { pattern: /^STEP-BY-STEP/i, cls: "ai-section-title" },
-      { pattern: /^EXAMPLE/i, cls: "ai-example" },
-      { pattern: /^COMMON\s*MISTAKE/i, cls: "ai-mistake" },
+  function formatAIResponse(raw) {
+    const html = escapeHtml(plainMath(raw)).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    const sections = [
+      { pattern: /^CORRECT\s*ANSWER\b/i, cls: "ai-correct" },
+      { pattern: /^STEP[\s-]*BY[\s-]*STEP/i, cls: "ai-steps" },
+      { pattern: /^EXAMPLE\b/i, cls: "ai-example" },
+      { pattern: /^COMMON\s*MISTAKE\b/i, cls: "ai-mistake" },
     ];
 
-    const lines = html.split("\n");
-    const result = [];
-    let currentSection = null;
-
-    lines.forEach((line) => {
+    const blocks = [];
+    let current = null;
+    html.split("\n").forEach((line) => {
       const trimmed = line.trim();
-      if (trimmed === "") { result.push(""); return; }
-      let matched = false;
-      for (const sec of sectionMap) {
-        if (sec.pattern.test(trimmed)) {
-          if (currentSection) result.push("</div>");
-          currentSection = sec.cls;
-          result.push('<div class="' + sec.cls + '">' + trimmed);
-          matched = true;
-          break;
-        }
-      }
-      if (!matched) {
-        result.push(trimmed);
+      if (!trimmed) return;
+      const sec = sections.find((s) => s.pattern.test(trimmed));
+      if (sec) {
+        current = { cls: sec.cls, lines: [trimmed] };
+        blocks.push(current);
+      } else if (current) {
+        current.lines.push(trimmed);
+      } else {
+        current = { cls: "", lines: [trimmed] };
+        blocks.push(current);
       }
     });
-    if (currentSection) result.push("</div>");
 
-    html = result.filter(l => l !== "").join("<br>");
-    return '<div class="ai-response-inner">' + html + '</div>';
+    const inner = blocks.map((b) => {
+      const [head, ...rest] = b.lines;
+      const body = `<strong>${head}</strong>${rest.length ? "<br>" + rest.join("<br>") : ""}`;
+      return b.cls ? `<div class="${b.cls}">${body}</div>` : body;
+    }).join("");
+    return `<div class="ai-response-inner">${inner}</div>`;
   }
 
   async function getAIExplanation() {
@@ -541,10 +557,12 @@
 
     const q = currentQuestion();
     DOM.aiExplanationContent.innerHTML =
-      '<span class="ai-loader">⏳ Generating explanation…</span>';
+      '<div class="ai-think" role="status" aria-live="polite">' +
+        '<span class="ai-orbit" aria-hidden="true"><span></span></span>' +
+        '<span class="ai-think-label">Thinking<span class="ai-dots"></span></span>' +
+      '</div>';
     DOM.aiExplanation.classList.add("show");
     DOM.aiBtn.disabled = true;
-    DOM.aiBtn.textContent = "⏳ Thinking…";
 
     try {
       const { data, error } = await Auth.client.functions.invoke("explain", {
