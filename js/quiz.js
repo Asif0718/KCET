@@ -304,14 +304,14 @@
 
   /** Reveal correctness, highlight options and show explanation. */
   function showResult(q, selectedKey, isRestored) {
-    const correct = selectedKey === q.correctAnswer;
+    const correct = q.correctAnswer === "*" || selectedKey === q.correctAnswer;
 
     /* Highlight all options */
     $all(".option", DOM.options).forEach((opt) => {
       const key = opt.dataset.key;
       opt.disabled = true;
       opt.classList.remove("selected", "correct", "wrong");
-      if (key === q.correctAnswer) opt.classList.add("correct");
+      if (key === q.correctAnswer || (q.correctAnswer === "*" && key === selectedKey)) opt.classList.add("correct");
       if (key === selectedKey && !correct) opt.classList.add("wrong");
       if (key === selectedKey && correct) opt.classList.add("selected");
     });
@@ -321,7 +321,7 @@
     DOM.feedback.classList.toggle("correct-feedback", correct);
     DOM.feedback.classList.toggle("wrong-feedback", !correct);
     DOM.feedback.textContent = correct
-      ? "✅ Correct!"
+      ? (q.correctAnswer === "*" ? "✅ Bonus question. Every option was awarded." : "✅ Correct!")
       : `❌ Wrong! (Correct answer: ${q.correctAnswer})`;
 
     /* Explanation card */
@@ -343,7 +343,7 @@
         const ans = state.answers[q.id];
         let cls = "attempted";
         if (ans !== undefined) {
-          cls = ans === q.correctAnswer ? "correct-pal" : "wrong-pal";
+          cls = q.correctAnswer === "*" || ans === q.correctAnswer ? "correct-pal" : "wrong-pal";
         }
         const current = i === state.index ? " current" : "";
         return `<button class="${cls}${current}" data-goto="${i}" title="Question ${i + 1}">${i + 1}</button>`;
@@ -419,7 +419,7 @@
       if (ans === undefined) return;
       attempted++;
       c.attempted++;
-      if (ans === q.correctAnswer) {
+      if (q.correctAnswer === "*" || ans === q.correctAnswer) {
         correct++;
         c.correct++;
       }

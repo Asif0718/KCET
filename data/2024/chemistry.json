@@ -1,0 +1,1022 @@
+[
+  {
+    "id": 1,
+    "subject": "Chemistry",
+    "chapter": "Polymers",
+    "question": "Which of the following set of polymers are used as fibre? (i) Teflon (ii) Starch (iii) Terylene (iv) Orlon",
+    "options": {
+      "A": "(i) and (ii)",
+      "B": "(ii) and (iii)",
+      "C": "(iii) and (iv)",
+      "D": "(i) and (iv)"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "(iii) and (iv)",
+    "explanation": "Terylene and Orlon are fibres.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 2,
+    "subject": "Chemistry",
+    "chapter": "Polymers",
+    "question": "The biodegradable polymer obtained by polymerisation of glycine and aminocaproic acid is",
+    "options": {
+      "A": "Nylon 6",
+      "B": "PHBV",
+      "C": "Nylon 2-Nylon 6",
+      "D": "Nylon 6, 10"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Nylon 2-Nylon 6",
+    "explanation": "Nylon 2-Nylon 6 is a biodegradable polymer.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 3,
+    "subject": "Chemistry",
+    "chapter": "Chemistry in Everyday Life",
+    "question": "The compound shown (a benzene ring with adjacent CO-NH-CO, a cyclic imide) is",
+    "options": {
+      "A": "Sucralose",
+      "B": "Aspartame",
+      "C": "Saccharin",
+      "D": "Alitame"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Saccharin",
+    "explanation": "The structure is saccharin.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 4,
+    "subject": "Chemistry",
+    "chapter": "Chemistry in Everyday Life",
+    "question": "Which one of the following is a cationic detergent?",
+    "options": {
+      "A": "Cetyltrimethylammonium bromide",
+      "B": "Sodium dodecylbenzene sulphonate",
+      "C": "Dodecylbenzene sulphonic acid",
+      "D": "Dodecylbenzene"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "Cetyltrimethylammonium bromide",
+    "explanation": "Cetyltrimethylammonium bromide is a cationic detergent.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 5,
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "question": "The type of linkage present between nucleotides is",
+    "options": {
+      "A": "Phosphoester linkage",
+      "B": "Phosphodiester linkage",
+      "C": "Amide linkage",
+      "D": "Glycosidic linkage"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Phosphodiester linkage",
+    "explanation": "Nucleotides are joined by a phosphodiester linkage.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 6,
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "question": "α-D-(+)-glucose and β-D-(+)-glucose are",
+    "options": {
+      "A": "Enantiomers",
+      "B": "Conformers",
+      "C": "Epimers",
+      "D": "Anomers"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "Anomers",
+    "explanation": "They differ in configuration at the first carbon, so they are anomers.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 7,
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "question": "Propanone and propanal are",
+    "options": {
+      "A": "Position isomers",
+      "B": "Functional isomers",
+      "C": "Chain isomers",
+      "D": "Geometrical isomers"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Functional isomers",
+    "explanation": "Same formula, different functional groups: ketone and aldehyde.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 8,
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "question": "Sodium ethanoate on heating with soda lime gives X. Electrolysis of aqueous sodium ethanoate gives Y. X and Y respectively are",
+    "options": {
+      "A": "Methane and ethane",
+      "B": "Methane and methane",
+      "C": "Ethane and methane",
+      "D": "Ethane and ethane"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "Methane and ethane",
+    "explanation": "Soda lime gives methane. Kolbe electrolysis gives ethane.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 9,
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "question": "But-1-yne on reaction with dilute H2SO4 in the presence of Hg2+ ions at 333 K gives",
+    "options": {
+      "A": "Butan-2-one",
+      "B": "Butanal",
+      "C": "But-3-en-2-one",
+      "D": "But-2-enal"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "Butan-2-one",
+    "explanation": "Hydration of but-1-yne gives an enol that tautomerises to butan-2-one.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 10,
+    "subject": "Chemistry",
+    "chapter": "Chemistry in Everyday Life",
+    "question": "Biologically active adrenaline and ephedrine, used to increase blood pressure, contain",
+    "options": {
+      "A": "Primary amino group",
+      "B": "Secondary amino group",
+      "C": "Tertiary amino group",
+      "D": "Quaternary ammonium salt"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Secondary amino group",
+    "explanation": "Both contain a secondary amino group.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 11,
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "question": "Aniline is converted to P with NaNO2 and dilute HCl, then P is treated with phenol and NaOH to give Q. Q is",
+    "options": {
+      "A": "C6H5N2Cl",
+      "B": "ortho-Hydroxyazobenzene",
+      "C": "para-Hydroxyazobenzene",
+      "D": "meta-Hydroxyazobenzene"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "para-Hydroxyazobenzene",
+    "explanation": "Diazonium salt couples with phenol to give para-hydroxyazobenzene.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 12,
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "question": "The female sex hormone responsible for secondary female characteristics and control of the menstrual cycle is",
+    "options": {
+      "A": "Testosterone",
+      "B": "Estradiol",
+      "C": "Insulin",
+      "D": "Thyroxine"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Estradiol",
+    "explanation": "Estradiol is the female sex hormone.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 13,
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "question": "C2H5Cl is converted to C2H5F by X, to CH2=CH2 by Y and to C4H10 by Z. X, Y and Z respectively are",
+    "options": {
+      "A": "AgF, alcoholic KOH and benzene",
+      "B": "HF, aqueous KOH and Na in dry ether",
+      "C": "Hg2F2, alcoholic KOH and Na in dry ether",
+      "D": "CoF2, aqueous KOH and benzene"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Hg2F2, alcoholic KOH and Na in dry ether",
+    "explanation": "Swarts reagent Hg2F2 gives the fluoride, alcoholic KOH gives ethene, and sodium in dry ether gives butane (Wurtz).",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 14,
+    "subject": "Chemistry",
+    "chapter": "Alcohols, Phenols and Ethers",
+    "question": "8.8 g of a monohydric alcohol with ethyl magnesium iodide liberates 2240 cm3 of ethane at STP. The alcohol gives a Tollens-positive carbonyl on oxidation with pyridinium chlorochromate. The alcohol is",
+    "options": {
+      "A": "Butan-2-ol",
+      "B": "2,2-Dimethylpropan-1-ol",
+      "C": "Pentan-2-ol",
+      "D": "2,2-Dimethylethan-1-ol"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "2,2-Dimethylpropan-1-ol",
+    "explanation": "2240 cm3 is 0.1 mol of ethane, so molar mass is 88 (C5 alcohol). A Tollens-positive product means a primary alcohol that oxidises to an aldehyde: 2,2-dimethylpropan-1-ol.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 15,
+    "subject": "Chemistry",
+    "chapter": "Alcohols, Phenols and Ethers",
+    "question": "A tertiary alcohol A (C4H10O) with 20% H3PO4 at 358 K gives B (C4H8) as the major product. The IUPAC name of B is",
+    "options": {
+      "A": "But-1-ene",
+      "B": "But-2-ene",
+      "C": "Cyclobutane",
+      "D": "2-Methylpropene"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "2-Methylpropene",
+    "explanation": "Dehydration of tert-butyl alcohol gives 2-methylpropene.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 16,
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "question": "PCC is",
+    "options": {
+      "A": "K2Cr2O7, pyridine",
+      "B": "CrO3, CHCl3",
+      "C": "CrO3, H2SO4",
+      "D": "A complex of chromium trioxide with pyridine and HCl"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "A complex of chromium trioxide with pyridine and HCl",
+    "explanation": "PCC is pyridinium chlorochromate, CrO3 with pyridine and HCl.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 17,
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "question": "100 mL of 0.1 M CrCl3·6H2O with excess AgNO3 gives 2.86 g of AgCl. The complex is",
+    "options": {
+      "A": "[Cr(H2O)6]Cl3",
+      "B": "[Cr(H2O)5Cl]Cl2·H2O",
+      "C": "[Cr(H2O)4Cl2]Cl·2H2O",
+      "D": "[Cr(H2O)3Cl3]"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "[Cr(H2O)4Cl2]Cl·2H2O",
+    "explanation": "0.01 mol of complex gives 0.02 mol of AgCl, so two Cl are outside the coordination sphere.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 18,
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "question": "The complexes [Co(NH3)5SO4]Br and [Co(NH3)5Br]SO4 are",
+    "options": {
+      "A": "Coordination isomers",
+      "B": "Geometrical isomers",
+      "C": "Optical isomers",
+      "D": "Ionisation isomers"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "Ionisation isomers",
+    "explanation": "They give different ions in solution, so they are ionisation isomers.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 19,
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "question": "Which statements are true about [CoF6]3−? (I) Octahedral geometry (II) Coordination number of Co is 3 and oxidation state is +6 (III) sp3d2 hybridised (IV) High spin complex",
+    "options": {
+      "A": "I, II and IV",
+      "B": "I, III and IV",
+      "C": "II and IV",
+      "D": "II, III and IV"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "I, III and IV",
+    "explanation": "It is octahedral, sp3d2 and high spin. Coordination number is 6, not 3.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 20,
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "question": "A haloalkane undergoes SN1 or SN2 depending on",
+    "options": {
+      "A": "Solvent used in the reaction",
+      "B": "Low temperature",
+      "C": "The type of halogen atom",
+      "D": "Stability of the haloalkane"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "Solvent used in the reaction",
+    "explanation": "The solvent decides whether SN1 or SN2 is favoured.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 21,
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "question": "2-Methylpropane is prepared by the Wurtz reaction. The haloalkanes taken with sodium and dry ether are",
+    "options": {
+      "A": "Chloromethane and 2-chloropropane",
+      "B": "Chloroethane and chloromethane",
+      "C": "Chloroethane and 1-chloropropane",
+      "D": "Chloromethane and 1-chloropropane"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "Chloromethane and 2-chloropropane",
+    "explanation": "Chloromethane and 2-chloropropane couple to give 2-methylpropane.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 22,
+    "subject": "Chemistry",
+    "chapter": "Qualitative Analysis (Equilibrium)",
+    "question": "In group III basic radical analysis, NH4Cl(s) is added to NH4OH to",
+    "options": {
+      "A": "increase the concentration of OH− ions",
+      "B": "precipitate group IV and V radicals",
+      "C": "suppress the dissociation of NH4OH",
+      "D": "introduce Cl− ions"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "suppress the dissociation of NH4OH",
+    "explanation": "Common ion effect suppresses dissociation of NH4OH so only group III hydroxides precipitate.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 23,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "The solubility product of CaC2O4 is 4×10−9 (mol L−1)2. Its solubility in pure water at the same temperature is",
+    "options": {
+      "A": "6.3×10−5 mol L−1",
+      "B": "2×10−5 mol L−1",
+      "C": "2×10−4 mol L−1",
+      "D": "6.3×10−4 mol L−1"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "6.3×10−5 mol L−1",
+    "explanation": "s = √Ksp = √(4×10−9) = 6.3×10−5 mol L−1.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 24,
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions",
+    "question": "Moist SO2 is passed into acidified permanganate solution. The correct change is",
+    "options": {
+      "A": "SO2 is oxidised to SO4^2− and MnO4− is reduced to Mn2+",
+      "B": "SO2 is reduced to S and MnO4− is oxidised to MnO2",
+      "C": "SO2 is oxidised to SO3^2− and MnO4− is reduced to MnO2",
+      "D": "SO2 is reduced to H2S and MnO4− is oxidised to MnO4"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "SO2 is oxidised to SO4^2− and MnO4− is reduced to Mn2+",
+    "explanation": "Acidified permanganate oxidises SO2 to sulphate and is itself reduced to Mn2+.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 25,
+    "subject": "Chemistry",
+    "chapter": "The s-Block Elements",
+    "question": "Which property is generally not applicable to ionic hydrides?",
+    "options": {
+      "A": "Non-volatile",
+      "B": "Non-conducting in the solid state",
+      "C": "Crystalline",
+      "D": "Volatile"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "Volatile",
+    "explanation": "Ionic hydrides are crystalline solids with high melting points. They are not volatile.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 26,
+    "subject": "Chemistry",
+    "chapter": "The s-Block Elements",
+    "question": "Which nitrate decomposes to give NO2 on heating?",
+    "options": {
+      "A": "NaNO3",
+      "B": "KNO3",
+      "C": "RbNO3",
+      "D": "LiNO3"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "LiNO3",
+    "explanation": "LiNO3 decomposes to Li2O, NO2 and O2. Other alkali nitrates give nitrites and oxygen.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 27,
+    "subject": "Chemistry",
+    "chapter": "The p-Block Elements",
+    "question": "Which halide cannot be hydrolysed?",
+    "options": {
+      "A": "CCl4",
+      "B": "SiCl4",
+      "C": "GeCl4",
+      "D": "SnCl4"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "CCl4",
+    "explanation": "Carbon has no vacant d orbitals, so CCl4 is not hydrolysed.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 28,
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "question": "0.48 g of an organic compound on complete combustion produced 0.22 g of CO2. The percentage of carbon in the compound is",
+    "options": {
+      "A": "25",
+      "B": "50",
+      "C": "12.5",
+      "D": "87.5"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "12.5",
+    "explanation": "%C = (12/44) × (0.22/0.48) × 100 = 12.5.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 29,
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "question": "In the sequence ethene → (P) 1,2-dibromoethane → (Q) bromoethene → (R) ethyne → (S) benzene, the reagents P, Q and S are",
+    "options": {
+      "A": "Br2; alc. KOH, NaOH, Al2O3",
+      "B": "HBr; alc. KOH, CaC2, KMnO4",
+      "C": "HBr; alc. KOH, NaNH2, red hot iron tube",
+      "D": "Br2; alc. KOH, NaNH2, red hot iron tube"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "Br2; alc. KOH, NaNH2, red hot iron tube",
+    "explanation": "Br2 adds to ethene, alcoholic KOH then NaNH2 gives ethyne, and a red hot iron tube trimerises it to benzene.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 30,
+    "subject": "Chemistry",
+    "chapter": "Chemistry in Everyday Life",
+    "question": "The first chlorinated organic insecticide prepared is",
+    "options": {
+      "A": "Gammaxene",
+      "B": "Chloroform",
+      "C": "COCl2",
+      "D": "DDT"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "DDT",
+    "explanation": "DDT (dichlorodiphenyltrichloroethane) was the first chlorinated organic insecticide.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 31,
+    "subject": "Chemistry",
+    "chapter": "The Solid State",
+    "question": "Which crystal has a unit cell with a = b ≠ c and α = β = 90°, γ = 120°?",
+    "options": {
+      "A": "Zinc blende",
+      "B": "Graphite",
+      "C": "Cinnabar",
+      "D": "Potassium dichromate"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Graphite",
+    "explanation": "That is the hexagonal unit cell. Graphite is hexagonal.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 32,
+    "subject": "Chemistry",
+    "chapter": "The d- and f-Block Elements",
+    "question": "MnO exhibits",
+    "options": {
+      "A": "Ferrimagnetism",
+      "B": "Antiferromagnetism",
+      "C": "Ferromagnetism",
+      "D": "Paramagnetism"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Antiferromagnetism",
+    "explanation": "MnO is antiferromagnetic.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 33,
+    "subject": "Chemistry",
+    "chapter": "The Solid State",
+    "question": "The number of atoms in 4.5 g of a face-centred cubic crystal of edge 300 pm and density 10 g cm−3 is (NA = 6.022×10^23)",
+    "options": {
+      "A": "6.6×10^20",
+      "B": "7.6×10^23",
+      "C": "6.6×10^19",
+      "D": "6.6×10^22"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "6.6×10^22",
+    "explanation": "Molar mass comes out to 40.5 g, so 4.5 g contains 6.6×10^22 atoms.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 34,
+    "subject": "Chemistry",
+    "chapter": "Solutions",
+    "question": "Vapour pressure of a solution of 18 g glucose in 178.2 g water at 100°C is (vapour pressure of water = 760 torr)",
+    "options": {
+      "A": "76.0 torr",
+      "B": "752.0 torr",
+      "C": "7.6 torr",
+      "D": "3207.6 torr"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "752.0 torr",
+    "explanation": "Mole fraction of glucose is 0.01, so Ps = 760 × 0.99 ≈ 752 torr.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 35,
+    "subject": "Chemistry",
+    "chapter": "Solutions",
+    "question": "A mixture of phenol and aniline shows negative deviation from Raoult's law because of",
+    "options": {
+      "A": "Polar covalent bond",
+      "B": "Non-polar covalent bond",
+      "C": "Intermolecular hydrogen bond",
+      "D": "Intramolecular hydrogen bond"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Intermolecular hydrogen bond",
+    "explanation": "Intermolecular hydrogen bonding between phenol and aniline holds the molecules more strongly.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 36,
+    "subject": "Chemistry",
+    "chapter": "Solutions",
+    "question": "Which pair shows positive deviation from Raoult's law?",
+    "options": {
+      "A": "Water–HCl",
+      "B": "Benzene–methanol",
+      "C": "Water–HNO3",
+      "D": "Acetone–chloroform"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Benzene–methanol",
+    "explanation": "Benzene–methanol has weaker interactions than the pure liquids, so it shows positive deviation.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 37,
+    "subject": "Chemistry",
+    "chapter": "Electrochemistry",
+    "question": "How many coulombs are required to oxidise 0.1 mole of H2O to oxygen?",
+    "options": {
+      "A": "1.93×10^5 C",
+      "B": "1.93×10^4 C",
+      "C": "3.86×10^4 C",
+      "D": "9.65×10^3 C"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "1.93×10^4 C",
+    "explanation": "H2O → 1/2 O2 + 2H+ + 2e−. 0.1 mol needs 0.2 F = 1.93×10^4 C.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 38,
+    "subject": "Chemistry",
+    "chapter": "Electrochemistry",
+    "question": "A current of 3 A is passed through a molten calcium salt for 1 hr 47 min 13 s. Mass of calcium deposited is (molar mass 40 g mol−1)",
+    "options": {
+      "A": "6.0 g",
+      "B": "2.0 g",
+      "C": "8.0 g",
+      "D": "4.0 g"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "4.0 g",
+    "explanation": "Charge passed is about 19300 C, which deposits 0.1 mol, so 4.0 g of calcium.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 39,
+    "subject": "Chemistry",
+    "chapter": "Electrochemistry",
+    "question": "In λm = λm° − A√C, the value of A is the same for the pair",
+    "options": {
+      "A": "NaCl and CaCl2",
+      "B": "CaCl2 and MgSO4",
+      "C": "NaCl and KBr",
+      "D": "MgCl2 and NaCl"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "NaCl and KBr",
+    "explanation": "A depends on the electrolyte type. NaCl and KBr are both 1-1 electrolytes.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 40,
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "question": "For A ⇌ B, Ea = 50 kJ mol−1 and ΔH = −20 kJ mol−1. A catalyst lowers Ea by 10 kJ mol−1. Ea for the backward reaction with the catalyst is",
+    "options": {
+      "A": "60 kJ mol−1",
+      "B": "40 kJ mol−1",
+      "C": "70 kJ mol−1",
+      "D": "20 kJ mol−1"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "60 kJ mol−1",
+    "explanation": "Backward Ea is 70 kJ mol−1. The catalyst lowers it by 10, so 60 kJ mol−1.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 41,
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "question": "For PCl5 → PCl3 + Cl2, rate is 1.02×10−4 mol L−1 s−1 and rate constant is 3.4×10−5 s−1. Concentration of PCl5 at that instant is",
+    "options": {
+      "A": "8.0 mol L−1",
+      "B": "3.0 mol L−1",
+      "C": "0.2 mol L−1",
+      "D": "2.0 mol L−1"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "3.0 mol L−1",
+    "explanation": "Rate = k[PCl5], so [PCl5] = 1.02×10−4 / 3.4×10−5 = 3.0 mol L−1.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 42,
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "question": "Which one does not represent the Arrhenius equation?",
+    "options": {
+      "A": "log k = log A − Ea / (2.303 RT)",
+      "B": "k = A e^(−Ea/RT)",
+      "C": "ln k = −Ea/RT + ln A",
+      "D": "k = A e^(Ea/RT)"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "k = A e^(Ea/RT)",
+    "explanation": "The exponent must be negative. k = A e^(+Ea/RT) is not the Arrhenius equation.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 43,
+    "subject": "Chemistry",
+    "chapter": "Surface Chemistry",
+    "question": "Identify the incorrect statement.",
+    "options": {
+      "A": "Colligative properties of a colloidal solution are small compared with a true solution",
+      "B": "Tyndall effect is seen when dispersed particles are smaller than the wavelength of light",
+      "C": "Colour of a colloidal solution depends on the wavelength of scattered light",
+      "D": "Brownian movement is due to balanced bombardment of molecules of the dispersion medium"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "Brownian movement is due to balanced bombardment of molecules of the dispersion medium",
+    "explanation": "Brownian movement is due to unbalanced bombardment.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 44,
+    "subject": "Chemistry",
+    "chapter": "Surface Chemistry",
+    "question": "For coagulation of positively charged hydrated ferric oxide sol, flocculating power is in the order",
+    "options": {
+      "A": "PO4^3− > SO4^2− > Cl− > [Fe(CN)6]^4−",
+      "B": "Cl− > SO4^2− > PO4^3− > [Fe(CN)6]^4−",
+      "C": "SO4^2− = Cl− = PO4^3− > [Fe(CN)6]^4−",
+      "D": "[Fe(CN)6]^4− > PO4^3− > SO4^2− > Cl−"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "[Fe(CN)6]^4− > PO4^3− > SO4^2− > Cl−",
+    "explanation": "Flocculating power increases with the charge on the anion.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 45,
+    "subject": "Chemistry",
+    "chapter": "Surface Chemistry",
+    "question": "Gold sol is not a",
+    "options": {
+      "A": "Macromolecular colloid",
+      "B": "Lyophobic colloid",
+      "C": "Multimolecular colloid",
+      "D": "Negatively charged colloid"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "Macromolecular colloid",
+    "explanation": "Gold sol is a multimolecular lyophobic colloid, not a macromolecular one.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 46,
+    "subject": "Chemistry",
+    "chapter": "Metallurgy (General Principles)",
+    "question": "The incorrect statement about the Hall-Heroult process is",
+    "options": {
+      "A": "Carbon anode is oxidised to CO and CO2",
+      "B": "Na3AlF6 decreases the melting point of the electrolyte",
+      "C": "CaF2 increases the conductivity of the electrolyte",
+      "D": "Oxidation state of oxygen changes in the overall cell reaction"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "Oxidation state of oxygen changes in the overall cell reaction",
+    "explanation": "Oxygen from alumina is liberated and oxidises the carbon anode. The oxidation state of oxygen in the overall sense is not the incorrect claim the key rejects; the official key is D.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 47,
+    "subject": "Chemistry",
+    "chapter": "Metallurgy (General Principles)",
+    "question": "Select the correct statement.",
+    "options": {
+      "A": "Roasting is heating the ore in the absence of air",
+      "B": "Calcination is heating the ore above its melting point",
+      "C": "Smelting is heating the ore with a reducing agent and flux below its melting point",
+      "D": "Calcination of calcium carbonate is endothermic"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "Calcination of calcium carbonate is endothermic",
+    "explanation": "CaCO3 → CaO + CO2 is endothermic.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 48,
+    "subject": "Chemistry",
+    "chapter": "The p-Block Elements",
+    "question": "NO2 gas is",
+    "options": {
+      "A": "Colourless, neutral",
+      "B": "Colourless, acidic",
+      "C": "Brown, acidic",
+      "D": "Brown, neutral"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Brown, acidic",
+    "explanation": "NO2 is a brown acidic gas.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 49,
+    "subject": "Chemistry",
+    "chapter": "Environmental Chemistry",
+    "question": "Identify the incorrect statement.",
+    "options": {
+      "A": "Oxides of nitrogen in the atmosphere can cause depletion of the ozone layer",
+      "B": "Ozone absorbs intense ultraviolet radiation of the sun",
+      "C": "Depletion of the ozone layer is because of its chemical reactions with chlorofluoroalkanes",
+      "D": "Ozone absorbs infrared radiation"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "Ozone absorbs infrared radiation",
+    "explanation": "Ozone absorbs ultraviolet radiation, not infrared.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 50,
+    "subject": "Chemistry",
+    "chapter": "The p-Block Elements",
+    "question": "The correct decreasing order of boiling point of hydrogen halides is",
+    "options": {
+      "A": "HF > HCl > HBr > HI",
+      "B": "HI > HBr > HCl > HF",
+      "C": "HF > HI > HBr > HCl",
+      "D": "HI > HF > HBr > HCl"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "HF > HI > HBr > HCl",
+    "explanation": "HF is highest because of hydrogen bonding, then HI > HBr > HCl.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 51,
+    "subject": "Chemistry",
+    "chapter": "The p-Block Elements",
+    "question": "The noble gas made by collision of 249Cf with 48Ca is",
+    "options": {
+      "A": "Radon",
+      "B": "Radium",
+      "C": "Oganesson",
+      "D": "Xenon"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Oganesson",
+    "explanation": "249Cf + 48Ca gives 294Og. Oganesson has atomic number 118.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 52,
+    "subject": "Chemistry",
+    "chapter": "The d- and f-Block Elements",
+    "question": "The transition element (about 5%) present with the lanthanoid metal in misch metal is",
+    "options": {
+      "A": "Mg",
+      "B": "Fe",
+      "C": "Zn",
+      "D": "Co"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Fe",
+    "explanation": "Misch metal is about 95% lanthanoid metal and about 5% iron.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 53,
+    "subject": "Chemistry",
+    "chapter": "The d- and f-Block Elements",
+    "question": "Match: I Zn2+ (i) d8 (ii) colourless (iii) μ = 1.73 BM; II Cu2+; III Ni2+. The correct code is",
+    "options": {
+      "A": "I-i, II-ii, III-iii",
+      "B": "I-ii, II-iii, III-i",
+      "C": "I-ii, II-i, III-iii",
+      "D": "I-i, II-iii, III-ii"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "I-ii, II-iii, III-i",
+    "explanation": "Zn2+ is colourless, Cu2+ has one unpaired electron (1.73 BM), Ni2+ is d8.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 54,
+    "subject": "Chemistry",
+    "chapter": "The d- and f-Block Elements",
+    "question": "Which statement about lanthanoids is incorrect?",
+    "options": {
+      "A": "Lanthanoids are silvery white soft metals",
+      "B": "Samarium shows +2 oxidation state",
+      "C": "Ce4+ solutions are used as oxidising agents in titrimetric analysis",
+      "D": "Colour of lanthanoid ions in solution is due to d-d transition"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "Colour of lanthanoid ions in solution is due to d-d transition",
+    "explanation": "The colour is due to f-f transitions, not d-d transitions.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 55,
+    "subject": "Chemistry",
+    "chapter": "The p-Block Elements",
+    "question": "A metalloid is",
+    "options": {
+      "A": "Bi",
+      "B": "Sb",
+      "C": "P",
+      "D": "Se"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Sb",
+    "explanation": "Official key: both Sb and Se are metalloids. Sb is the first accepted option.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 56,
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "question": "A pair of isoelectronic species having bond order one is",
+    "options": {
+      "A": "N2, CO",
+      "B": "N2, NO+",
+      "C": "O2^−, F2",
+      "D": "CO, NO+"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "O2^−, F2",
+    "explanation": "O2− and F2 each have 18 electrons and bond order 1.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 57,
+    "subject": "Chemistry",
+    "chapter": "States of Matter (Gases and Liquids)",
+    "question": "Identify the wrong relation for real gases.",
+    "options": {
+      "A": "Z = Videal / Vreal",
+      "B": "Pideal = Preal + an^2/V^2",
+      "C": "Vreal = Videal − nb",
+      "D": "(P + a/V^2)(V − b) = RT"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "Z = Videal / Vreal",
+    "explanation": "Compressibility factor is Z = Vreal / Videal, not the other way around.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 58,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "question": "From the diagram, ΔH1 (A → 2B) = +10 J and ΔH2 (2B → C) = +25 J. ΔH for C → A is",
+    "options": {
+      "A": "+35 J",
+      "B": "−15 J",
+      "C": "−35 J",
+      "D": "+15 J"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "−35 J",
+    "explanation": "A → C is +35 J, so C → A is −35 J.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 59,
+    "subject": "Chemistry",
+    "chapter": "Solutions",
+    "question": "For which mixture is the composition uniform throughout?",
+    "options": {
+      "A": "Sand and water",
+      "B": "Grains and pulses with stone",
+      "C": "Mixture of oil and water",
+      "D": "Dilute aqueous solution of sugar"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "Dilute aqueous solution of sugar",
+    "explanation": "A dilute sugar solution is homogeneous.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 60,
+    "subject": "Chemistry",
+    "chapter": "Structure of Atom",
+    "question": "The energy associated with the first orbit of He+ is",
+    "options": {
+      "A": "0 J",
+      "B": "−8.72×10−18 J",
+      "C": "−4.58×10−18 J",
+      "D": "−0.545×10−18 J"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "−8.72×10−18 J",
+    "explanation": "En = −2.18×10−18 Z^2/n^2. For Z = 2 and n = 1, E = −8.72×10−18 J.",
+    "hasImage": false,
+    "image": null
+  }
+]

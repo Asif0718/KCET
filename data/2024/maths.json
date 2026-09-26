@@ -1,0 +1,1022 @@
+[
+  {
+    "id": 1,
+    "subject": "Mathematics",
+    "chapter": "Sets",
+    "question": "Two finite sets have m and n elements. The number of subsets of the first is 56 more than the number of subsets of the second. The values of m and n are",
+    "options": {
+      "A": "7, 6",
+      "B": "5, 1",
+      "C": "6, 3",
+      "D": "8, 7"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "6, 3",
+    "explanation": "2^m − 2^n = 56. 2^6 − 2^3 = 64 − 8 = 56, so m = 6 and n = 3.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 2,
+    "subject": "Mathematics",
+    "chapter": "Relations and Functions",
+    "question": "If [x]^2 − 5[x] + 6 = 0, where [x] is the greatest integer function, then",
+    "options": {
+      "A": "x ∈ [3, 4]",
+      "B": "x ∈ [2, 4)",
+      "C": "x ∈ [2, 3]",
+      "D": "x ∈ (2, 3]"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "x ∈ [2, 4)",
+    "explanation": "[x] is 2 or 3. That means x lies from 2 up to, but not including, 4.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 3,
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions",
+    "question": "In two circles, arcs of the same length subtend 30° and 78° at the centre. The ratio of their radii is",
+    "options": {
+      "A": "5/13",
+      "B": "13/5",
+      "C": "13/4",
+      "D": "4/13"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "13/5",
+    "explanation": "Arc length = rθ, so the radii are in the inverse ratio of the angles: 78 : 30 = 13 : 5.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 4,
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions",
+    "question": "If triangle ABC is right angled at C, then tan A + tan B is",
+    "options": {
+      "A": "a + b",
+      "B": "a² / (bc)",
+      "C": "c² / (ab)",
+      "D": "b² / (ac)"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "c² / (ab)",
+    "explanation": "A and B are complementary, so tan B = cot A. Their sum simplifies to c² / (ab).",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 5,
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers",
+    "question": "The real value of α for which (1 − i sin α) / (1 + 2i sin α) is purely real is",
+    "options": {
+      "A": "(n+1)π/2, n ∈ N",
+      "B": "(2n+1)π/2, n ∈ N",
+      "C": "nπ, n ∈ N",
+      "D": "(2n−1)π/2, n ∈ N"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "nπ, n ∈ N",
+    "explanation": "The imaginary part vanishes when sin α = 0, so α = nπ.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 6,
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "question": "The length of a rectangle is five times its breadth. If the minimum perimeter is 180 cm, then",
+    "options": {
+      "A": "Breadth ≤ 15 cm",
+      "B": "Breadth ≥ 15 cm",
+      "C": "Length ≤ 15 cm",
+      "D": "Length = 15 cm"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Breadth ≥ 15 cm",
+    "explanation": "Perimeter 2(5b + b) = 12b is at least 180, so the breadth is at least 15 cm.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 7,
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "question": "The value of 49C3 + 48C3 + 47C3 + 46C3 + 45C3 + 45C4 is",
+    "options": {
+      "A": "50C4",
+      "B": "50C3",
+      "C": "50C2",
+      "D": "50C1"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "50C4",
+    "explanation": "Adding these combinations one by one (the hockey-stick identity) gives 50C4.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 8,
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "question": "In the expansion of (1 + x)^n, C1/C0 + 2 C2/C1 + 3 C3/C2 + … + n Cn/C(n−1) equals",
+    "options": {
+      "A": "n(n+1)/2",
+      "B": "n/2",
+      "C": "(n+1)/2",
+      "D": "3n(n+1)"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "n(n+1)/2",
+    "explanation": "Each term r · Cr / C(r−1) equals r. The sum of the first n natural numbers is n(n+1)/2.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 9,
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "question": "Sn is the sum of n terms of a G.P. with first term a and common ratio r. Then Sn / S2n is",
+    "options": {
+      "A": "r^n + 1",
+      "B": "1 / (r^n + 1)",
+      "C": "r^n − 1",
+      "D": "1 / (r^n − 1)"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "1 / (r^n + 1)",
+    "explanation": "Sn = a(r^n − 1)/(r − 1) and S2n = a(r^(2n) − 1)/(r − 1). Their ratio is 1 / (r^n + 1).",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 10,
+    "subject": "Mathematics",
+    "chapter": "Quadratic Equations",
+    "question": "The A.M. and G.M. of the roots of a quadratic equation are 5 and 4. The equation is",
+    "options": {
+      "A": "x² − 10x − 16 = 0",
+      "B": "x² + 10x + 16 = 0",
+      "C": "x² + 10x − 16 = 0",
+      "D": "x² − 10x + 16 = 0"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "x² − 10x + 16 = 0",
+    "explanation": "Sum of roots is 2 × 5 = 10 and product is 4² = 16, so the equation is x² − 10x + 16 = 0.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 11,
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "question": "The angle between the line x + y = 3 and the line joining (1, 1) and (−3, 4) is",
+    "options": {
+      "A": "tan^−1(7)",
+      "B": "tan^−1(−1/7)",
+      "C": "tan^−1(1/7)",
+      "D": "tan^−1(2/7)"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "tan^−1(1/7)",
+    "explanation": "The slopes are −1 and −3/4. The formula for the angle between them gives tan^−1(1/7).",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 12,
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "question": "The equation of the parabola with focus (6, 0) and directrix x = −6 is",
+    "options": {
+      "A": "y² = 24x",
+      "B": "y² = −24x",
+      "C": "x² = 24y",
+      "D": "x² = −24y"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "y² = 24x",
+    "explanation": "The focus is to the right of the directrix, so the parabola is y² = 4ax with a = 6, that is y² = 24x.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 13,
+    "subject": "Mathematics",
+    "chapter": "Limits and Derivatives",
+    "question": "The limit as x → π/4 of (√2 cos x − 1) / (cot x − 1) is",
+    "options": {
+      "A": "2",
+      "B": "√2",
+      "C": "1/2",
+      "D": "1/√2"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "1/2",
+    "explanation": "Putting x = π/4 gives 0/0. Simplifying the limit gives 1/2.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 14,
+    "subject": "Mathematics",
+    "chapter": "Mathematical Reasoning",
+    "question": "The negation of “For every real number x, x² + 5 is positive” is",
+    "options": {
+      "A": "For every real x, x² + 5 is not positive",
+      "B": "For every real x, x² + 5 is negative",
+      "C": "There exists a real x such that x² + 5 is not positive",
+      "D": "There exists a real x such that x² + 5 is positive"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "There exists a real x such that x² + 5 is not positive",
+    "explanation": "The negation of “for every” is “there exists”, and the property is negated.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 15,
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "question": "Observations a, b, c, d, e have mean m and standard deviation S. The standard deviation of a+k, b+k, c+k, d+k, e+k is",
+    "options": {
+      "A": "kS",
+      "B": "S + k",
+      "C": "S/k",
+      "D": "S"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "S",
+    "explanation": "Adding the same number to every observation does not change the spread, so the standard deviation stays S.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 16,
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "question": "f : R → R is given by f(x) = tan x. Then f^−1(1) is",
+    "options": {
+      "A": "π/4",
+      "B": "{nπ + π/4 : n ∈ Z}",
+      "C": "π/3",
+      "D": "{nπ + π/3 : n ∈ Z}"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "π/4",
+    "explanation": "tan(π/4) = 1. In the principal range the inverse value is π/4.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 17,
+    "subject": "Mathematics",
+    "chapter": "Relations and Functions",
+    "question": "f : R → R is f(x) = x² + 1. The pre-images of 17 and −3 are",
+    "options": {
+      "A": "empty set and {4, −4}",
+      "B": "{3, −3} and empty set",
+      "C": "{4, −4} and empty set",
+      "D": "{4, −4} and {2, −2}"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "{4, −4} and empty set",
+    "explanation": "x² + 1 = 17 gives x = ±4. x² + 1 = −3 is impossible, so that pre-image is empty.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 18,
+    "subject": "Mathematics",
+    "chapter": "Relations and Functions",
+    "question": "If (g∘f)(x) = sin x and (f∘g)(x) = (sin √x)², then",
+    "options": {
+      "A": "f(x) = sin²x, g(x) = x",
+      "B": "f(x) = sin√x, g(x) = √x",
+      "C": "f(x) = sin²x, g(x) = √x",
+      "D": "f(x) = sin√x, g(x) = x²"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "f(x) = sin²x, g(x) = √x",
+    "explanation": "f(x) = sin²x and g(x) = √x satisfy both compositions.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 19,
+    "subject": "Mathematics",
+    "chapter": "Relations and Functions",
+    "question": "A = {2, 3, …, 18} and (a, b) R (c, d) when ad = bc. The number of ordered pairs in the equivalence class of (3, 2) is",
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "6",
+      "D": "7"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "6",
+    "explanation": "ad = bc means a/b = c/d. The pairs in A×A with the same ratio as 3/2 give 6 ordered pairs.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 20,
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "question": "If cos^−1 x + cos^−1 y + cos^−1 z = 3π, then x(y+z) + y(z+x) + z(x+y) equals",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "6",
+      "D": "12"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "6",
+    "explanation": "Each inverse cosine is at most π, so each is π and x = y = z = −1. The expression equals 6.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 21,
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "question": "If 2 sin^−1 x − 3 cos^−1 x = 4 and x ∈ [−1, 1], then 2 sin^−1 x + 3 cos^−1 x equals",
+    "options": {
+      "A": "(4 − 6π)/5",
+      "B": "(6π − 4)/5",
+      "C": "3π/2",
+      "D": "0"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "(6π − 4)/5",
+    "explanation": "Use sin^−1 x + cos^−1 x = π/2 to solve for each inverse, then add them.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 22,
+    "subject": "Mathematics",
+    "chapter": "Matrices",
+    "question": "If A is a square matrix with A² = A, then (I + A)³ equals",
+    "options": {
+      "A": "7A − I",
+      "B": "7A",
+      "C": "7A + I",
+      "D": "I − 7A"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "7A + I",
+    "explanation": "Because A² = A, higher powers of A stay equal to A. Expanding gives I + 7A.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 23,
+    "subject": "Mathematics",
+    "chapter": "Matrices",
+    "question": "If A = [[1, 1], [1, 1]], then A^10 equals",
+    "options": {
+      "A": "2^8 A",
+      "B": "2^9 A",
+      "C": "2^10 A",
+      "D": "2^11 A"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "2^9 A",
+    "explanation": "A² = 2A, so each extra multiplication brings a factor of 2. A^10 = 2^9 A.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 24,
+    "subject": "Mathematics",
+    "chapter": "Determinants",
+    "question": "f(x) is the determinant with rows (x−3, 2x²−18, 2x³−81), (x−5, 2x²−50, 4x³−500) and (1, 2, 3). Then f(1)·f(3) + f(3)·f(5) + f(5)·f(1) is",
+    "options": {
+      "A": "−1",
+      "B": "0",
+      "C": "1",
+      "D": "2"
+    },
+    "correctAnswer": "*",
+    "correctAnswerText": "Any option (bonus)",
+    "explanation": "This question was awarded as a bonus in KCET 2024, so every option scores.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 25,
+    "subject": "Mathematics",
+    "chapter": "Determinants",
+    "question": "If P = [[1, α, 3], [1, 3, 3], [2, 4, 4]] is the adjoint of a 3×3 matrix A and |A| = 4, then α equals",
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "11",
+      "D": "0"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "11",
+    "explanation": "For a 3×3 matrix, |adj A| = |A|² = 16. Setting |P| = 16 gives α = 11.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 26,
+    "subject": "Mathematics",
+    "chapter": "Determinants",
+    "question": "A = [[x, 1], [1, x]] and B = [[x, 1, 1], [1, x, 1], [1, 1, x]]. Then dB/dx is",
+    "options": {
+      "A": "3A",
+      "B": "−3B",
+      "C": "3B + 1",
+      "D": "1 − 3A"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "3A",
+    "explanation": "Differentiating the determinant B with respect to x gives 3 times the determinant A.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 27,
+    "subject": "Mathematics",
+    "chapter": "Limits and Derivatives",
+    "question": "f(x) is the determinant with rows (cos x, x, 1), (2 sin x, x, 2x) and (sin x, x, x). Then the limit of f(x)/x² as x → 0 is",
+    "options": {
+      "A": "−1",
+      "B": "0",
+      "C": "3",
+      "D": "2"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "0",
+    "explanation": "Expanding the determinant and dividing by x², the limit is 0.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 28,
+    "subject": "Mathematics",
+    "chapter": "Relations and Functions",
+    "question": "Which statement about the logarithm to any base b > 1 is correct?",
+    "options": {
+      "A": "Its domain is all real numbers",
+      "B": "Its range is all positive real numbers",
+      "C": "The point (1, 0) is always on its graph",
+      "D": "Its graph decreases from left to right"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "The point (1, 0) is always on its graph",
+    "explanation": "log(1) = 0 for every base, so (1, 0) lies on the graph.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 29,
+    "subject": "Mathematics",
+    "chapter": "Continuity and Differentiability",
+    "question": "The function f(x) = |cos x| is",
+    "options": {
+      "A": "Everywhere continuous and differentiable",
+      "B": "Everywhere continuous but not differentiable at odd multiples of π/2",
+      "C": "Neither continuous nor differentiable at (2n+1)π/2",
+      "D": "Not differentiable anywhere"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Everywhere continuous but not differentiable at odd multiples of π/2",
+    "explanation": "The absolute value makes a sharp corner wherever cos x is zero, so it is not differentiable there.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 30,
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "question": "If y = 2x^(3x), then dy/dx at x = 1 is",
+    "options": {
+      "A": "2",
+      "B": "6",
+      "C": "3",
+      "D": "1"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "6",
+    "explanation": "Take logarithm and differentiate. At x = 1 the derivative is 6.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 31,
+    "subject": "Mathematics",
+    "chapter": "Continuity and Differentiability",
+    "question": "f(x+y) = f(x)f(y) for all real x, y, f(0) ≠ 0, f(5) = 3 and f'(0) = 2. Then f'(5) is",
+    "options": {
+      "A": "6",
+      "B": "0",
+      "C": "3",
+      "D": "−6"
+    },
+    "correctAnswer": "*",
+    "correctAnswerText": "Any option (bonus)",
+    "explanation": "This question was a bonus in KCET 2024. Ignoring an inconsistency in the data, the working answer is 6.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 32,
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "question": "The value of c in (0, 2) satisfying the mean value theorem for f(x) = x(x−1)² on [0, 2] is",
+    "options": {
+      "A": "3/4",
+      "B": "4/3",
+      "C": "1/3",
+      "D": "2/3"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "4/3",
+    "explanation": "f'(c) equals the average slope on [0, 2]. Solving gives c = 4/3.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 33,
+    "subject": "Mathematics",
+    "chapter": "Continuity and Differentiability",
+    "question": "The derivative of cos²( cot^−1( (2+x) / √(2−x) ) ) is",
+    "options": {
+      "A": "−3/4",
+      "B": "−1/2",
+      "C": "1/2",
+      "D": "1/4"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "1/4",
+    "explanation": "Simplifying the inverse cotangent and then differentiating gives 1/4.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 34,
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "question": "For f(x) = x³ − 6x² + 12x − 3, the point x = 2 is",
+    "options": {
+      "A": "a point of minimum",
+      "B": "a point of inflexion",
+      "C": "not a critical point",
+      "D": "a point of maximum"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "a point of inflexion",
+    "explanation": "f'(2) = 0 and f''(2) = 0, but the sign of f' does not change, so it is a point of inflexion.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 35,
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "question": "The function x^x, x > 0, is strictly increasing at",
+    "options": {
+      "A": "every real x",
+      "B": "x < 1/e",
+      "C": "x > 1/e",
+      "D": "x < 0"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "x > 1/e",
+    "explanation": "The derivative of x^x is positive when x > 1/e.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 36,
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "question": "The maximum volume of a right circular cone with slant height 6 is",
+    "options": {
+      "A": "4√3 π cubic units",
+      "B": "16√3 π cubic units",
+      "C": "3√3 π cubic units",
+      "D": "6√3 π cubic units"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "16√3 π cubic units",
+    "explanation": "Write the volume using the slant height and maximise. The maximum is 16√3 π.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 37,
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "question": "If f(x) = x e^(x(1−x)), then f(x) is",
+    "options": {
+      "A": "increasing on all real numbers",
+      "B": "decreasing on all real numbers",
+      "C": "decreasing on [−1/2, 1]",
+      "D": "increasing on [−1/2, 1]"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "increasing on [−1/2, 1]",
+    "explanation": "f'(x) is non-negative on [−1/2, 1], so the function is increasing there.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 38,
+    "subject": "Mathematics",
+    "chapter": "Integrals",
+    "question": "∫ sin x / (3 + 4 cos² x) dx equals",
+    "options": {
+      "A": "−1/(2√3) tan^−1(2 cos x / √3) + C",
+      "B": "1/√3 tan^−1(cos x / 3) + C",
+      "C": "1/(2√3) tan^−1(cos x / 3) + C",
+      "D": "−1/√3 tan^−1(2 cos x / 3) + C"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "−1/(2√3) tan^−1(2 cos x / √3) + C",
+    "explanation": "Substitute t = cos x. The integral becomes a standard arctan form.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 39,
+    "subject": "Mathematics",
+    "chapter": "Integrals",
+    "question": "∫ from −π to π of (1 − x²) sin x cos² x dx equals",
+    "options": {
+      "A": "π − π²/3",
+      "B": "2π − π³",
+      "C": "π − π³/2",
+      "D": "0"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "0",
+    "explanation": "The integrand is an odd function and the limits are symmetric, so the integral is 0.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 40,
+    "subject": "Mathematics",
+    "chapter": "Integrals",
+    "question": "∫ dx / ( x [ 6(log x)² + 7 log x + 2 ] ) equals",
+    "options": {
+      "A": "(1/2) log |(2 log x + 1)/(3 log x + 2)| + C",
+      "B": "log |(2 log x + 1)/(3 log x + 2)| + C",
+      "C": "log |(3 log x + 2)/(2 log x + 1)| + C",
+      "D": "(1/2) log |(3 log x + 2)/(2 log x + 1)| + C"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "log |(2 log x + 1)/(3 log x + 2)| + C",
+    "explanation": "Substitute t = log x and split into partial fractions. The result is option B.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 41,
+    "subject": "Mathematics",
+    "chapter": "Integrals",
+    "question": "∫ sin(5x/2) / sin(x/2) dx equals",
+    "options": {
+      "A": "2x + sin x + 2 sin 2x + C",
+      "B": "x + 2 sin x + 2 sin 2x + C",
+      "C": "x + 2 sin x + sin 2x + C",
+      "D": "2x + sin x + sin 2x + C"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "x + 2 sin x + sin 2x + C",
+    "explanation": "The ratio of sines expands into a short sum of cosines, and integrating gives x + 2 sin x + sin 2x.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 42,
+    "subject": "Mathematics",
+    "chapter": "Integrals",
+    "question": "∫ from 1 to 5 of (|x − 3| + |1 − x|) dx equals",
+    "options": {
+      "A": "12",
+      "B": "5/6",
+      "C": "21",
+      "D": "10"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "12",
+    "explanation": "Split the integral where the expressions inside the absolute values change sign. The total is 12.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 43,
+    "subject": "Mathematics",
+    "chapter": "Limits and Derivatives",
+    "question": "The limit as n → ∞ of ( n/(n²+1²) + n/(n²+2²) + … + n/(n²+(5n)²) ) equals",
+    "options": {
+      "A": "π/4",
+      "B": "tan^−1 3",
+      "C": "tan^−1 2",
+      "D": "π/2"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "tan^−1 2",
+    "explanation": "This is a Riemann sum for ∫ dx/(1+x²) from 0 to 5, but the last term stops at 5 in a way that evaluates to tan^−1 2.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 44,
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "question": "The area bounded by the line y = 3x and the curve y = x² is",
+    "options": {
+      "A": "10",
+      "B": "9/2",
+      "C": "9",
+      "D": "5"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "9/2",
+    "explanation": "The curves meet at x = 0 and x = 3. The area between them is 9/2.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 45,
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "question": "The area bounded by the line y = x and the curve y = x³ is",
+    "options": {
+      "A": "0.2",
+      "B": "0.3",
+      "C": "0.4",
+      "D": "0.5"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "0.5",
+    "explanation": "They meet at x = −1, 0 and 1. Adding the two equal areas gives 1/2.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 46,
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "question": "The solution of e^(dy/dx) = x + 1, with y(0) = 3, is",
+    "options": {
+      "A": "y − 2 = x log x − x",
+      "B": "y − x − 3 = x log x",
+      "C": "y − x − 3 = (x+1) log(x+1)",
+      "D": "y + x − 3 = (x+1) log(x+1)"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "y + x − 3 = (x+1) log(x+1)",
+    "explanation": "dy/dx = log(x+1). Integrating and using y(0) = 3 gives option D.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 47,
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "question": "The family of curves whose tangent at any point has x and y intercepts double the coordinates of that point is",
+    "options": {
+      "A": "xy = C",
+      "B": "x² + y² = C",
+      "C": "x² − y² = C",
+      "D": "y/x = C"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "xy = C",
+    "explanation": "The intercept condition gives a differential equation whose solution is xy = constant.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 48,
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "question": "AB = 3i + 4k and AC = 5i − 2j + 4k are sides of triangle ABC. The length of the median through A is",
+    "options": {
+      "A": "√18",
+      "B": "√72",
+      "C": "√33",
+      "D": "√288"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "√33",
+    "explanation": "The midpoint of BC is (B+C)/2. The median vector from A has length √33.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 49,
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "question": "The volume of the parallelepiped with edges j + k, i + k and i + j is",
+    "options": {
+      "A": "6",
+      "B": "2",
+      "C": "4",
+      "D": "3"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "2",
+    "explanation": "The volume is the absolute value of the scalar triple product, which is 2.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 50,
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "question": "a and b are unit vectors with angle θ between them. Then a + b is a unit vector if",
+    "options": {
+      "A": "θ = π/4",
+      "B": "θ = π/3",
+      "C": "θ = 2π/3",
+      "D": "θ = π/2"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "θ = 2π/3",
+    "explanation": "|a + b|² = 2 + 2 cos θ = 1 when cos θ = −1/2, so θ = 2π/3.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 51,
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "question": "For non-coplanar a, b, c, the vectors p, q, r are the pairwise cross products divided by the scalar triple product. Then (a+b)·p + (b+c)·q + (c+a)·r equals",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "3"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "3",
+    "explanation": "Each dot product equals 1, so the sum is 3.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 52,
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "question": "The lines (x−1)/(−3) = (y−2)/(2k) = (z−3)/2 and (x−1)/(3k) = (y−5)/1 = (z−6)/(−5) are perpendicular. Then k equals",
+    "options": {
+      "A": "−10/7",
+      "B": "−7/10",
+      "C": "−10",
+      "D": "−7"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "−10/7",
+    "explanation": "Perpendicular lines have direction dots equal to zero: −9k + 2k − 10 = 0, so k = −10/7.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 53,
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "question": "The distance between the planes 2x + 3y + 4z = 4 and 4x + 6y + 8z = 12 is",
+    "options": {
+      "A": "2",
+      "B": "8",
+      "C": "2/√29",
+      "D": "4"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "2/√29",
+    "explanation": "Make the normals equal, then the distance is |6 − 4| / √(4+9+16) = 2/√29.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 54,
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "question": "The sine of the angle between the line (x−2)/3 = (y−3)/4 = (4−z)/(−5) and the plane 2x − 2y + z = 5 is",
+    "options": {
+      "A": "1/(5√2)",
+      "B": "2/(5√2)",
+      "C": "3/50",
+      "D": "3/√50"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "1/(5√2)",
+    "explanation": "sin φ = |direction · normal| / (|direction| |normal|). That simplifies to 1/(5√2).",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 55,
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "question": "The equation xy = 0 in three-dimensional space represents",
+    "options": {
+      "A": "a pair of straight lines",
+      "B": "a plane",
+      "C": "a pair of planes at right angles",
+      "D": "a pair of parallel planes"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "a pair of planes at right angles",
+    "explanation": "xy = 0 means x = 0 or y = 0, which are two perpendicular planes.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 56,
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "question": "The plane containing the point (3, 2, 0) and the line (x−3)/1 = (y−6)/5 = (z−4)/4 is",
+    "options": {
+      "A": "x − y + z = 1",
+      "B": "x + y + z = 5",
+      "C": "x + 2y − z = 1",
+      "D": "2x − y + z = 5"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "x − y + z = 1",
+    "explanation": "The plane must contain the point and the direction of the line. Only x − y + z = 1 does both.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 57,
+    "subject": "Mathematics",
+    "chapter": "Linear Programming",
+    "question": "Corner points of a feasible region are (0, 2), (3, 0), (6, 0), (6, 8) and (0, 5). For z = 4x + 6y, the minimum occurs at",
+    "options": {
+      "A": "only (0, 2)",
+      "B": "only (3, 0)",
+      "C": "the midpoint of (0, 2) and (3, 0)",
+      "D": "any point on the segment joining (0, 2) and (3, 0)"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "any point on the segment joining (0, 2) and (3, 0)",
+    "explanation": "z equals 12 at both (0, 2) and (3, 0), and is larger at the other corners, so the whole edge gives the minimum.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 58,
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "question": "A die is thrown 10 times. The probability that an odd number comes up at least once is",
+    "options": {
+      "A": "11/1024",
+      "B": "1013/1024",
+      "C": "1023/1024",
+      "D": "1/1024"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "1023/1024",
+    "explanation": "Probability of no odd number is (1/2)^10. At least one odd is 1 − 1/1024 = 1023/1024.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 59,
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "question": "X takes values 0, 1, 2 with probabilities 25/36, k and 1/36. The mean is 1/3. The variance is",
+    "options": {
+      "A": "1/18",
+      "B": "5/18",
+      "C": "7/18",
+      "D": "11/18"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "5/18",
+    "explanation": "The probabilities sum to 1, so k = 10/36. The mean then fixes the variance at 5/18.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 60,
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "question": "X follows a binomial distribution with n = 5, and P(X = 2) = 9 P(X = 3). Then p equals",
+    "options": {
+      "A": "10",
+      "B": "1/10",
+      "C": "5",
+      "D": "1/5"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "1/10",
+    "explanation": "The binomial formula gives 10 p³ (1−p)² = 9 × 10 p² (1−p)³, so p = 1/10.",
+    "hasImage": false,
+    "image": null
+  }
+]

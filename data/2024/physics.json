@@ -1,0 +1,1022 @@
+[
+  {
+    "id": 1,
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "question": "The ratio of molar specific heats of oxygen is",
+    "options": {
+      "A": "1.4",
+      "B": "1.67",
+      "C": "1.33",
+      "D": "1.28"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "1.4",
+    "explanation": "Oxygen is diatomic, so it has 5 degrees of freedom. γ = 1 + 2/f = 1.4.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 2,
+    "subject": "Physics",
+    "chapter": "Oscillations",
+    "question": "For a particle in simple harmonic motion, at its mean position",
+    "options": {
+      "A": "Velocity is zero and acceleration is maximum",
+      "B": "Velocity is maximum and acceleration is zero",
+      "C": "Both velocity and acceleration are maximum",
+      "D": "Both velocity and acceleration are zero"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "Velocity is maximum and acceleration is zero",
+    "explanation": "At the mean position the displacement is zero, so acceleration is zero and speed is greatest.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 3,
+    "subject": "Physics",
+    "chapter": "Waves",
+    "question": "A motor-cyclist moving towards a huge cliff at 18 km/h blows a horn of frequency 325 Hz. Speed of sound is 330 m/s. The number of beats he hears is",
+    "options": {
+      "A": "5",
+      "B": "4",
+      "C": "10",
+      "D": "7"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "5",
+    "explanation": "18 km/h is 5 m/s. The beat frequency is 325 × 5 / (330 − 5) = 5.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 4,
+    "subject": "Physics",
+    "chapter": "Electric Charges and Fields",
+    "question": "A body has a charge of −3.2 μC. The number of excess electrons it has is",
+    "options": {
+      "A": "5.12×10^25",
+      "B": "5×10^12",
+      "C": "2×10^13",
+      "D": "5.12×10^13"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "2×10^13",
+    "explanation": "Number of electrons = charge / e = 3.2×10^−6 / 1.6×10^−19 = 2×10^13.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 5,
+    "subject": "Physics",
+    "chapter": "Electric Charges and Fields",
+    "question": "Point charge A is +10 μC and point charge B is +20 μC, kept 1 m apart. F1 is the force on A due to B and F2 is the force on B due to A. Then",
+    "options": {
+      "A": "F1 = −2 F2",
+      "B": "F1 = −F2",
+      "C": "2 F1 = −F2",
+      "D": "F1 = F2"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "F1 = −F2",
+    "explanation": "Newton's third law: the two electrostatic forces are equal in size and opposite in direction.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 6,
+    "subject": "Physics",
+    "chapter": "Electric Charges and Fields",
+    "question": "A uniform electric field E = 3×10^5 N/C acts along the positive y-axis. The flux through a 10 cm × 30 cm rectangle parallel to the z-x plane is",
+    "options": {
+      "A": "12×10^3 V m",
+      "B": "9×10^3 V m",
+      "C": "15×10^3 V m",
+      "D": "18×10^3 V m"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "9×10^3 V m",
+    "explanation": "The area faces the field, so flux = E × area = 3×10^5 × 0.03 = 9×10^3 V m.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 7,
+    "subject": "Physics",
+    "chapter": "Electric Charges and Fields",
+    "question": "The total electric flux through a closed spherical surface of radius r enclosing an electric dipole of moment 2aq is",
+    "options": {
+      "A": "Zero",
+      "B": "q/ε0",
+      "C": "2q/ε0",
+      "D": "8πr^2 q / ε0"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "Zero",
+    "explanation": "A dipole has equal and opposite charges, so the net charge inside the surface is zero and the flux is zero.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 8,
+    "subject": "Physics",
+    "chapter": "Electric Charges and Fields",
+    "question": "Under electrostatic conditions for a charged conductor, which statement is true?",
+    "options": {
+      "A": "The electric field on the surface is σ / (2ε0)",
+      "B": "The electric potential inside a charged conductor is always zero",
+      "C": "Any excess charge resides on the surface of the conductor",
+      "D": "The net electric field is tangential to the surface"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Any excess charge resides on the surface of the conductor",
+    "explanation": "Excess charge on a conductor stays on the outer surface.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 9,
+    "subject": "Physics",
+    "chapter": "Electric Charges and Fields",
+    "question": "A cube of side 1 cm contains 100 molecules, each with induced dipole moment 0.2×10^−6 C m, in a field of 4 N/C. The electric susceptibility of the material, in C^2 N^−1 m^−2, is",
+    "options": {
+      "A": "50",
+      "B": "5",
+      "C": "0.5",
+      "D": "0.05"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "5",
+    "explanation": "Susceptibility = (polarisation) / E. With the given numbers it comes out to 5.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 10,
+    "subject": "Physics",
+    "chapter": "Electrostatic Potential and Capacitance",
+    "question": "A 5 μF capacitor is charged by a 10 V battery. At an instant the potential difference is 4 V and is changing at 0.6 V/s. The rate at which energy is stored at that instant is",
+    "options": {
+      "A": "12 μW",
+      "B": "3 μW",
+      "C": "Zero",
+      "D": "30 μW"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "12 μW",
+    "explanation": "Energy U = ½CV^2, so dU/dt = CV dV/dt = 5×10^−6 × 4 × 0.6 = 12 μW.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 11,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "question": "E is the electric field inside a conductor of conductivity σ and resistivity ρ, and j is the current density. The correct form of Ohm's law is",
+    "options": {
+      "A": "E = σ j",
+      "B": "j = ρ E",
+      "C": "E = ρ j",
+      "D": "E · j = ρ"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "E = ρ j",
+    "explanation": "V = iR gives E = ρ j.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 12,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "question": "In the circuit, end A is at potential V0 and end B is grounded. The current I in the circuit is",
+    "options": {
+      "A": "V0 / R",
+      "B": "2 V0 / R",
+      "C": "3 V0 / R",
+      "D": "V0 / (3R)"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "V0 / (3R)",
+    "explanation": "The resistors combine to an effective resistance of 3R, so I = V0 / (3R).",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 13,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "question": "Current through a conductor varies with time as shown in the graph (rising to 400 mA and back). The number of electrons passing a cross-section from t = 0 to t = 20 s is",
+    "options": {
+      "A": "3.125×10^19",
+      "B": "1.6×10^19",
+      "C": "6.25×10^18",
+      "D": "1.625×10^18"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "3.125×10^19",
+    "explanation": "Charge is the area under the I-t graph, 5 C. Number of electrons = 5 / 1.6×10^−19 = 3.125×10^19.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 14,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "question": "The I-V graph of a conductor at 100°C and 400°C makes angles 45° and 30° with the voltage axis. The temperature coefficient of resistance, per °C, is about",
+    "options": {
+      "A": "3×10^−3",
+      "B": "6×10^−3",
+      "C": "9×10^−3",
+      "D": "12×10^−3"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "3×10^−3",
+    "explanation": "Resistance is 1/tan of the angle. Using those two resistances gives α about 3.2×10^−3 per °C.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 15,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "question": "A 60 W, 120 V bulb is to be connected to a 220 V source. The series resistance so that the bulb glows properly is",
+    "options": {
+      "A": "50 Ω",
+      "B": "100 Ω",
+      "C": "200 Ω",
+      "D": "288 Ω"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "200 Ω",
+    "explanation": "The bulb needs 0.5 A and has resistance 240 Ω. At 220 V the total resistance must be 440 Ω, so 200 Ω is added in series.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 16,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "question": "In a metre bridge the balance lengths for a coil at 0°C and 100°C are 50 cm and 60 cm. The standard resistance is 4 Ω in both trials. The temperature coefficient of the coil is",
+    "options": {
+      "A": "0.05 per °C",
+      "B": "0.02 per °C",
+      "C": "0.005 per °C",
+      "D": "2.0 per °C"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "0.005 per °C",
+    "explanation": "The two resistances are 4 Ω and 6 Ω. α = (6 − 4) / (4 × 100) = 0.005 per °C.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 17,
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "question": "A moving electron produces",
+    "options": {
+      "A": "only an electric field",
+      "B": "both an electric and a magnetic field",
+      "C": "only a magnetic field",
+      "D": "neither an electric nor a magnetic field"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "both an electric and a magnetic field",
+    "explanation": "A moving charge has an electric field and also a magnetic field.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 18,
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "question": "A coil of 9 turns carrying a current produces field B1 at the centre. It is rewound into 3 turns with the same current. The new field B2 is",
+    "options": {
+      "A": "B1 / 9",
+      "B": "9 B1",
+      "C": "3 B1",
+      "D": "B1 / 3"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "B1 / 9",
+    "explanation": "The wire length is fixed, so fewer turns means a larger radius. The centre field falls by a factor of 9.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 19,
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "question": "A particle of specific charge q/m = π C/kg starts along the positive x-axis at 10 m/s in a field B = −2 k T. Its velocity after 1/12 s is",
+    "options": {
+      "A": "5(i + j)",
+      "B": "5(i + √3 j)",
+      "C": "5(√3 i − j)",
+      "D": "5(√3 i + j)"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "5(√3 i + j)",
+    "explanation": "The particle goes around a circle. In 1/12 s it has turned 30°, so the velocity is 5(√3 i + j).",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 20,
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "question": "The field at the centre of a circular coil of radius R carrying current I is 64 times the field at a distance x on its axis. Then x is",
+    "options": {
+      "A": "R / (4√15)",
+      "B": "R√3",
+      "C": "R / 4",
+      "D": "R√15"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "R√15",
+    "explanation": "Comparing the centre formula with the axial formula gives x = R√15.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 21,
+    "subject": "Physics",
+    "chapter": "Magnetism and Matter",
+    "question": "Magnetic hysteresis is exhibited by",
+    "options": {
+      "A": "only paramagnetic materials",
+      "B": "only diamagnetic materials",
+      "C": "only ferromagnetic materials",
+      "D": "both paramagnetic and ferromagnetic materials"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "only ferromagnetic materials",
+    "explanation": "Only ferromagnets keep a magnetisation after the field is removed, which is hysteresis.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 22,
+    "subject": "Physics",
+    "chapter": "Magnetism and Matter",
+    "question": "Magnetic susceptibility of Mg at 300 K is 1.2×10^−5. Its susceptibility at 200 K is",
+    "options": {
+      "A": "18×10^−5",
+      "B": "180×10^−5",
+      "C": "1.8×10^−5",
+      "D": "0.18×10^−5"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "1.8×10^−5",
+    "explanation": "For a paramagnet, susceptibility is inversely proportional to temperature, so it becomes 1.8×10^−5.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 23,
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "question": "A uniform field B = 2 mT points vertically downwards through a closed surface made of a hemisphere S1 and a cone S2. The fluxes through S1 and S2 are",
+    "options": {
+      "A": "−20 μWb and +20 μWb",
+      "B": "+20 μWb and −20 μWb",
+      "C": "−40 μWb and +40 μWb",
+      "D": "+40 μWb and −40 μWb"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "−20 μWb and +20 μWb",
+    "explanation": "The same flux enters one surface and leaves the other, so the two fluxes are equal and opposite.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 24,
+    "subject": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "question": "A conducting ring falls towards a long straight current-carrying conductor, in the same plane. Then",
+    "options": {
+      "A": "the induced current is zero",
+      "B": "the induced current is anticlockwise",
+      "C": "the induced current is clockwise",
+      "D": "the ring will come to rest"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "the induced current is clockwise",
+    "explanation": "As the ring approaches, the flux through it increases, and Lenz's law gives a clockwise current.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 25,
+    "subject": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "question": "An induced current of 2 A flows through a coil of resistance 10 Ω. The change in magnetic flux in 1 ms is",
+    "options": {
+      "A": "0.2×10^−2 Wb",
+      "B": "2×10^−2 Wb",
+      "C": "22×10^−2 Wb",
+      "D": "0.22×10^−2 Wb"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "2×10^−2 Wb",
+    "explanation": "Induced emf = iR = 20 V = change in flux / time, so the flux change is 0.02 Wb.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 26,
+    "subject": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "question": "A square loop moves away from a long current-carrying wire at constant speed. The mutual inductance of the loop and the wire varies with time as",
+    "options": {
+      "A": "a curve falling steeply then flattening",
+      "B": "a curve rising",
+      "C": "a horizontal straight line",
+      "D": "a straight line falling to zero"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "a horizontal straight line",
+    "explanation": "For this motion the mutual inductance does not change with time, so the graph is a horizontal line.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 27,
+    "subject": "Physics",
+    "chapter": "Alternating Current",
+    "question": "Which combination is best for tuning an LCR circuit used for communication?",
+    "options": {
+      "A": "R = 20 Ω, L = 1.5 H, C = 35 μF",
+      "B": "R = 25 Ω, L = 2.5 H, C = 45 μF",
+      "C": "R = 25 Ω, L = 1.5 H, C = 45 μF",
+      "D": "R = 15 Ω, L = 3.5 H, C = 30 μF"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "R = 15 Ω, L = 3.5 H, C = 30 μF",
+    "explanation": "A communication circuit needs a high Q factor. Q = (1/R)√(L/C) is largest for option D.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 28,
+    "subject": "Physics",
+    "chapter": "Alternating Current",
+    "question": "In a series LCR circuit only C is varied. The resonance frequency f0 as a function of C is",
+    "options": {
+      "A": "a peak",
+      "B": "a straight line rising",
+      "C": "a curve falling as C increases",
+      "D": "a straight line falling"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "a curve falling as C increases",
+    "explanation": "f0 = 1 / (2π√(LC)), so it falls as capacitance increases.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 29,
+    "subject": "Physics",
+    "chapter": "Alternating Current",
+    "question": "The figure shows R, XL and XC against frequency in a series LCR circuit. The circuit is capacitive at point",
+    "options": {
+      "A": "Point B",
+      "B": "Point D",
+      "C": "Point A",
+      "D": "Point C"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "Point A",
+    "explanation": "The circuit is capacitive where capacitor reactance is above inductor reactance. On the graph that is point A.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 30,
+    "subject": "Physics",
+    "chapter": "Electromagnetic Waves",
+    "question": "Electromagnetic waves of intensity I hit a perfectly reflecting surface of area A normally. The force on the surface is",
+    "options": {
+      "A": "2IA / c",
+      "B": "IA / c",
+      "C": "IA / (2c)",
+      "D": "I / (2Ac)"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "2IA / c",
+    "explanation": "A perfect reflector takes twice the momentum of an absorber, so the force is 2IA/c.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 31,
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "question": "The final image formed by an astronomical telescope is",
+    "options": {
+      "A": "real, erect and diminished",
+      "B": "virtual, inverted and diminished",
+      "C": "real, inverted and magnified",
+      "D": "virtual, inverted and magnified"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "virtual, inverted and magnified",
+    "explanation": "An astronomical telescope gives a virtual, inverted and magnified final image.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 32,
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "question": "For an equilateral prism the angle of minimum deviation equals the angle of the prism. The speed of light inside the prism is",
+    "options": {
+      "A": "3×10^8 m/s",
+      "B": "2√3×10^8 m/s",
+      "C": "√3×10^8 m/s",
+      "D": "(√3 / 2)×10^8 m/s"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "√3×10^8 m/s",
+    "explanation": "μ = sin((A+D)/2) / sin(A/2) = √3, so the speed inside is c/√3 = √3×10^8 m/s.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 33,
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "question": "A point object is 2R from a spherical boundary between media n1 = 4/3 and n2 = 3/2, with R = 10 cm. The image is at a distance from P equal to",
+    "options": {
+      "A": "30 cm in the rarer medium",
+      "B": "30 cm in the denser medium",
+      "C": "18 cm in the rarer medium",
+      "D": "18 cm in the denser medium"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "30 cm in the rarer medium",
+    "explanation": "The refraction formula at a spherical surface puts the image 30 cm away in the rarer medium.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 34,
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "question": "An equiconvex lens of radius 14 cm is made of two materials, n = 1.5 on the left and n = 1.2 on the right. An object is 40 cm away. The image distance is",
+    "options": {
+      "A": "25 cm",
+      "B": "50 cm",
+      "C": "35 cm",
+      "D": "40 cm"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "40 cm",
+    "explanation": "The two halves act as one lens of focal length 20 cm, and the lens formula gives an image at 40 cm.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 35,
+    "subject": "Physics",
+    "chapter": "Waves",
+    "question": "A galaxy moves away from the Earth so that a line at 600 nm is seen at 601 nm. The speed of the galaxy relative to the Earth is",
+    "options": {
+      "A": "500 km/s",
+      "B": "50 km/s",
+      "C": "200 km/s",
+      "D": "20 km/s"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "500 km/s",
+    "explanation": "Δλ/λ = v/c, so v = (1/600) × 3×10^8 = 500 km/s.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 36,
+    "subject": "Physics",
+    "chapter": "Wave Optics",
+    "question": "Three polaroids are placed with pass axes of the second and third at 30° and 90° to the first. Unpolarised light of intensity I0 enters the first. The intensity from the third is",
+    "options": {
+      "A": "zero",
+      "B": "3 I0 / 32",
+      "C": "3 I0 / 8",
+      "D": "3 I0 / 16"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "3 I0 / 32",
+    "explanation": "Each polaroid passes a cos² factor. The result is 3 I0 / 32.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 37,
+    "subject": "Physics",
+    "chapter": "Wave Optics",
+    "question": "In Young's experiment an electron beam gives fringe width β1. It is replaced by protons of the same speed. The new fringe width β2 satisfies",
+    "options": {
+      "A": "β1 = β2",
+      "B": "no fringes are formed",
+      "C": "β1 < β2",
+      "D": "β1 > β2"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "β1 > β2",
+    "explanation": "Fringe width is proportional to wavelength, and a heavier proton has a smaller de Broglie wavelength, so β1 > β2.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 38,
+    "subject": "Physics",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "question": "Light of energy E falls on a metal of work function E/3. The kinetic energies of the photoelectrons are",
+    "options": {
+      "A": "K = 2E/3",
+      "B": "K = E/3",
+      "C": "0 ≤ K ≤ 2E/3",
+      "D": "0 ≤ K ≤ E/3"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "0 ≤ K ≤ 2E/3",
+    "explanation": "The fastest electron has K = E − E/3 = 2E/3, and others have anything from 0 up to that.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 39,
+    "subject": "Physics",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "question": "The work function of a metal is 2.4 eV. Photoemission does not take place for wavelength",
+    "options": {
+      "A": "200 nm",
+      "B": "300 nm",
+      "C": "700 nm",
+      "D": "400 nm"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "700 nm",
+    "explanation": "The threshold wavelength is about 517 nm. Light of 700 nm has less energy than the work function.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 40,
+    "subject": "Physics",
+    "chapter": "Atoms",
+    "question": "In alpha scattering, the distance of closest approach is d for speed v. If the speed is doubled, the distance of closest approach becomes",
+    "options": {
+      "A": "4d",
+      "B": "2d",
+      "C": "d/2",
+      "D": "d/4"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "d/4",
+    "explanation": "Closest approach is inversely proportional to the square of the speed, so it becomes d/4.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 41,
+    "subject": "Physics",
+    "chapter": "Atoms",
+    "question": "The ratio of the area of the first excited orbit to the ground orbit of hydrogen is",
+    "options": {
+      "A": "1 : 16",
+      "B": "1 : 4",
+      "C": "4 : 1",
+      "D": "16 : 1"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "16 : 1",
+    "explanation": "Orbit radius goes as n², so area goes as n^4. For n = 2 and n = 1 the ratio is 16 : 1.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 42,
+    "subject": "Physics",
+    "chapter": "Nuclei",
+    "question": "The ratio of the volume of an Al-27 nucleus to its surface area is (R0 = 1.2×10^−15 m)",
+    "options": {
+      "A": "2.2×10^−15 m",
+      "B": "1.3×10^−15 m",
+      "C": "0.22×10^−15 m",
+      "D": "1.2×10^−15 m"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "1.2×10^−15 m",
+    "explanation": "Volume / area = R/3, and R = R0 A^(1/3) = R0 × 3, so the ratio is R0.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 43,
+    "subject": "Physics",
+    "chapter": "Nuclei",
+    "question": "In the fission 235U → 144Ba + 89Kr + 3 neutrons, the binding energies are 1800, 1200 and 780 MeV. The average kinetic energy carried by each fast neutron is",
+    "options": {
+      "A": "200 MeV",
+      "B": "180 MeV",
+      "C": "67 MeV",
+      "D": "60 MeV"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "60 MeV",
+    "explanation": "Energy released is (1200 + 780) − 1800 = 180 MeV. Shared by 3 neutrons, that is 60 MeV each.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 44,
+    "subject": "Physics",
+    "chapter": "Nuclei",
+    "question": "The graph of ln R against time for a radioactive sample has intercept 2 and falls to 1 at t = 10^4 s. N0 is (take e² = 7.5)",
+    "options": {
+      "A": "7,500",
+      "B": "3,500",
+      "C": "75,000",
+      "D": "1,50,000"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "75,000",
+    "explanation": "R0 = e² = 7.5 and the decay constant is 10^−4 per second, so N0 = R0 / λ = 75,000.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 45,
+    "subject": "Physics",
+    "chapter": "Semiconductor Electronics",
+    "question": "The depletion region in an unbiased semiconductor diode consists of",
+    "options": {
+      "A": "both free electrons and holes",
+      "B": "neither free electrons nor holes",
+      "C": "only free electrons",
+      "D": "only holes"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "neither free electrons nor holes",
+    "explanation": "Free electrons and holes have recombined there, so the region has no mobile charges.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 46,
+    "subject": "Physics",
+    "chapter": "Semiconductor Electronics",
+    "question": "The upper level of the valence band and the lower level of the conduction band overlap in the case of",
+    "options": {
+      "A": "silicon",
+      "B": "copper",
+      "C": "carbon",
+      "D": "germanium"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "copper",
+    "explanation": "In a conductor such as copper the two bands overlap.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 47,
+    "subject": "Physics",
+    "chapter": "Semiconductor Electronics",
+    "question": "A Zener diode of breakdown voltage VZ is used with a load RL. The current through the Zener diode is",
+    "options": {
+      "A": "(V0 − VZ) / RS",
+      "B": "(V0 − VZ) / RL",
+      "C": "VZ / RL",
+      "D": "(V0 − VZ) / RS − IL"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "(V0 − VZ) / RS − IL",
+    "explanation": "The source current splits between the Zener and the load, so IZ = (V0 − VZ)/RS − IL.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 48,
+    "subject": "Physics",
+    "chapter": "Semiconductor Electronics",
+    "question": "A p-n diode is forward biased by 5.7 V in series with 5 kΩ. The barrier potential is 0.7 V. The current in the circuit is",
+    "options": {
+      "A": "1.14 mA",
+      "B": "1 mA",
+      "C": "1 A",
+      "D": "1.14 A"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "1 mA",
+    "explanation": "Current = (5.7 − 0.7) / 5000 = 1 mA.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 49,
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "question": "An athlete runs on a circular track of diameter 80 m. The distance and the magnitude of displacement when he covers 3/4 of the circle are",
+    "options": {
+      "A": "60π m and 40√2 m",
+      "B": "40π m and 60√2 m",
+      "C": "120π m and 80√2 m",
+      "D": "80π m and 120√2 m"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "60π m and 40√2 m",
+    "explanation": "Distance is three quarters of the circumference, 60π m. Displacement is the chord, 40√2 m.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 50,
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "question": "The resultant of two vectors can never be 3 units for the pair",
+    "options": {
+      "A": "1 unit and 2 units",
+      "B": "2 units and 5 units",
+      "C": "3 units and 6 units",
+      "D": "4 units and 8 units"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "4 units and 8 units",
+    "explanation": "The resultant lies between the sum and the difference. For 4 and 8 that range is 4 to 12, which does not include 3.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 51,
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "question": "A block is on a rough incline of 30°. Coefficients of static and kinetic friction are 0.6 and 0.5. Take g = 10 m/s². The acceleration of the block is",
+    "options": {
+      "A": "2 m/s²",
+      "B": "zero",
+      "C": "0.196 m/s²",
+      "D": "0.67 m/s²"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "zero",
+    "explanation": "The downhill component is smaller than the maximum static friction, so the block stays at rest.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 52,
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "question": "A 500 g particle starts from rest. The power delivered rises linearly and the area under the power-time graph up to 5 s is 25 J. Its momentum at t = 5 s is",
+    "options": {
+      "A": "2√5 N s",
+      "B": "5√2 N s",
+      "C": "5 N s",
+      "D": "5.5 N s"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "5 N s",
+    "explanation": "The area is the kinetic energy, 25 J. Then p = √(2mK) = 5 N s.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 53,
+    "subject": "Physics",
+    "chapter": "Nuclei",
+    "question": "The dimensional formula for the activity of a radioactive substance is",
+    "options": {
+      "A": "M^0 L^1 T^−1",
+      "B": "M^0 L^1 T^0",
+      "C": "M^0 L^0 T^−1",
+      "D": "M^−1 L^0 T^0"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "M^0 L^0 T^−1",
+    "explanation": "Activity is decays per second, so its dimension is 1/time.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 54,
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "question": "A ceiling fan rotates about a fixed axle. With the axle drawn as the z-axis, the direction of angular velocity is along",
+    "options": {
+      "A": "+j",
+      "B": "−j",
+      "C": "+k",
+      "D": "−k"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "−k",
+    "explanation": "Right-hand rule along the axle as drawn gives the negative z direction.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 55,
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "question": "A 1 kg body hangs from a string over a frictionless pulley of mass 2 kg. It is released 1.6 m above the ground. The speed with which it strikes the ground is",
+    "options": {
+      "A": "16 m/s",
+      "B": "8 m/s",
+      "C": "4√2 m/s",
+      "D": "4 m/s"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "8 m/s",
+    "explanation": "Lost potential energy is shared by the block and the pulley. The speed at the ground is 8 m/s.",
+    "hasImage": true,
+    "image": null
+  },
+  {
+    "id": 56,
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "question": "The acceleration due to gravity at a height equal to half the radius of the Earth is",
+    "options": {
+      "A": "4.4 m/s²",
+      "B": "6.5 m/s²",
+      "C": "zero",
+      "D": "9.8 m/s²"
+    },
+    "correctAnswer": "A",
+    "correctAnswerText": "4.4 m/s²",
+    "explanation": "g at height h is g R² / (R + h)². With h = R/2 this is 4g/9 ≈ 4.4 m/s².",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 57,
+    "subject": "Physics",
+    "chapter": "Properties of Matter",
+    "question": "A metal wire of density ρ and length L hangs from a rigid support. The increase in length due to its own weight is (Y is Young's modulus)",
+    "options": {
+      "A": "ρgL / Y",
+      "B": "ρgL² / (2Y)",
+      "C": "ρgL² / Y",
+      "D": "ρgL² / (4Y)"
+    },
+    "correctAnswer": "B",
+    "correctAnswerText": "ρgL² / (2Y)",
+    "explanation": "The weight acts at the centre of the wire, so the extension is ρgL² / (2Y).",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 58,
+    "subject": "Physics",
+    "chapter": "Properties of Matter",
+    "question": "Water flows at 0.314 m³/s through a horizontal pipe. The speed where the radius is 10 cm is",
+    "options": {
+      "A": "0.1 m/s",
+      "B": "1 m/s",
+      "C": "10 m/s",
+      "D": "100 m/s"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "10 m/s",
+    "explanation": "Speed = volume flow rate / area = 0.314 / (π × 0.01) = 10 m/s.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 59,
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "question": "A solid cube of mass m at θ0 is heated at a constant rate until it becomes vapour at θ2. The minimum heat supplied is (s1, s2 specific heats; Lf, Lv latent heats)",
+    "options": {
+      "A": "m s1 (θ1 − θ0) + m s2 (θ2 − θ1)",
+      "B": "m Lf + m s2 (θ2 − θ1) + m Lv",
+      "C": "m s1 (θ1 − θ0) + m Lf + m s2 (θ2 − θ1) + m Lv",
+      "D": "m s1 (θ1 − θ0) + m Lf + m s2 (θ2 − θ0) + m Lv"
+    },
+    "correctAnswer": "C",
+    "correctAnswerText": "m s1 (θ1 − θ0) + m Lf + m s2 (θ2 − θ1) + m Lv",
+    "explanation": "Heat is needed to warm the solid, melt it, warm the liquid and then vaporise it.",
+    "hasImage": false,
+    "image": null
+  },
+  {
+    "id": 60,
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "question": "One mole of an ideal monoatomic gas is taken round the cyclic process MNOM shown on the P-V diagram. The work done by the gas is",
+    "options": {
+      "A": "4.5 P0 V0",
+      "B": "4 P0 V0",
+      "C": "9 P0 V0",
+      "D": "2 P0 V0"
+    },
+    "correctAnswer": "D",
+    "correctAnswerText": "2 P0 V0",
+    "explanation": "Work done in a cycle is the area enclosed by the path, which is 2 P0 V0.",
+    "hasImage": true,
+    "image": null
+  }
+]
